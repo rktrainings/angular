@@ -1,0 +1,92 @@
+[
+    {
+        "approvedCostCase": {
+            "band3": 12.0,
+            "band4": 50.0,
+            "band5": 19.5,
+            "band6": 14.0,
+            "band7": 2.0,
+            "band8": 1.0,
+            "band9": 1.0,
+            "band10": 0.0,
+            "total": 99.5
+        },
+        "ciRelease": {
+            "band3": 0.0,
+            "band4": 0.0,
+            "band5": 0.0,
+            "band6": 0.0,
+            "band7": 0.0,
+            "band8": 0.0,
+            "band9": 0.0,
+            "band10": 0.0,
+            "total": 0.0
+        },
+        "currentCostCase": {
+            "band3": 12.0,
+            "band4": 50.0,
+            "band5": 19.5,
+            "band6": 14.0,
+            "band7": 2.0,
+            "band8": 1.0,
+            "band9": 1.0,
+            "band10": 0.0,
+            "total": 99.5
+        },
+        "headCount": {
+            "band3": 14.0,
+            "band4": 33.0,
+            "band5": 17.0,
+            "band6": 15.0,
+            "band7": 2.0,
+            "band8": 1.0,
+            "band9": 1.0,
+            "band10": 0.0,
+            "total": 83.0
+        },
+        "attritionCount": {
+            "band3": 0.0,
+            "band4": 4.0,
+            "band5": 2.0,
+            "band6": 0.0,
+            "band7": 0.0,
+            "band8": 0.0,
+            "band9": 0.0,
+            "band10": 0.0,
+            "total": 6.0
+        },
+        "submittedPostions": {
+            "band3": 0.0,
+            "band4": 1.0,
+            "band5": 0.0,
+            "band6": 1.0,
+            "band7": 0.0,
+            "band8": 0.0,
+            "band9": 0.0,
+            "band10": 0.0,
+            "total": 2.0
+        },
+        "openPostions": {
+            "band3": 2.0,
+            "band4": 1.0,
+            "band5": 2.0,
+            "band6": 0.0,
+            "band7": 0.0,
+            "band8": 0.0,
+            "band9": 0.0,
+            "band10": 0.0,
+            "total": 5.0
+        },
+        "vacantPostions": {
+            "band3": -4.0,
+            "band4": 19.0,
+            "band5": 2.5,
+            "band6": -2.0,
+            "band7": 0.0,
+            "band8": 0.0,
+            "band9": 0.0,
+            "band10": 0.0,
+            "total": 15.5
+        }
+    }
+]

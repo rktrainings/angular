@@ -1,0 +1,155 @@
+@import "~src/styles";
+
+#hiring-form {
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+.firstRow {
+  padding-left: 3vh;
+}
+b {
+  font-size: 3vh;
+}
+.mat-card {
+  height: 86vh;
+  overflow: auto;
+}
+
+// .sticky-label {
+//   position: absolute;
+//   margin: -10px 0px 0px 0px;
+// }
+
+// .stickies{
+//   position: fixed;
+//   right: 22vh;
+//   padding-bottom: 1px;
+//   z-index: 1000;
+// }
+
+// .sticky-card {
+//   cursor: pointer;
+//   height: 0vh !important;
+//   width: 15vh;
+//   overflow: unset !important;
+// }
+
+// .sticky-card:hover {
+//   cursor: pointer;
+//   width: 25vh;
+//   color:white;
+//   background-color: $bg-aqua !important;
+// }
+
+.mat-card:before,
+.mat-card:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+
+.mat-card:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+.buttonRow {
+  float: right;
+}
+
+.mat-raised-button {
+  float: right;
+  background: $bg-aqua !important;
+  border-radius: 20px;
+  margin-right: 2vh;
+  color: white !important;
+  height: 5vh;
+}
+
+.rTableRow {
+  display: table-row;
+}
+
+.rTableCell,
+.rTableHead {
+  display: table-cell;
+  // padding: 3px 15px;
+}
+
+.sticky-label {
+  // position: absolute;
+  // margin: -10px 0px 0px 0px;
+}
+
+.stickies {
+  // position: fixed;
+  // right: 22vh;
+  // padding-left: 105vh;
+  // padding-bottom: 1px;
+  padding-right: 3px;
+  z-index: 1000;
+}
+
+.stickies {
+  cursor: pointer;
+  height: 3vh;
+  width: 10vh;
+  overflow: unset !important;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid white;
+  font-family: $play;
+}
+.sticky-card{
+  background-color: $bg-aqua;
+  height: 5vh;
+  width: 10vh;
+  border-radius: 10px;
+  color: white;
+}
+
+::ng-deep .sticky-card:hover > .mat-button-focus-overlay{
+  opacity: 0 !important;
+}
+::ng-deep .sticky-card > .mat-button-focus-overlay{
+  opacity: 0 !important;
+}
+
+.stickies:hover {
+  cursor: pointer;
+  // position: absolute;
+  width: 10vh;
+  height: 11vh;
+  color: white;
+  background-color: $bg-aqua !important;
+  transition: height 0.2s;
+  // box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+}
+
+
+.stickies:hover > .sticky-card {
+  top: 2.5vh;
+  position: relative;
+  font-family: $play;
+}
+
+.show-sticky {
+  padding-left: 115vh;
+  position: absolute;
+  z-index: 1000;
+  // position: absolute;
+}

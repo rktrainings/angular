@@ -1,0 +1,32 @@
+<!-- <div *ngIf="showSticky">
+  <div class="stickies" *ngFor="let sticky of stickyLabels;let i=index" [ngStyle]="{'top':topPosition(i)}">
+    <mat-card class="sticky-card" (click)="openDialog(sticky)">
+      <strong class="sticky-label">
+        {{sticky}}
+      </strong>
+    </mat-card>
+  </div>
+</div> -->
+
+
+<div class="show-sticky" *ngIf="showSticky">
+
+  <div class="rTableRow">
+    <div class="rTableCell stickies" *ngFor="let sticky of stickyLabels;let i=index" (click)="openDialog(sticky)">
+      <button mat-button class="sticky-card" >
+        <strong class="sticky-label">
+          {{sticky}}
+        </strong>
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-external-hiring *ngIf="hireType=='external' && invokeExternal && GRBfields.length>0 && GOMfields.length>0"
+  (close)="close()" [childFormName]="childFormName" [GRBfields]="GRBfields" [GOMfields]="GOMfields"
+  [TRAMfields]="TRAMfields" [backFillData]="backFillData" [orpData]="orpData" [templateData]="templateData">
+</app-external-hiring>
+<app-internal-hiring *ngIf="hireType=='internal' && invokeInternal && GRBfields.length>0" (close)="close()"
+  [childFormName]="childFormName" [GRBfields]="GRBfields" [backFillData]="backFillData" [orpData]="orpData"
+  [templateData]="templateData">
+</app-internal-hiring>

@@ -1,0 +1,26 @@
+<div id="comment-box">
+  <div class="row">
+    <div class="col-10">
+      <b class="attrition-comments">REQUEST ATTRITION BACKFILL </b>
+    </div>
+    <div class="col-2">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div class="container">
+
+
+    <div class="row">
+      <!-- <textarea placeholder="Enter comments here"  [(ngModel)]="comment" require class="form-control" id="comment" rows="4"></textarea> -->
+      <textarea placeholder="Enter comments here"  [(ngModel)]="comment" class="form-control" id="comment" rows="4" required ></textarea>
+      
+    </div>
+    <div class="row">
+      <div class="col submitButtonCol">
+        <button class="submitButton"mat-raised-button [disabled]="disableSubmit()" (click)="onSubmit()">SUBMIT</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+

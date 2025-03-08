@@ -1,0 +1,69 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()">close</mat-icon>
+</div>
+
+
+
+<div *ngIf="!showRejectContent" class="commentBox">
+  
+  <div class="quarter-container" *ngIf="formName == 'board' || formName == 'swap' && hireType == 'external' ">
+    <div class="tableRow">
+      <div class="tableCell"> Quarter <strong class="text-danger">*</strong> </div>
+      <div class="tableCell">
+        <app-quarter-picker (quarterEvent)="receiveQuarter($event)"></app-quarter-picker>
+      </div>
+    </div>
+  </div>
+
+  <div class="comments-label">
+    <div class="col-11">
+      <!-- Approved -->
+      <b>
+        <div *ngIf="commentsType === 'Approved'; else otherComments">
+          <span class="cmtHeading"> Approver Comments</span>
+          <span style="color: red;">*</span>
+        </div>
+        <ng-template #otherComments>
+          {{commentsType}} Comments
+          <span style="color: red;">*</span>
+        </ng-template>
+      </b>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <textarea placeholder="Enter Comments" [(ngModel)]="comments" class="form-control" id="comments" rows="4"
+        (blur)="filledTextArea()" required></textarea>
+    </div>
+    <div class="row">
+      <div mat-dialog-actions>
+        <button mat-raised-button [ngClass]="disableSubmit ? 'disable-button-submit' : 'button-submit'"
+          [disabled]="disableSubmit" (click)="onSubmitClick()">SUBMIT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="showRejectContent" class="reject-content">
+  <div class="commentBox">
+    <div class="comments-label">
+      <div class="col-11">
+          <div>
+            <b class="cmtHeading"> Rejection Comments  </b>
+            <strong class="text-danger" > *</strong>
+          </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <textarea placeholder="Enter Comments" [(ngModel)]="comments" class="form-control text-box" id="comments" rows="4" cols="25" required></textarea>
+      </div>
+        <div mat-dialog-actions class="buttonRow row">
+          <button mat-raised-button class="submitButton" [disabled]="comments.length>0?false:true" (click)="onSubmitClick()">SUBMIT</button>
+        </div>
+    </div>
+  </div> 
+</div>
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+[fullScreen]="true"><span class="loading-aqua"
+  style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>

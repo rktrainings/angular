@@ -1,0 +1,47 @@
+<div class="tab-descriptions">
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </div>
+  <div id="table-scroll" class="cc-table-container table-border">
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="">
+      <ng-container matColumnDef="deptCode">
+
+        <th mat-header-cell *matHeaderCellDef id="tableheader"> DEPT CODE </th>
+        <td mat-cell *matCellDef="let element" class=" left-align clickableText" (click)="openDialog(element)">
+          {{element.deptCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deptname">
+        <th mat-header-cell *matHeaderCellDef id="tableheader" class="left-align" style="width: 23vh;">
+          DEPT NAME </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="width: 23vh;"> {{element.deptname | uppercase}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sdl">
+        <th mat-header-cell *matHeaderCellDef id="tableheader" class="left-align" style="width: 23vh;"> SDL
+        </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="width: 23vh;"> {{element.sdl | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="geo">
+        <th mat-header-cell *matHeaderCellDef id="tableheader" class="left-align" style="width: 23vh;"> GEO
+        </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="width: 23vh;"> {{element.geo | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="iot">
+        <th mat-header-cell *matHeaderCellDef id="tableheader" class="left-align" style="width: 23vh;"> IOT
+        </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="width: 23vh;"> {{element.iot | uppercase}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="columnsToDisplay;sticky: true"></tr>
+      <tr mat-row *matRowDef="let element; columns: columnsToDisplay;" class="example-element-row">
+      </tr>
+
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>
+</div>

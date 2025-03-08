@@ -1,0 +1,74 @@
+<div class="rTableRow">
+  <div class="rTableCell">
+    <label class="header-text"> UTE </label>
+  </div>
+  <div class="rTableCell">
+    <div class="close-icon">
+      <mat-icon class="close" (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+</div>
+<div *ngIf="enableLoadingMsg">
+  <div class="loading-msg">
+    <img src="./assets/icons/spinner-2.gif" />
+  </div>
+</div>
+
+<div *ngIf="!enableLoadingMsg && !enabledNoDataMsgWTD">
+  <table mat-table [dataSource]="dataSourceWTD">
+    <ng-container matColumnDef="weekEndingDate" class="text">
+      <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 16vh;"> Week Ending Date </th>
+      <td mat-cell *matCellDef="let element" class="clickable left-align">
+        {{element.weekendingDate}}
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="targetUTE" class="text">
+      <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 10vh;"> Target UTE [WTD] </th>
+      <td mat-cell *matCellDef="let element" class="left-align"> {{element.targetUte | number:'1.2-2'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actualChargeableUTE" class="text">
+      <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 8vh;"> Actual Chargeable UTE [WTD] </th>
+      <td mat-cell *matCellDef="let element" class="left-align"> {{element.actualChargeableUte | number:'1.2-2'}} </td>
+    </ng-container>
+
+
+    <tr class="row-header-height" mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+    <tr class="row-height" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>
+<div *ngIf="enabledNoDataMsgWTD" class="no-data">
+  NO DATA AVAILABLE
+</div>
+
+<br>
+<div>
+  <div *ngIf="!enableLoadingMsg && !enabledNoDataMsgQTD">
+    <table mat-table [dataSource]="dataSourceQTD">
+      <ng-container matColumnDef="weekEndingDate" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 16vh;"> Week Ending Date </th>
+        <td mat-cell *matCellDef="let element" class="clickable left-align">
+          {{element.weekendingDate}}
+        </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="targetUTE" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 10vh;"> Target UTE [QTD] </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.targetUte | number:'1.2-2'}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="actualChargeableUTE" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 8vh;"> Actual Chargeable UTE [QTD] </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.actualChargeableUte | number:'1.2-2'}} </td>
+      </ng-container>
+  
+      <tr class="row-header-height" mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+      <tr class="row-height" mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+  <div *ngIf="enabledNoDataMsgQTD" class="no-data">
+    NO DATA AVAILABLE
+  </div>
+  
+</div>

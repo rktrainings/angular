@@ -1,0 +1,35 @@
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b>Swap Audit Logs [{{grbNumber}}]</b>
+    </div>
+    <div class="downloadIcon">
+      <mat-icon class="download" (click)="exportData()">cloud_download</mat-icon>
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+    <div class="audit-container-swap">
+      <table mat-table [dataSource]="dataSource">
+
+        <ng-container *ngFor="let item of displayedColumns;let i=index" [matColumnDef]="item">
+          <th mat-header-cell *matHeaderCellDef class="grb-audit-th">
+            {{displayedHeaders[i] | uppercase}} </th>
+          <td mat-cell *matCellDef="let element" class="grb-audit-td">
+            <span>{{element[item] | uppercase}}</span>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div *ngIf="enabledNoDataMsg" class="no-data">
+        NO DATA AVAILABLE
+      </div>
+    </div>

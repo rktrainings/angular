@@ -1,0 +1,23 @@
+<div id="add-Resignation">
+  <div class="row">
+    <div class="col-11">
+      <b> WITHDRAW RESIGNATION </b>
+    </div>
+    <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div class="container">
+
+
+    <div class="row">
+      <textarea placeholder="Enter Withdraw Reason" [(ngModel)]="data.comments" class="form-control" id="withdrawReason" rows="4"></textarea>
+    </div>
+    <div class="row">
+      <div class="col submitButtonCol">
+        <button class="submitButton"mat-raised-button (click)="onSubmit()">SUBMIT</button>
+      </div>
+
+    </div>
+  </div>
+</div>

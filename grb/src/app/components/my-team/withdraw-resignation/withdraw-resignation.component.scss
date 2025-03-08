@@ -1,0 +1,38 @@
+@import "~src/styles";
+
+.container {
+  margin-top: 4vh;
+}
+b{
+  font-size: 3vh;
+  font-family: $play;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
+.submitButton {
+  background: $bg-aqua;
+  color: white;
+  border-radius: 30px;
+  float: right;
+}
+.submitButton:not([disabled]){
+  color: white !important;
+  background: $bg-aqua !important;
+  font-family: $play;
+  border-radius: 30px;
+}
+.submitButtonCol {
+  top: 3vh;
+
+}
+
+#withdrawReason:active,
+#withdrawReason:focus {
+  border-color: unset !important;
+  box-shadow: unset !important
+}
+
+

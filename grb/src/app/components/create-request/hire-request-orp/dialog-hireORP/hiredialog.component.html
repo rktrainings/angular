@@ -1,0 +1,18 @@
+
+<div *ngIf="!hirestatus"><p>
+  "This GRB can be converted to internal if assessment is successful".
+</p>
+<button mat-raised-button  class="submitButton" (click)="navigate()"> OK </button>
+</div>
+<div *ngIf="hirestatus">
+  
+    <div>
+      <p>Please select the Option as Match in Skill found or Uncheck the employee and click on Submit</p>
+
+    </div>
+  <div style="text-align: center;">
+      <button mat-raised-button class="submitButton" (click)="dialogRef.close()" > Close </button>
+   
+</div>
+
+</div>

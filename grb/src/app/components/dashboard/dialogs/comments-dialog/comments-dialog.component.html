@@ -1,0 +1,55 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+</div>
+
+<div *ngIf="displayCommentsInfo">
+  <div *ngIf="requiredInfo !== undefined && !displayNoAvailableData">
+    <h1 class="header-text">APPROVAL COMMENTS</h1>
+    <div mat-dialog-content>
+      <p class="description-text">{{requiredInfo | uppercase}}</p>
+    </div>
+  </div>
+  <div *ngIf="comments !== undefined">
+    <h1 class="header-text">COMMENTS </h1>
+    <div mat-dialog-content>
+      <p class="description-text">{{comments | uppercase}}</p>
+    </div>
+  </div>
+  <div *ngIf="displayNoAvailableData">
+    <P class="no-data">NO DATA AVAILABLE</P>
+  </div>
+
+</div>
+
+<!-- <div *ngIf="displayCommentsBox">
+  <mat-form-field class="text-area form-field">
+    <textarea id="inforequired" class="text-area" matInput placeholder="Information Required" value={{requiredInfo}}
+      [(ngModel)]="requiredInfo" disabled>
+      </textarea>
+  </mat-form-field>
+  <mat-form-field class="text-area form-field">
+    <textarea id="comments" name="comments" class="form-control" matInput placeholder="Comments"
+      [(ngModel)]="providedcomments" required>
+    </textarea>
+  </mat-form-field>
+</div> -->
+
+<div *ngIf="displayCommentsBox">
+  <label>INFORMATION REQUIRED</label>
+
+  <div>
+    <textarea id="inforequired" value="{{requiredInfo}}" placeholder="Information Required" class="form-control"
+      rows="4" [(ngModel)]="requiredInfo" disabled></textarea>
+  </div>
+  <label>COMMENTS<strong class="text-danger">*</strong></label>
+  <div>
+    <textarea id="comments" name="comments" placeholder="Comments" class="form-control" rows="4"
+      [(ngModel)]="providedcomments" required></textarea>
+  </div>
+
+</div>
+
+<div mat-dialog-actions *ngIf="enabledButton">
+  <button mat-raised-button id='buttonColor' [disabled]="providedcomments === ''"
+    (click)="onSubmitClick()">SUBMIT</button>
+</div>

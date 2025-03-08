@@ -1,0 +1,89 @@
+<div class="tablecontent">
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </div>
+  <div class="swap-table table-border">
+    <table mat-table [dataSource]="dataSource" class="">
+
+      <ng-container matColumnDef="metro">
+
+        <th mat-header-cell *matHeaderCellDef>METRO# </th>
+        <td mat-cell *matCellDef="let element" class=" left-align">
+          {{element.metroNo}} </td>
+      </ng-container>
+      <ng-container matColumnDef="grbNum">
+        <th mat-header-cell *matHeaderCellDef> GRB#</th>
+        <td mat-cell *matCellDef="let element"> {{element.grbNumber | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deptCode">
+        <th mat-header-cell *matHeaderCellDef> DEPT CODE </th>
+        <td mat-cell *matCellDef="let element"> {{element.deptCode}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="deptName">
+        <th mat-header-cell *matHeaderCellDef> DEPT NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.deptName | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="band">
+        <th mat-header-cell *matHeaderCellDef>BAND</th>
+        <td mat-cell *matCellDef="let element"> {{element.band}} </td>
+      </ng-container>
+
+
+
+      <ng-container matColumnDef="nominatedempId">
+        <th mat-header-cell *matHeaderCellDef> NOMINATED EMP ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.nominatedEmpId}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="empName">
+        <th mat-header-cell *matHeaderCellDef> EMP NAME </th>
+        <td mat-cell *matCellDef="let element"> {{element.empName | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="empDeptCode">
+        <th mat-header-cell *matHeaderCellDef>EMPLOYEE DEPT CODE</th>
+        <td mat-cell *matCellDef="let element"> {{element.empDeptCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="empband">
+        <th mat-header-cell *matHeaderCellDef> EMPLOYEE BAND</th>
+        <td mat-cell *matCellDef="let element"> {{element.empBand}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="newmetro">
+        <th mat-header-cell *matHeaderCellDef> NEW METRO</th>
+        <td mat-cell *matCellDef="let element"> {{element.newMetroNo}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="submittedDate">
+        <th mat-header-cell *matHeaderCellDef> SUBMITTED DATE </th>
+        <td mat-cell *matCellDef="let element"> {{element.createdDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef> STATUS </th>
+        <td mat-cell *matCellDef="let element"> {{element.finalStatus | uppercase}} </td>
+      </ng-container>
+      <ng-container matColumnDef="auditlog">
+        <th mat-header-cell *matHeaderCellDef class="auditTH">AUDIT</th>
+        <td class="auditTD" mat-cell *matCellDef="let element">
+          <mat-icon class="auditLogs" matTooltip="View Logs" matTooltipPosition="above" (click)="openDialog(element)">
+            assignment_ind
+          </mat-icon>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true;"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;">
+      </tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>
+</div>

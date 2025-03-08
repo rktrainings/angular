@@ -1,0 +1,84 @@
+<div id="my-request">
+  <mat-card class="mat-card-my-request">
+
+
+    <mat-tab-group style="margin-top: 5vh;" (selectedTabChange)="onTabChangeEvent($event.index)">
+
+      <mat-tab label="HIRE REQUEST {{hireReqCount}}" [ngClass]="tabIndex== 0 ? 'active' : '' ">
+
+        <div *ngIf="!pendingHireRequestStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-hire-request *ngIf="pendingHireRequestStatus" [hireDataSource]="hireDataSource"
+          [isHireEnabled]="isHireEnabled">
+        </app-hire-request>
+      </mat-tab>
+
+
+      <mat-tab label="SWAP {{swapCount}}">
+
+        <div *ngIf="!pendingSwapStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-swap *ngIf="pendingSwapStatus" [swapDataSource]="swapDataSource" [isSwapEnabled]="isSwapEnabled">
+        </app-swap>
+
+      </mat-tab>
+
+
+      <mat-tab label="BAND CHANGE {{bandChangeCount}}">
+        <div *ngIf="!pendingBandStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-band-change *ngIf="pendingBandStatus" [bandChangeDataSource]="bandChangeDataSource"
+          [isBandChangeEnabled]="isBandChangeEnabled">
+        </app-band-change>
+
+      </mat-tab>
+
+      <mat-tab label=" GRB REVISE {{GRBReviseCount}}">
+        <div *ngIf="!pendingReviseStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-grb-revise *ngIf="pendingReviseStatus" [grbreviseDataSource]="grbreviseDataSource"
+          [isGRBReviseEnabled]="isGRBReviseEnabled">
+        </app-grb-revise>
+
+      </mat-tab>
+
+      <mat-tab label=" COSTCASE {{costcaseCount}}">
+        <div *ngIf="!pendingCostcaseStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-costcase *ngIf="pendingCostcaseStatus" [costcaseDataSource]="costcaseDataSource"
+          [isCostcaseEnabled]="isCostcaseEnabled">
+        </app-costcase>
+
+      </mat-tab>
+      <div *ngIf="showCi">
+      <mat-tab label=" CI {{ciCount}}">
+        <div *ngIf="!pendingCiStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-ci *ngIf="pendingCiStatus" [ciDataSource]="ciDataSource"
+          [isCiEnabled]="isCiEnabled">
+        </app-ci>
+
+      </mat-tab>
+      </div>
+
+    </mat-tab-group>
+  </mat-card>
+</div>

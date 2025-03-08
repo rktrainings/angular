@@ -1,0 +1,36 @@
+[  {
+
+    "field_name": "Metro Number",
+    "field_type": "text",
+    "field_identifier": "metroNumber",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 1
+
+  }, {
+
+    "field_name": "Band",
+    "field_type": "number",
+    "field_identifier": "band",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 1
+
+  },
+  {
+
+    "field_name": "Total Quantity",
+    "field_type": "number",
+    "field_identifier": "totalQuantity",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 1
+
+  }
+]

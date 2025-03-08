@@ -1,0 +1,66 @@
+@import "~src/styles";
+#hc-selection-group-label{
+  font-size:2.75vh;
+}
+.submitButton:not([disabled]) {
+    color: white !important;
+    background: $bg-aqua !important;
+    float:right;
+    border-radius: 30px;
+    font-family: $play !important;
+  }
+  mat-icon {
+    cursor: pointer;
+    float: right;
+  }
+  ::ng-deep .dropdown-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+    border: 1px solid #ced4da !important;
+    border-radius: 8px;
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    border-style: solid !important;
+    border-left-width: 6px !important;
+    border-radius: 8px !important;
+    border-left-color: $bg-aqua !important;
+    align-items: center !important;
+  }
+  ::ng-deep .mat-select-value-text {
+    padding-left: 1vh !important;
+  }
+  ::ng-deep .bandList .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: unset !important;
+    width: unset !important;
+  }
+  .form-control:active,
+  .form-control:focus {
+    border-right-color: unset !important;
+    border-top-color: unset !important;
+  
+    border-bottom-color: unset !important;
+    box-shadow: unset !important;
+  }
+  
+  .mat-form-field {
+    width: 100% !important;
+  }
+  .form-control {
+    border-style: solid;
+    border-left-width: 6px !important;
+    border-radius: 8px !important;
+    border-left-color: $bg-aqua !important;
+    width: 150%;
+    // border-right-width: 6px;
+    // border-right-color: $bg-aqua
+  }
+  
+  .form-control:active,
+  .form-control:focus {
+    border-right-color: unset !important;
+    border-top-color: unset !important;
+  
+    border-bottom-color: unset !important;
+    box-shadow: unset !important;
+  }
+  .lbl-gap {
+    padding-top: 4vh;
+    font-family: $play;
+  }

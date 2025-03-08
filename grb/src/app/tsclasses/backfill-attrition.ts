@@ -1,0 +1,46 @@
+export class BackfillAttrition {
+    empId: string;
+    employeeName: string;
+    gender: string;
+    dob: string;
+    srd: string;
+    doj: string;
+    location: string;
+    actualLocation: string;
+    bu: string;
+    deptCode: string;
+    deptName: string;
+    actualDeptCode: string;
+    actualDeptName: string;
+    sdl: string;
+    band: string;
+    patorhir: string;
+    organization: string;
+	vertical:string;
+	billableNonbillable:string;
+	geo:string;
+	tower:string;
+	isManagerstr:string;
+	projectDesc:string;
+	personnal:string;
+	orgUnit:string;
+	positionId:string;
+    jobShortId:string;
+    supId:string;
+	supName:string;
+	empNotesid:string;
+	managerNotedid:string;
+	employeeType:string;
+	status:string;
+	dor:string;
+    lwd:string;
+    lossReason:string;
+	seperationReason:string;
+	backfillYesNo:string;
+	subProcess:string;
+	opsSupport:string;
+	lpd:string;
+	subBand:string;
+	volInvol:string;
+
+}

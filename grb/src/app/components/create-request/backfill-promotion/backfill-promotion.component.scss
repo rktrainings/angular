@@ -1,0 +1,102 @@
+@import "~src/styles";
+
+.my-attrition-container {
+  height: 65.5vh;
+  overflow: auto;
+}
+#search > input {
+  border-radius: 15px;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+.menu-icon {
+  margin-top: 1vh;
+}
+.searchBar {
+  width: 30vh;
+}
+
+#attrition {
+  position: relative;
+  padding: 2vh;
+}
+
+th.mat-header-cell {
+  text-align: left !important;
+  width: 5%;
+}
+
+td.mat-cell {
+  text-align: left !important;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin: 15vh;
+}
+
+.loading-msg {
+  margin: 10%;
+  font-weight: bold;
+  font-size: 5vh;
+  color: $bg-aqua !important;
+  text-align: center;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 20px;
+  text-align: center;
+  display: inline-block;
+  align-content: center;
+  color: white;
+  background-color: $bg-aqua;
+  cursor: pointer;
+}
+
+.mat-icon {
+  align-content: left;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 4vh !important;
+}
+
+.heading {
+  font-family: "Russo One", sans-serif !important;
+  font-size: 3.5vh !important;
+  float: right;
+  padding-right: 30px;
+}
+
+.mat-card-bf-promotion {
+  padding: 2vh;
+  border-radius: 3vh;
+}
+
+.mat-form-field-search {
+  padding-top: 20px;
+}
+.descriptions {
+  padding: 15px 0px 0px 23px;
+}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $bg-aqua;
+}
+
+.backButton,
+.nextButton {
+  color: white !important;
+  background: $bg-aqua !important;
+  float: right;
+  border-radius: 30px;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $bg-aqua;
+}
+
+.text {
+  text-align: center !important;
+}

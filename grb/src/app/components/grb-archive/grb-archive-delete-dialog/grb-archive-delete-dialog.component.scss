@@ -1,0 +1,28 @@
+@import "~src/styles";
+
+#archive-delete {
+  border-radius: 11px;
+}
+.delete-logout{
+  margin-left: 2vh;
+  cursor: pointer;
+}
+.delete-heading p{
+  font-size: 3.5vh;
+  font-family: $play;
+}
+.delete-text{
+  font-size: 2vh;
+  font-family: $play;
+}
+.delete-button{
+  border-radius: 30px;
+  background-color: $bg-aqua;
+  color:white;
+  margin: 1vh;
+}
+.delete-buttons-row{
+  float: right;
+  height: 0vh;
+  padding-bottom: 6vh;
+}

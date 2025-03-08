@@ -1,0 +1,27 @@
+@import "~src/styles";
+
+#form-select-dialog {
+  padding-left: 2vh;
+}
+
+#radio-group-label {
+  font-size: 2vh;
+}
+.radio-group{
+    padding-top: 2vh;
+}
+.radio {
+  display: inline-grid;
+}
+
+.internal {}
+
+.external {
+  padding-left: 5vh;
+}
+
+.mat-raised-button {
+  background-color: $bg-aqua;
+  color: white !important;
+  float: right; 
+}

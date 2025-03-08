@@ -1,0 +1,38 @@
+<div class="view-profile">
+    <div class="row">
+        <div class="col-11 prf-heading">
+            <p>User Profile</p>
+        </div>
+        <div class="col-1">
+            <mat-icon class="close-prf" (click)="dialogRef.close()">close</mat-icon>
+        </div>
+    </div>
+    <div class="prf-body">
+        <div class="row prf-border">
+            <div class="col pic-col">
+                <span class="prf" type="span">
+                    <img class="prf-pic-view" *ngIf="empId" (click)="viewProfile()"
+                        [src]="photoURL"  (error)="update($event)"/>
+                </span>
+            </div>
+        </div>
+        <div class="userDetails">
+            <div class="row detailsRow">
+                <div class="col-8">
+                    <p>Employee Name</p>
+                </div>
+                <div class="col-4">
+                    <p>{{empName}}</p>
+                </div>
+            </div>
+            <div class="row detailsRow">
+                <div class="col-8">
+                    <p>Role</p>
+                </div>
+                <div class="col-4">
+                    <p class="roles"> {{highestRole}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

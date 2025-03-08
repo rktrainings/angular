@@ -1,0 +1,215 @@
+<div id="card-template">
+  <div class="row row1">
+    <div class="col" *ngFor="let parent of templatecard;  let i = index;">
+      <!-- Stepper -->
+
+      <div class="stepper-main" *ngIf="parent.key == 'GRB'">
+
+        <div [ngStyle]="{'color': activeGRBDetails ? 'green' : '#50a3c3'}">
+          <div class="svg-div">
+            <svg [ngClass]="'svg-icon-template-'+(i+1)" viewBox="0 0 240 66"
+              [ngStyle]="{'fill': activeGRBDetails ? 'green' : '#50a3c3'}">
+              <use xlink:href="./assets/icons/grb/list.svg#list"></use>
+            </svg>
+          </div>
+          <div class="icon-with-label">
+            <div class="mat-icons">
+              <mat-icon *ngIf="activeGRBDetails">done_all</mat-icon>
+              <mat-icon *ngIf="!activeGRBDetails">cancel</mat-icon>
+            </div>
+            <div>
+              <div class="stepper-label">
+                <!-- <span>GRB DETAILS</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="stepper-main" *ngIf="parent.key == 'EMP' && isEmployeeFilled">
+
+        <div [ngStyle]="{'color': activeEmpDetails ? 'green' : '#50a3c3'}">
+          <div class="svg-div">
+            <svg [ngClass]="'svg-icon-template-'+(i+1)" viewBox="0 0 220 61"
+              [ngStyle]="{'fill': activeEmpDetails ? 'green' : '#50a3c3' }">
+              <use xlink:href="./assets/icons/grb/employees.svg#employee"></use>
+            </svg>
+          </div>
+          <div class="icon-with-label">
+            <div class="mat-icons">
+              <mat-icon *ngIf="activeEmpDetails">done_all</mat-icon>
+              <mat-icon *ngIf="!activeEmpDetails">cancel</mat-icon>
+            </div>
+            <div>
+              <div class="stepper-label">
+                <!-- <span>EMPLOYEE DETAILS</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stepper-main" *ngIf="parent.key == 'GOM' && isExternalGRB && showGOM">
+
+        <div [ngStyle]="{'color': activeGOMDetails ? 'green' : '#50a3c3'}">
+          <div class="svg-div">
+            <svg [ngClass]="'svg-icon-template-'+(i+1)" class="svg-gom" viewBox="0 0 240 66"
+              [ngStyle]="{'fill': activeGOMDetails ? 'green' : '#50a3c3' }">
+              <use xlink:href="./assets/icons/grb/gom.svg#gom"></use>
+            </svg>
+          </div>
+          <div class="icon-with-label">
+            <div class="mat-icons">
+              <mat-icon *ngIf="activeGOMDetails">done_all</mat-icon>
+              <mat-icon *ngIf="!activeGOMDetails">cancel</mat-icon>
+            </div>
+            <div>
+              <div class="stepper-label">
+                <!-- <span class="stepper-label">GOM DETAILS</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stepper-main" *ngIf="parent.key == 'TRAM' && isExternalGRB && !hideTram">
+
+        <div [ngStyle]="{'color': activeTRAMDetails ? 'green' : '#50a3c3'}">
+
+          <div class="icon-with-label">
+            <div class="svg-div">
+              <svg [ngClass]="'svg-icon-template-'+(i+1)" class="svg-gom" viewBox="0 0 240 66"
+                [ngStyle]="{'fill': activeTRAMDetails ? 'green' : '#50a3c3' }">
+                <use xlink:href="./assets/icons/grb/tram1.svg#tram"></use>
+              </svg>
+            </div>
+            <div class="mat-icons">
+              <mat-icon *ngIf="activeTRAMDetails">done_all</mat-icon>
+              <mat-icon *ngIf="!activeTRAMDetails">cancel</mat-icon>
+            </div>
+            <div>
+              <div class="stepper-label">
+                <!-- <span class="stepper-label">TRAM DETAILS</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="stepper-main" *ngIf="parent.key == 'Preview'">
+
+        <div [ngStyle]="{'color': activePreview ? 'green' : '#50a3c3'}">
+          <div class="svg-div" [ngStyle]="{'margin-left': displayArchive ? '10vh' : none}">
+            <svg [ngClass]="'svg-icon-template-'+(i+1)" viewBox="0 0 300 150"
+              [ngStyle]="{'fill': activePreview ? 'green' : '#50a3c3'}">
+              <use xlink:href="./assets/icons/grb/preview.svg#preview"></use>
+            </svg>
+          </div>
+          <div class="icon-with-label" [ngStyle]="{'margin-left': displayArchive ? '-23vh' : none}">
+            <div class="mat-icons">
+              <mat-icon *ngIf="activePreview">done_all</mat-icon>
+              <mat-icon *ngIf="!activePreview">cancel</mat-icon>
+            </div>
+            <div>
+              <div class="stepper-label review-stepper-text">
+                <!-- <span>PREVIEW</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="displayArchive" style="margin-left: 85vh;">
+        <mat-card class="example-card mat-card-template" [attr.id]="parent.key" (click)="navigateTemplate(parent.key);"
+          style="width: 200px;">
+          <div class="row">
+            <div class="imagediv col-10">
+              <img class="example-header-image">
+            </div>
+          </div>
+          <div></div>
+          <mat-card-content>
+            <p class="headingkey">
+              {{parent.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="card-actions">
+            <div class="actions">
+              <mat-icon class="action-icon" *ngIf="parent.key == 'Preview'">remove_red_eye</mat-icon>
+
+
+              <!-- <div *ngIf="inCompleteBackfill">
+          <mat-icon class="notfilled action-icon">create</mat-icon>
+        </div> 
+
+        
+          <mat-icon *ngIf="!inCompleteBackfill" class="right action-icon">done</mat-icon>
+          -->
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <!-- Mat Card Iteration -->
+      <div *ngIf="!displayArchive">
+        <mat-card class="example-card mat-card-template" [attr.id]="parent.key" (click)="navigateTemplate(parent.key);">
+          <div class="row">
+            <div class="imagediv col-10">
+              <img class="example-header-image">
+            </div>
+          </div>
+          <div></div>
+          <mat-card-content>
+            <p class="headingkey">
+              {{parent.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions class="card-actions">
+            <div class="actions">
+              <mat-icon class="action-icon" *ngIf="parent.key == 'Preview'">remove_red_eye</mat-icon>
+              <mat-icon *ngIf="parent.key == 'GRB' && !parent.filled" class="notfilled action-icon">edit</mat-icon>
+              <mat-icon *ngIf="parent.key == 'GRB' && parent.filled" class="notfilled action-icon">done</mat-icon>
+
+              <mat-icon *ngIf="parent.key == 'GOM' && !parent.filled" class="notfilled action-icon">edit</mat-icon>
+              <mat-icon *ngIf="parent.key == 'GOM' && parent.filled" class="notfilled action-icon">done</mat-icon>
+
+              <mat-icon *ngIf="parent.key == 'TRAM' && !parent.filled" class="notfilled action-icon">edit</mat-icon>
+              <mat-icon *ngIf="parent.key == 'TRAM' && parent.filled" class="notfilled action-icon">done</mat-icon>
+
+              <mat-icon *ngIf="parent.key == 'EMP' && !inCompleteBackfill" class="notfilled action-icon">edit</mat-icon>
+              <mat-icon *ngIf="parent.key == 'EMP' && inCompleteBackfill" class="right action-icon">done</mat-icon>
+
+              <!-- <div *ngIf="inCompleteBackfill">
+              <mat-icon class="notfilled action-icon">create</mat-icon>
+            </div> 
+
+            
+              <mat-icon *ngIf="!inCompleteBackfill" class="right action-icon">done</mat-icon>
+              -->
+            </div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row2 buttonRow">
+    <button type="submit" *ngIf="showUpdate" mat-raised-button class="form-submit submitButton" [disabled]="onEnable()"
+      (click)="onUpdate()">Save and
+      Update</button>
+    <button type="submit" *ngIf="showSubmit" mat-raised-button class="form-submit standard-button submitButton"
+      [disabled]="onEnable()" (click)="onSubmit()">Submit</button>
+    <button type="submit" *ngIf="showApprove" mat-raised-button class="form-submit standard-button submitButton"
+      [disabled]="onEnable()" (click)="onApprove()">Approve</button>
+    <button type="submit" *ngIf="showReject" mat-raised-button class="form-submit standard-button submitButton"
+      [disabled]="onEnable()" (click)="onReject()">Reject</button>
+    <button type="submit" *ngIf="showInfo" mat-raised-button class="form-submit submitButton" [disabled]="onEnable()"
+      (click)="onShowInfo()">More Info</button>
+    <button type="submit" *ngIf="showClose" mat-raised-button class="form-submit standard-button  submitButton"
+      (click)="onClose()">Close</button>
+  </div>
+  <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">{{loadingText}}</span></ngx-spinner>
+</div>

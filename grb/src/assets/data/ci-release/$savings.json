@@ -1,0 +1,38 @@
+[
+    {
+        "field_name": "CCN/PCR",
+        "field_type": "dropdown",
+        "field_identifier": "ccnpcr_number",
+        "options":"",
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Month of Release",
+        "field_type": "dropdown",
+        "field_identifier": "monthOfRelease",
+        "options": ["January","February","March","April","May","June","July","August","September","October","November","December"],
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Balance FTE Count",
+        "field_type": "number",
+        "field_identifier": "balanceFteCount",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "FTE Count",
+        "field_type": "number",
+        "field_identifier": "fteCount",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": false
+    }
+]

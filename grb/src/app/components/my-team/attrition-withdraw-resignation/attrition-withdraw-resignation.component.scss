@@ -1,0 +1,29 @@
+@import "~src/styles";
+
+.container {
+  margin-top: 4vh;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+.attrition-withdraw {
+  font-size: 3vh;
+  font-family: $play;
+}
+.submitButton {
+  background: $bg-aqua;
+  color: white;
+  border-radius: 30px;
+  float: right;
+}
+
+.submitButtonCol {
+  top: 3vh;
+}
+
+#comment:active,
+#comment:focus {
+  border-color: unset !important;
+  box-shadow: unset !important;
+}

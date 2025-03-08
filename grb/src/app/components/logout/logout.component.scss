@@ -1,0 +1,28 @@
+@import "~src/styles";
+
+#logout {
+  border-radius: 11px;
+}
+.close-logout{
+  margin-left: 2vh;
+  cursor: pointer;
+}
+.logout-heading p{
+  font-size: 3.5vh;
+  font-family: $play;
+}
+.logout-text{
+  font-size: 2vh;
+  font-family: $play;
+}
+.logout-button{
+  border-radius: 30px;
+  background-color: $bg-aqua;
+  color:white;
+  margin: 1vh;
+}
+.logout-buttons-row{
+  float: right;
+  height: 0vh;
+  padding-bottom: 6vh;
+}

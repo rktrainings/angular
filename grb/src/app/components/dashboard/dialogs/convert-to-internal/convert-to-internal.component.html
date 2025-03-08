@@ -1,0 +1,84 @@
+<div class="convert-to-internal">
+  <div class="row">
+    <div class="col-11">
+      <b class="convert-heading">CONVERT TO INTERNAL</b>
+    </div>
+    <div class="col-1">
+      <div class="close-icon">
+        <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div class="row convert-internal-row">
+    <div class="col-4">
+      <label for="validationServer03">Metro Number</label>
+      <strong class="text-danger">*</strong>
+      <input type="text" class="form-control number" maxlength="8" [(ngModel)]="oldFields.metro" (input)="keyUpMetro()"
+        id="validationServer03" readonly=true required>
+      <div class="invalid-feedback">
+        Please enter a valid metro number
+      </div>
+    </div>
+    <div class="col-4">
+      <label for="validationServer04">Band</label>
+      <strong class="text-danger">*</strong>
+      <input type="text" maxlength="2" class="form-control "
+        [ngClass]="(oldFields.band && oldFields.band.length==0)?'is-invalid':''" [(ngModel)]="oldFields.band"
+        id="validationServer04" (change)="bandChange()" readonly=true required>
+
+    </div>
+    <div class="col-4">
+      <label for="validationServer05">Total Quantity</label>
+      <strong class="text-danger">*</strong>
+      <input type="number" [min]="1" [max]="maxtotalQty" class="form-control"
+        [ngClass]="oldFields.totalQty && oldFields.totalQty.length==0?'is-invalid':''" [(ngModel)]="oldFields.totalQty"
+        readonly=true id="validationServer05" required>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="row convert-internal-row">
+    <div class="col-4">
+      <label for="validationServer">Metro Number</label>
+      <strong class="text-danger">*</strong>
+      <input type="text" class="form-control number" maxlength="8" [(ngModel)]="newFields.metro"
+        [ngClass]="(newFields.metro && newFields.metro.length==0 || !metroValid)?'is-invalid':''" (input)="keyUpMetro()"
+        [disabled]="disableMetro" id="validationServer" required>
+      <div class="invalid-feedback">
+        Please enter a valid metro number
+      </div>
+    </div>
+    <div class="col-4">
+      <label for="validationServer04">Band</label>
+      <strong class="text-danger">*</strong>
+      <div class="form-field" *ngIf="bandType=='dropdown'">
+        <mat-form-field class="dropdown-field ">
+          <mat-select [(value)]="newFields.band" (selectionChange)="bandChange()">
+            <mat-option *ngFor="let option of filterBands"  [matTooltip]="option" [value]="option">{{option}}</mat-option>
+          </mat-select>
+          <!-- <mat-error *ngIf="submitted && hiringForm.controls[field.field_identifier].hasError('required')">
+                {{field.field_name}} is required.</mat-error> -->
+
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-4" *ngIf="oldFields.totalQty>1">
+      <label for="validationServer05">Total Quantity</label>
+      <strong class="text-danger">*</strong>
+      <input type="number" [min]="1" [max]="maxtotalQty" step="1" class="form-control" (input)="check()"
+        [ngClass]="newFields.totalQty && newFields.totalQty.length==0?'is-invalid':''" [(ngModel)]="newFields.totalQty"
+        id="validationServer05" required>
+    </div>
+  </div>
+
+  <div class="convert-internal-buttons">
+    <button mat-raised-button class="nextButton-convert" id='buttonColor' [disabled]="isDisabled()"
+      (click)="onSubmit()">
+      <div *ngIf="showSpinner" class="loading-button">
+        <img src="./assets/icons/spinner-2.gif" />
+      </div>
+      <div *ngIf="!showSpinner">
+        Next
+      </div>
+    </button>
+  </div>
+</div>

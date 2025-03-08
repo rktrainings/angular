@@ -1,0 +1,47 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+</div>
+<div>
+  <div class="rTableRow download">
+    <div class="rTableCell">
+      <div>
+        <span class="btn btn-file clickable" style="padding-right: 11vh !important;">
+          <i class="material-icons left" style="padding-right: 1vh !important; margin-top: -2vh;">cloud_upload</i>
+          <span style="position: absolute; margin-top: -5px;">UPLOAD</span>
+          <input type="file" (change)="fileUpload($event.target.files)" accept=".xls,.xlsx" />
+        </span>
+
+      </div>
+    </div>
+    <div class="rTableCell">
+      <button type="button" (click)="downloadSample()" class="btn btn-file" style="padding: 1px 15px 0px 42px !important">
+        <mat-icon class="material-icons left" style="position: absolute !important; margin-left: -30px; padding-top: 4px">cloud_download</mat-icon>
+        <span> SAMPLE</span>
+      </button>
+    </div>
+  </div>
+  <div>
+    <p class="upload-note">
+      Note: The file upload will support only excel format(.xls/.xlsx)
+    </p>
+  </div>
+
+  <div class="upload-progress-bar" *ngIf="showProgressBar">
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+
+  <div *ngIf="uploadSuccess">
+    <p class="fileName">{{fileName}}</p>
+    <p class="fileUploadStatus">
+      File Uploaded Successfully
+    </p>
+    <!-- <mat-icon class="success-icon"> sentiment_satisfied_alt sentiment_satisfied_alt sentiment_satisfied_alt</mat-icon> -->
+  </div>
+
+  <div *ngIf="uploadFailed">
+    <p class="fileName">{{fileName}}</p>
+    <p class="fileUploadStatus"> Failed to upload file </p>
+    <!-- <mat-icon class="failed-icon"> sentiment_very_dissatisfied sentiment_very_dissatisfied sentiment_very_dissatisfied</mat-icon> -->
+  </div>
+
+</div>

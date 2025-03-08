@@ -1,0 +1,49 @@
+@import "~src/styles";
+
+.mat-header-row {
+    background-color: $bg-aqua !important;
+}
+
+th {
+    top: -1px !important;
+}
+.mat-header-cell {
+    font-size: 2vh !important;
+    font-family: $play !important;
+    color: $white !important;
+}
+
+.mat-cell {
+    font-size: 1.7vh !important;
+    font-family: $play !important;
+}
+
+tr {
+    border: 1px solid lightgray !important;
+}
+
+// mat-calender-table
+.mat-calendar-table-header tr {
+    border: none !important;
+}
+.mat-calendar-body tr {
+    border: none !important;
+}
+
+.mat-row:hover {
+    background-color: #e0f5fd !important;
+    cursor: auto !important;
+}
+
+.table-border {
+    border: 1px solid lightgray;
+}
+
+.left-align {
+    text-align: left !important;
+}
+
+.center-align {
+    text-align: center !important;
+}
+

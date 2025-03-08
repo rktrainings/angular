@@ -1,0 +1,271 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+html,
+body {
+  // height: 100%;
+}
+
+html {
+  // background: url('src/assets/icons/ibmLogo.svg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  // background: url('src/assets/icons/IBM_Services_Brochures.jpg');
+  // opacity:0.3;
+  // filter: blur(8px);
+  // background: rgba(21, 41, 53, .9);
+  // background: url('src/assets/icons/ibm-cloud-application-hosting-bare-metal-servers.jpg');
+  // background: linear-gradient(#36D1DC, #5B86E5);
+  // background-image:linear-gradient(173deg, #135a7a, 212%, #80d0c7) !important;
+}
+body {
+  margin-top: 10vh !important;
+}
+
+$play: "Play", sans-serif;
+$russo: "Russo One", sans-serif;
+$white: white;
+// $bg-aqua: #50a3c3;
+$bg-aqua: #1c95c5;
+$bg-gradient: #0662c2;
+$danger: #dc3545;
+
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.397);
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px !important;
+  border-radius: 10px !important;
+  background: rgba(163, 161, 161, 0.4) !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.397) !important;
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(163, 161, 161, 0.4) !important;
+}
+
+/* loading dots */
+
+.loading:after {
+  content: " .";
+  animation: dots 1s steps(5, end) infinite;
+}
+.loading-aqua:after {
+  content: " .";
+  animation: dots-aqua 1s steps(5, end) infinite;
+}
+
+@keyframes dots {
+  0%,
+  20% {
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: white;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 white, 0.5em 0 0 white;
+  }
+}
+
+@keyframes dots-aqua {
+  0%,
+  20% {
+    color: $bg-aqua;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  40% {
+    color: $bg-aqua;
+    text-shadow: 0.25em 0 0 rgba(0, 0, 0, 0), 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  60% {
+    text-shadow: 0.25em 0 0 $bg-aqua, 0.5em 0 0 rgba(0, 0, 0, 0);
+  }
+  80%,
+  100% {
+    text-shadow: 0.25em 0 0 $bg-aqua, 0.5em 0 0 $bg-aqua;
+  }
+}
+.mat-card {
+  // box-shadow: 1px 13px rgba(16, 14, 23, 0.33) !important;
+  box-shadow: 1px 0px 2px 2px rgba(16, 14, 23, 0.33) !important;
+}
+// mat-table css
+.mat-table {
+  width: 100%;
+  box-shadow: unset;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  text-align: center !important;
+}
+
+.mat-tab-label {
+  font-size: 1rem;
+}
+::ng-deep .mat-tab-label-active {
+  background-color: aliceblue !important;
+  color: black;
+  opacity: 1 !important;
+  // font-weight: bold;
+}
+
+.mat-ink-bar {
+  background-color: $bg-aqua !important;
+}
+
+.toll-icon-tooltip {
+  white-space: pre-line;
+}
+
+::ng-deep .mat-tab-group {
+  height: 73vh !important;
+  margin-top: 0vh !important;
+}
+
+.mat-tab-label-content {
+  font-family: $play !important;
+}
+
+input,
+label,
+textarea,b {
+  font-family: $play;
+}
+
+::ng-deep .mat-select-value {
+  font-family: $play !important;
+}
+
+::ng-deep .mat-option-text {
+  font-family: $play !important;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $bg-aqua;
+}
+.mat-simple-snackbar,
+.mat-simple-snackbar-action {
+  font-family: $play;
+  font-size: 2.5vh;
+  button {
+    font-size: 2.5vh;
+    font-family: "play";
+    color: $bg-aqua;
+  }
+}
+
+.mat-snack-bar-container {
+  height: 5vh;
+  min-width: 70vh !important;
+  min-height: 7vh !important;
+  max-width: unset !important
+}
+
+.mat-raised-button-wrapper {
+  font-family: $play !important;
+}
+
+.loading-text {
+  padding-top: 10vh; //ngx-spinner
+}
+
+.no-data,
+span,
+.invalid-feedback {
+  font-family: $play !important;
+}
+
+::ng-deep .mat-card {
+  font-family: $play !important;
+}
+
+::ng-deep .noData {
+  font-family: $play !important;
+}
+.mat-raised-button {
+  border-radius: 30px;
+}
+
+.mat-option-text:active,
+.mat-option-text:hover,
+mat-label {
+  color: $bg-aqua;
+}
+
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: $bg-aqua !important;
+  .mat-form-field-ripple {
+    background-color: $bg-aqua !important;
+  }
+}
+.mat-form-field.mat-focused.mat-primary .mat-select-arrow {
+  color: $bg-aqua;
+}
+
+input,
+button,
+li,
+span {
+  outline: none !important;
+}
+
+::ng-deep .mat-calendar-body-selected {
+  background-color: $bg-aqua;
+}
+
+.usabilla_live_button_container {
+  top: 50.5vh !important;
+}
+
+::ng-deep .mat-dialog-container {
+  border-radius: 25px !important;
+}
+
+.excel-icon {
+  width: 5vh;
+}
+
+// ::ng-deep .is-invalid .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix{
+//   border: 1px #dc3545 !important;
+//   border-left-color: #dc3545 !important;
+// }
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: $bg-aqua !important;
+}
+
+::ng-deep .mat-radio-button.mat-accent.mat-radio-checked .mat-radio-inner-circle {
+  background-color: $bg-aqua !important;
+}
+
+.mat-cell{
+  font-size: 1.7vh !important;
+}
+
+
+.mat-header-cell{
+  font-size: 1.9vh !important;
+}

@@ -1,0 +1,91 @@
+@import "~src/styles";
+.cost-case-template tr{
+    height: 6vh;
+}
+.lbl-gap{
+    font-size: 2vh;
+}
+.actualCostCase{
+    height: 18.25vh;
+    overflow-y: auto;
+}
+.cost-case-input {
+    width: 75% !important;
+    text-align: center;
+}
+.costCaseWidth {
+    padding-left: 1vh;
+}
+
+.cc-td,
+.cc-th {
+    text-align: center !important;
+    width: 19vh;
+    padding: 0px !important;
+}
+
+.inputBox {
+    position: relative;
+    margin-left: 28%;
+}
+
+.comments-cc {
+    padding-top: 2vh;
+}
+.comments{
+    height: 7vh;
+    width: 100%;
+    padding: 1vh;
+    font-size: 1.75vh;
+}
+.upload-col {
+    margin: 7vh;
+}
+
+
+.noBandSelected {
+    text-align: center;
+    font-size: 2vh;
+    padding: 2vh;
+}
+
+.noData-actualCC{
+    text-align: center;
+    font-size: 2vh;
+    padding: 2vh;
+}
+// upload
+.uploadButton {
+    cursor: pointer;
+    background-color: $bg-aqua !important;
+    color: white !important;
+}
+.cloud-upload {
+    position: relative;
+    padding-right: 1vh;
+    top: -2px;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.btn {
+    border-radius: 8px;
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+.upload-btn-wrapper input[type="file"] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.fileName{
+    float: right;
+    padding: 1vh;
+}

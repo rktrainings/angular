@@ -1,0 +1,73 @@
+<!-- <button class="close"mat-raised-button (click)="onNoClick()">X</button>
+<h1 mat-dialog-title>Attrition Details</h1>
+<div mat-dialog-content>
+
+  <table *ngFor="let field of attritionDetails" id='attDet'>
+    <tr>
+      <td id="attDet">{{ field.name}}</td>
+      <td id="attDet">{{ field.value}}</td>
+    </tr>
+
+  </table>
+</div>
+
+<div mat-dialog-actions>
+  
+  <button class="close"mat-raised-button (click)="onCancelClick()">X</button>
+</div> -->
+
+
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-10">
+      <b> Attrition Details </b>
+    </div>
+    <div class="col-2">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        Backfill Percent:
+      </div>
+      <div class="col">
+        00%
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Employee Id
+      </div>
+      <div class="col">
+        0007S5744
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        Employee Name
+      </div>
+      <div class="col">
+        Suyog Mahajan
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Band
+      </div>
+      <div class="col">
+        10
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Department Name
+      </div>
+      <div class="col">
+        XYZ
+      </div>
+    </div>
+  </div>
+</div>

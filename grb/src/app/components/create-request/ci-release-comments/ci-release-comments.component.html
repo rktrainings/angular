@@ -1,0 +1,26 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()">close</mat-icon>
+</div>
+
+<div class="commentBox">
+  <div class="comments-label">
+    <div class="col-11">
+        <div>
+          <b class="cmtHeading">Enter your Comments </b>
+          <strong class="text-danger" > *</strong>
+        </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <textarea placeholder="Enter Comments" [(ngModel)]="comments" class="form-control text-box" id="comments" rows="4" cols="25" required></textarea>
+    </div>
+      <div mat-dialog-actions class="buttonRow row">
+        <button mat-raised-button class="submitButton" [disabled]="comments.length>0?false:true" (click)="onSubmitClick()">SUBMIT</button>
+      </div>
+  </div>
+</div>
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+[fullScreen]="true"><span class="loading-aqua"
+  style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Submitting</span></ngx-spinner>
+

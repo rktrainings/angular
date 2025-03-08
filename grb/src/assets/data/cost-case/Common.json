@@ -1,0 +1,102 @@
+[
+    {
+        "field_name": "Cost Case Type",
+        "field_type": "dropdown",
+        "field_identifier": "costCaseType",
+        "options": [
+            "CCN/PCR",
+            "REVISED COST CASE",
+            "DEBAND",
+            "MOVE TO LOW COST"
+        ],
+        "default": "CCN/PCR",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "CCN/PCR",
+        "field_type": "text",
+        "field_identifier": "ccnPcr",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Dept Code",
+        "field_type": "text",
+        "field_identifier": "deptCode",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "From",
+        "field_type": "dropdown",
+        "field_identifier": "fromMonth",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "To",
+        "field_type": "dropdown",
+        "field_identifier": "toMonth",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Currency",
+        "field_type": "dropdown",
+        "field_identifier": "currency",
+        "options": [
+            "CAD - Canadian Dollar",
+            "EUR - Euro",
+            "INR - Indian Rupee",
+            "USD - United States Dollar"    
+        ],
+        "default": "INR - Indian Rupee",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "TCV",
+        "field_type": "number",
+        "field_identifier": "tcv",
+        "options": "",
+        "default": 0,
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Dept Name",
+        "field_type": "text",
+        "field_identifier": "deptName",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "SDL",
+        "field_type": "text",
+        "field_identifier": "sdl",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Total FTE",
+        "field_type": "number",
+        "field_identifier": "totalFte",
+        "options": "",
+        "default": 0,
+        "required": true,
+        "disabled": true
+    }
+]

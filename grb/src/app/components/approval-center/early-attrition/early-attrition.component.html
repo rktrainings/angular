@@ -1,0 +1,92 @@
+<div id="bizops" *ngIf="!enableLoadingMsg">
+  <mat-card class="mat-card-bizops">
+    <!-- <div class="rTableRow download">
+      <div class="rTableCell">
+        <button type="button" (click)="onClickUpload()" class="btn btn-file clickable" style="padding: 0vh 12vh 0vh 3vh !important">
+          <mat-icon class="material-icons left" style="margin:1vh 2vh 0vh 0vh">cloud_upload</mat-icon>
+          <span style="position: absolute;">UPLOAD</span>
+        </button>
+      </div>
+    </div> -->
+    
+    <div *ngIf="!enableLoadingMsg">
+      <div id="search">
+        <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+      </div>
+      <div class="countDiv-earlyAttrition">
+        <div class="count-earlyAttrition"> [{{count}}]</div>
+      </div>
+        <div id="table-wrapper-bizops" class="bizops-table-container table-border">
+          <table mat-table [dataSource]="dataSource" class="">
+            <ng-container matColumnDef="metroNo">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> METRO# </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.metroNo}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="deptName">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 24vh;">DEPT NAME </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.deptName | uppercase}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="hireType">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 20vh;"> HIRE TYPE </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.hireType | uppercase}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="hiringReason">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 25vh;">HIRE REASON </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.hiringReason | uppercase}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="totalQuantity">
+              <th mat-header-cell *matHeaderCellDef class="center-align" style="width: 15vh;">QUANTITY </th>
+              <td mat-cell *matCellDef="let element" class="clickable center-align">
+                {{element.totalQuantity}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="band" >
+              <th mat-header-cell *matHeaderCellDef class="center-align"style="width: 15vh;">BAND </th>
+              <td mat-cell *matCellDef="let element" class="clickable center-align">
+                {{element.band}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="requestSubmmitedDate">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 25vh;">SUBMITTED DATE </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.requestSubmmitedDate}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="requestSummitedBy" >
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 25vh;">REQUESTER NAME </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                {{element.requestSummitedBy}}
+              </td>
+            </ng-container>
+            <ng-container matColumnDef="review">
+              <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;">REVIEW </th>
+              <td mat-cell *matCellDef="let element" class="clickable left-align">
+                <button mat-raised-button id='buttonColor' (click)="onActionClick(element)">ACTION</button>
+              </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <div *ngIf="enabledNoDataMsg" class="no-data">
+            NO DATA AVAILABLE
+          </div>
+          <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+      [fullScreen]="true"><span class="loading-aqua"
+        style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+        </div>
+    </div>
+  </mat-card>
+
+</div>
+
+<div *ngIf="enableLoadingMsg">
+ <app-loader></app-loader>
+</div>  

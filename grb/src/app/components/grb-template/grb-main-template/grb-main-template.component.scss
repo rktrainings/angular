@@ -1,0 +1,130 @@
+@import "~src/styles";
+
+#template {
+    position: relative;
+    padding: 2vh; 
+}
+.metroNum{
+    float: right;
+    position: fixed;
+    right: 5vh;
+    top: 19vh;
+}
+.mat-card-template {
+    height: 72vh;
+    // box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+    padding: 3vh;
+    // border: 2px solid black;
+    border-radius: 3vh;
+}
+
+.rTableRow {
+    display: table-row;
+  }
+  .rTableCell {
+    display: table-cell;
+   // padding: 1vh 14vh;
+  }
+  svg:hover {
+    fill: green;
+  }
+
+ ::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header .mat-step-label {
+    width: 100%;
+    padding-top: 20px;
+    font-family: "Play", sans-serif;
+    font-size: 3vh;
+}
+
+// ::ng-deep .mat-step-header .mat-step-icon-state-edit {
+//     background-color: green !important;
+//     color: #fff;
+// }
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: $bg-aqua;
+    color: #fff;
+}
+
+// External GRB
+::ng-deep .external .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(1) .mat-step-icon {
+    background-color: var(--ext-var1) !important;
+ } 
+
+::ng-deep .external .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(2) .mat-step-icon {
+    background-color: var(--ext-var2) !important;
+ } 
+
+::ng-deep .external .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(3) .mat-step-icon {
+    background-color: var(--ext-var3) !important;
+ } 
+ 
+ ::ng-deep .external .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(4) .mat-step-icon {
+    background-color: var(--ext-var4) !important;
+ } 
+
+ // Internal GRB
+ ::ng-deep .internal .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(1) .mat-step-icon {
+    background-color: var(--int-var1);
+ } 
+
+::ng-deep .internal .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(2) .mat-step-icon {
+    background-color: var(--int-var2);
+ } 
+
+::ng-deep .internal .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(3) .mat-step-icon {
+    background-color: var(--int-var3);
+ } 
+ 
+::ng-deep .mat-stepper-label-position-bottom 
+.mat-horizontal-stepper-header {
+    box-sizing: border-box;
+    flex-direction: column;
+    height: auto;
+    padding: 0px 24px 20px 24px !important;
+}
+
+::ng-deep .mat-horizontal-stepper-header{
+    pointer-events: none !important;
+}
+
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, 
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before {
+    border-top-width: 1px;
+    border-top-style: solid;
+    content: '';
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    top: 13px !important;
+    width: calc(50% - 20px);
+}
+
+::ng-deep .mat-stepper-label-position-bottom 
+.mat-stepper-horizontal-line {
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    top: 13px !important;
+}
+
+h1:nth-of-type(1) {
+    color: blue;
+  }
+svg {
+    width: 60px;
+    height: 80px;
+    fill: currentColor;
+    vertical-align: bottom;
+  }
+
+  
+.clickedMenu {
+    text-align: end;
+    font-family: $play !important;
+    font-size: 4vh;
+    padding-right: 3vh;
+    // padding-top: 1vh;
+    margin-bottom: 0 !important;
+    color: white;
+  }

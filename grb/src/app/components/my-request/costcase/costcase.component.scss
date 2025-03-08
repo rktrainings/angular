@@ -1,0 +1,43 @@
+mat-icon {
+    cursor: pointer;
+  }
+  #search {
+    padding-top: 2vh !important;
+  }
+  #search > input {
+    border-radius: 15px !important;
+    margin-left: 3vh !important;
+    margin-bottom: 2vh !important;
+    padding: 1vh !important;
+  }
+  .searchBar {
+    width: 30vh !important;
+  }
+  th.mat-header-cell {
+    text-align: left;
+    padding-right: 20px !important;
+  }
+  td.mat-cell {
+    text-align: left;
+    padding-right: 23px;
+  }
+  th.mat-header-cell:last-of-type {
+    padding-right: 2px !important;
+  }
+  td.mat-cell:last-of-type {
+    //padding-right: 12px;
+    text-align: center;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-size: 2.5vh !important;
+    font-weight: bold;
+    margin: 15vh;
+  }
+  
+  .costcase-table{
+    border: 1px solid lightgray;
+    height: 57vh;
+    overflow: auto;
+  }

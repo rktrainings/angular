@@ -1,0 +1,62 @@
+<div class="tab-descriptions">
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </div>
+  <div class="ci-dashboard-table-container table-border">
+    <table mat-table [dataSource]="dataSource" >
+      <!-- <ng-container matColumnDef="requestid" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >REQUEST ID </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requestid}} </td>
+      </ng-container> -->
+
+      <ng-container matColumnDef="requesttype" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align">REQUEST TYPE </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requesttype}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="requestedfor" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >REQUESTED FOR </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requestedfor}} </td>
+
+      </ng-container> 
+
+      <ng-container matColumnDef="band" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >BAND </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.actualband}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="depcode" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >DEPT CODE </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.depcode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deptname" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >DEPT NAME </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.deptname | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="requeststatus" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >REQUEST STATUS </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requeststatus=='CANCELLED'?'REJECTED':element.requeststatus}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="ftecount" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" >FTE COUNT </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="padding-left: 20px;"> {{element.fteCount}} </td>
+      </ng-container>
+      
+      <ng-container matColumnDef="lastActionDate" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" > LAST ACTION DATE </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{getActionDate(element)}} </td>
+      </ng-container>
+
+      
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="tab-descriptions">
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </div>
+  <div class="approved-hiring-request-table-container table-border">
+    <table mat-table [dataSource]="dataSource" >
+      <ng-container matColumnDef="metroNumber" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 10vh;"> METRO# </th>
+        <td mat-cell *matCellDef="let element" class="clickable left-align" (click)="onMetroClick(element)">
+          {{element.metroNumber}}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 11vh;"> STATUS </th>
+        <td mat-cell *matCellDef="let element" class="left-align word-wrap">
+
+          <div *ngIf="element.metroStatus == 'NOT_REVIEWED'; else status">
+            NOT REVIEWED
+          </div>
+          <ng-template #status>
+            {{element.metroStatus | uppercase}}
+          </ng-template>
+
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="band" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 8vh;">BAND </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.band}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="totalQuantity" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 6vh;"> QTY </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.totalQunatity}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="deptName" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 18vh;">DEPT NAME </th>
+        <td mat-cell *matCellDef="let element" class="left-align"style="padding-right: 3vh;width: 10vh"> {{element.deptName | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="requestSubmittedBy" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 20vh;"> SUBMITTED BY </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requestSubmittedBy | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="requestSubmittedDate" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align word-wrap" style="width: 11vh"> SUBMITTED DATE </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.requestSubmittedDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="boardApprovalDate" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align word-wrap" style="width: 2vh;padding-left: 6vh;padding-right: 3vh;">APPROVAL DATE </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="padding-left: 6vh;padding-right: 3vh;"> {{element.boardApprovedDate | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="hireType" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align word-wrap" style="width: 2vh;">HIRING TYPE </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.hireType | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="hiringAs" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align word-wrap" style="width: 41vh;padding-left: 5vh;">HIRING AS </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="padding-left: 5vh;"> {{element.hiringAs | uppercase}} </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="hiringManager" class="text">
+        <th mat-header-cell *matHeaderCellDef class="left-align word-wrap" style="width: 25vh;"> HIRING MANAGER NAME </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.hiringManager | uppercase}} </td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>
+</div>

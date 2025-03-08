@@ -1,0 +1,14 @@
+
+
+ <div class="newgrowth">
+  <label id="newgrowth-radio-group-label">CONVERSION</label>
+  <mat-icon (click)="close()">close</mat-icon>
+ 
+ <mat-radio-group aria-labelledby="newgrowth-radio-group-label" class="newgrowth-radio-group" [(ngModel)]="selected">
+   <mat-radio-button class="newgrowth-radio-button" *ngFor="let conversion of conversionlist" [value]="conversion">
+     {{conversion | uppercase}}
+   </mat-radio-button>
+ </mat-radio-group>
+ <button class="submitButton" mat-raised-button [disabled]="disableSubmit()" (click)="onSubmit()">SUBMIT</button>
+ 
+ </div>

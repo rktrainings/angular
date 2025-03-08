@@ -1,0 +1,134 @@
+// @import "~src/styles";
+
+// // .left-align {
+// //     text-align: left !important;
+// //   }
+  
+//   .center-align {
+//     text-align: center !important;
+//   }
+  
+//   ::ng-deep .noData {
+//     margin: 20vh !important;
+//     // height: 5vh !important;
+//     font-size: 2.5vh !important;
+//     font-weight: bold !important;
+//     text-align: center !important;
+  
+//   }
+//   b {
+//     font-size: 2vh
+//   }
+//   .header {
+//     margin-top: 10px; margin-bottom: 10px; margin-right: 10px; margin-left: 10px;
+//   }
+  
+//   .count{
+//     font-size: 2.5vh !important;
+//     font-weight: bold !important;
+//     text-align: end !important;
+//     margin-right: 4vh;
+//   }
+  
+//   ::ng-deep th {
+//     font-size: 1.5vh !important;
+//     font-weight: 550 !important;
+//   }
+//   // th.mat-header-cell:first-of-type{
+//   //     padding-left: 7px !important;
+//   // }
+  
+// .mat-header-cell {
+//     // text-align: center;
+
+//     font-weight: bolder !important;
+//     color: $white !important;
+//     font-size: 1.8vh !important;
+//   }
+  
+//   ::ng-deep .transfer-table-container .mat-cell {
+ 
+//     font-size: 2.0vh !important;
+//     font-weight: 400 !important;
+//     font-family: Roboto,"Helvetica Neue",sans-serif;
+//   }
+//   .transfer{
+//     padding: 5vh;
+// }
+
+// .submittedBy {
+//   text-align: center !important;
+// }
+@import "~src/styles";
+
+.left-align {
+  text-align: left !important;
+}
+b{
+  font-family: $play;
+  font-size: 3vh;
+
+}
+.center-align {
+  text-align: center !important;
+}
+
+::ng-deep .noData {
+  margin: 20vh !important;
+  // height: 5vh !important;
+  // font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: center !important;
+
+}
+.transfer-table-container{
+  padding: 1vh;
+  border:1px solid lightgrey;
+}
+::ng-deep .transfer-table-container .mat-cell {
+ 
+  // font-size: 2.0vh !important;
+  font-weight: 400 !important;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.count {
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: end !important;
+  margin-right: 4vh;
+}
+
+::ng-deep th {
+  // font-size: 1.5vh !important;
+  font-weight: 550 !important;
+}
+
+
+.mat-header-cell {
+  // text-align: center;
+  font-weight: bolder !important;
+  color: $white !important;
+  // font-size: 1.8vh !important;
+  // width: 6%;
+}
+
+.mat-cell {
+  // font-size: 1.8vh !important;
+  font-weight: 400 !important;
+}
+
+.transfer {
+  padding: 5vh;
+}
+
+.submittedBy {
+  text-align: center !important;
+}

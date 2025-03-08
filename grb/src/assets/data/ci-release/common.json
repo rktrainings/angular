@@ -1,0 +1,128 @@
+[
+    {
+        "field_name": "Request Type",
+        "field_type": "dropdown",
+        "field_identifier": "requestType",
+        "options":["FTE Release","Dollar Savings"],
+        "default": "",
+        "required": true,
+        "disabled": true
+    }, {
+        "field_name": "Dept Code",
+        "field_type": "text",
+        "field_identifier": "deptCode",
+        "options":"",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Dept Name",
+        "field_type": "text",
+        "field_identifier": "deptName",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+   
+    {
+        "field_name": "SDL Name",
+        "field_type": "text",
+        "field_identifier": "sdlName",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Tower",
+        "field_type": "text",
+        "field_identifier": "tower",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Sub Process",
+        "field_type": "text",
+        "field_identifier": "subProcess",
+        "options": "",
+        "default": "NA",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "GEO / IOT",
+        "field_type": "text",
+        "field_identifier": "iot",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Competency Name",
+        "field_type": "text",
+        "field_identifier": "competencyName",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Account Type",
+        "field_type": "text",
+        "field_identifier": "accountType",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Business Type",
+        "field_type": "text",
+        "field_identifier": "businessType",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    },
+    {
+        "field_name": "Project Id",
+        "field_type": "text",
+        "field_identifier": "projectId",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Project Name",
+        "field_type": "text",
+        "field_identifier": "projectName",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Release Details",
+        "field_type": "dropdown",
+        "field_identifier": "releaseDetails",
+        "options": ["Attrited from IBM", "Incremental Revenue", "Moved to different department", "Moved to different process within the same department","Bench Release","CCN / PCR Not Hired"],
+        "default": "",
+        "required": true,
+        "disabled": false
+    },
+    {
+        "field_name": "Quarter Release",
+        "field_type": "dropdown",
+        "field_identifier": "qtrOfRelease",
+        "options": "",
+        "default": "",
+        "required": true,
+        "disabled": true
+    }
+]

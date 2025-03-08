@@ -1,0 +1,35 @@
+<div class="cost-case-submitted-requests" *ngIf="show">
+  <mat-card class="mat-card-submitted-costCase">
+    <div id="search">
+      <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    </div>
+    <div class="countDiv-cc">
+      <div class="count-cc"> [{{count}}]</div>
+    </div>
+    <div class="table-border cost-case-approval-table">
+      <table mat-table [dataSource]="dataSource">
+        <ng-container *ngFor="let item of displayedColumns;let i=index" [matColumnDef]="item">
+          <th mat-header-cell *matHeaderCellDef class="left-align ">
+            {{displayedHeaders[i] | uppercase}} </th>
+          <td mat-cell *matCellDef="let element" class="left-align ">
+            <span>{{element[item] | uppercase}}</span>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef class="left-align actions"> ACTIONS </th>
+          <td mat-cell class="left-align" *matCellDef="let element">
+            <button mat-raised-button class="actionButton" (click)="onActionClick(element)">ACTION</button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="AllColumns;sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: AllColumns;"></tr>
+      </table>
+      <div *ngIf="dataSource.data.length==0||enabledNoDataMsg" class="no-data">
+        NO DATA AVAILABLE
+      </div>
+    </div>
+  </mat-card>
+</div>
+<div *ngIf="!show">
+  <app-loader></app-loader>
+</div>

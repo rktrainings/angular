@@ -1,0 +1,29 @@
+@import "~src/styles";
+
+.container {
+  margin-top: 4vh;
+}
+.edit-my-team{
+  padding-left:2vh;
+  font-size: 3vh;
+  font-family: $play;
+}
+mat-icon {
+  cursor: pointer;
+}
+.submitButton:not([disabled]){
+  color: white !important;
+  background: $bg-aqua !important;
+  font-family: $play;
+  border-radius: 30px;
+}
+.submitButton {
+  background: $bg-aqua;
+  color: white;
+  border-radius: 30px;
+}
+
+.submitButtonCol{
+    left: 19px;
+    top: 10px;
+}

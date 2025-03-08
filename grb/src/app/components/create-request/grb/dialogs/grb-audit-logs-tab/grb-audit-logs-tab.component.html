@@ -1,0 +1,26 @@
+<div id="audit-logs-tabs">
+
+  <div class="row">
+    <div class="col-11">
+      <b> Audit Logs </b>
+    </div>
+    <div class="col-1">
+      <mat-icon class="close" (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <mat-tab-group *ngIf="show">
+    <mat-tab label="Swap">
+      <app-audit-logs-grb [auditData]="swapAudit"></app-audit-logs-grb>
+    </mat-tab>
+    <mat-tab label="GRB Revise">
+      <app-audit-logs-grb [auditData]="grbRevise"></app-audit-logs-grb>
+    </mat-tab>
+    <mat-tab label="Band Change">
+      <app-audit-logs-grb [auditData]="bandChange"></app-audit-logs-grb>
+    </mat-tab>
+  </mat-tab-group>
+
+  <div class="audit-spinner" *ngIf="!show">
+    <img src="./assets/icons/spinner-2.gif" />
+  </div>
+</div>

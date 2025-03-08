@@ -1,0 +1,15 @@
+<div id="ute" *ngIf="!enableLoadingMsg">
+  <!-- <p class="pageHeader">UTE</p> -->
+  <mat-card class="mat-card-ute">
+      
+    <div>
+      <!-- <app-toll-template></app-toll-template> -->
+      <app-toll-template *ngIf="isUTEAPICallEnabled" [enabledUTE]="enabledUTE" [dataSourceUTE]="dataSourceUTE">
+      </app-toll-template>
+
+    </div>
+  </mat-card>
+</div>
+<div *ngIf="enableLoadingMsg">
+  <app-loader></app-loader>
+</div>

@@ -1,0 +1,180 @@
+@import "~src/styles";
+
+#search {
+  padding-top: 1vh !important;
+}
+
+.mat-tab-body-content {
+  overflow: hidden !important;
+}
+#search > input {
+  border-radius: 15px;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+
+.searchBar {
+  width: 30vh;
+}
+
+.cc-table-container {
+  height: 52vh;
+  overflow: auto;
+}
+// @media only screen and (min-width: 1400px) {
+//   .cc-table-container {
+//     height: 49vh !important;
+//     overflow: auto;
+//   }
+// }
+@media only screen and (min-width: 1700px) {
+  .cc-table-container {
+    height: 51vh !important;
+    overflow: auto;
+  }
+}
+// .mat-tab-group{
+//   height: 68vh !important;
+// }
+
+#tableheader {
+  width: 14%;
+}
+.mat-card-dashboard {
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+  padding-left: 3vh;
+  padding-right: 3vh;
+  height: 79vh;
+  // border: 2px solid black;
+  border-radius: 3vh;
+}
+
+.mat-label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.mat-form-field-search {
+  padding-top: 20px;
+}
+
+.tab-descriptions {
+  // padding-top: 1.5vh;
+  // padding-left: 3vh;
+
+  // padding: 15px 0px 0px 23px;
+}
+
+//Arpita
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+// tr.mat-header-row {
+//   // height: 56px;
+//   background: darkturquoise;
+// }
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #e0f5fd;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+tr {
+  border: 1px solid lightgray;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin: 15vh;
+}
+.example-element-diagram {
+  min-width: 80px;
+  // border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+.cc-table-container th.mat-header-cell {
+  font-weight: bold;
+  color: black;
+  width: 10%;
+}
+
+.cc-table-container .td.mat-cell {
+  text-align: left;
+}
+
+// th.mat-header-cell:last-of-type {
+//   padding-right: 0px;
+//   // width: 100px;
+// }
+.td.mat-cell:last-of-type {
+  padding: unset !important;
+}
+.mat-icon-cc,
+.clickableText {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clickableText {
+  color: $bg-aqua;
+}
+.loading-msg {
+  margin-top: 5%;
+  font-weight: bold;
+  font-size: 5vh;
+  color: $bg-aqua !important;
+  text-align: center;
+}
+// tbody>tr:hover {
+//   background-color: #e0f5fd !important;
+//   cursor: auto;
+// }
+.mat-header-cell {
+  font-weight: bolder !important;
+  color: white !important;
+  font-size: 1.9vh !important;
+}
+.mat-cell {
+  font-size: 1.7vh !important;
+  font-weight: 500 ;
+}
+.left-align {
+  text-align: left !important;
+}
+
+.center-align {
+  text-align: center !important;
+}

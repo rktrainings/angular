@@ -1,0 +1,19 @@
+<div id="bandmix" *ngIf="!enableLoadingMsg">
+  <!-- <p class="pageHeader">BANDMIX</p> -->
+  <mat-card class="mat-card-bandmix">
+    <!-- <div *ngIf="enableLoadingMsg">
+      <div class="loading-msg">
+        <img src="./assets/icons/spinner-2.gif" />
+        <p>Loading ...</p>
+      </div>
+    </div>     -->
+    <div>
+      <!-- <app-toll-template></app-toll-template> -->
+      <app-toll-template *ngIf="isBMAPICallEnabled" [enabledBM]="enabledBM" [dataSourceBM]="dataSourceBM">
+      </app-toll-template>
+    </div>
+  </mat-card>
+</div>
+<div *ngIf="enableLoadingMsg">
+  <app-loader></app-loader>
+</div>

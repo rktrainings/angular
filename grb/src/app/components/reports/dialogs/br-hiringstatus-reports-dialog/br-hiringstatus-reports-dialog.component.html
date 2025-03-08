@@ -1,0 +1,55 @@
+<div class="br-hiring-status-report">
+  <label id="br-hiring-radio-group-label">REPORT - BR-HIRING STATUS</label>
+  <mat-icon (click)="goToMenu()">close</mat-icon>
+
+  <!-- <mat-form-field class="datepicker">
+  <input matInput [matDatepicker]="picker" [name]="fromDate"
+    [formControlName]="fromDate" 
+    (dateChange)="saveData($event.target.value)" required>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+  
+ 
+</mat-form-field> -->
+  <div class=" row daterow">
+    <div class="col-6">
+      <label class="lbl-gap">
+        FROM DATE:
+        <strong class="text-danger">*</strong>
+      </label>
+      <div class="form-field ">
+        <mat-form-field class="datepicker">
+          <input matInput [matDatepicker]="fromDatepicker" [(ngModel)]="fromDate"
+            (dateChange)="saveDate('fromDate',$event.target.value)" readonly="true" required>
+          <mat-datepicker-toggle matSuffix [for]="fromDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #fromDatepicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-6">
+      <label class="lbl-gap">
+        TO DATE:
+        <strong class="text-danger">*</strong>
+      </label>
+      <div class="form-field">
+        <mat-form-field class="datepicker">
+          <input matInput [matDatepicker]="toDatepicker" [(ngModel)]="toDate" readonly="true"
+            (dateChange)="saveDate('toDate',$event.target.value)" required>
+          <mat-datepicker-toggle matSuffix [for]="toDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #toDatepicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="enableRaodiorow" class="radiorow">
+    <mat-radio-group aria-labelledby="br-hiring-radio-group-label" class="br-hiring-radio-group" [(ngModel)]="selected">
+      <mat-radio-button class="br-hiring-radio-button" *ngFor="let option of options" [value]="option">
+        {{option | uppercase}}
+      </mat-radio-button>
+    </mat-radio-group>
+    <button class="submitButton" style=" float:right;
+border-radius: 30px; font-family: 'Play', sans-serif;" mat-raised-button [disabled]="disableSubmit()"
+      (click)="onSubmit()">EXPORT</button>
+  </div>
+</div>

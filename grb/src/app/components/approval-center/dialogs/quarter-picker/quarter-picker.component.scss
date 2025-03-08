@@ -1,0 +1,78 @@
+@import "~src/styles";
+
+.ngb-dp-arrow {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+}
+
+.ngb-dp-arrow-btn {
+  padding: 0 .25rem;
+  margin: 0 .5rem;
+  border: none;
+  background-color: transparent;
+}
+
+.ngb-dp-navigation-chevron {
+  border-style: solid;
+  border-width: .2em .2em 0 0;
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  margin-left: -.5em;
+  margin-right: .25em;
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.right .ngb-dp-navigation-chevron {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-left: .5em;
+  margin-right: .25em;
+}
+
+.selectYear {
+  display: block;
+  width: 100%;
+  padding: .25rem .25rem;
+  clear: both;
+  text-align: center;
+}
+
+.dropdown-item {
+  padding: .5rem 0.5rem !important;
+  text-align: center;
+}
+
+.bg-primary {
+  background-color: $bg-aqua !important;
+}
+
+.btn-outline-primary {
+  color: $bg-aqua;
+  border-color: $bg-aqua;
+}
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show>.btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: $bg-aqua;
+  border-color: $bg-aqua;
+}
+
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: $bg-aqua !important;
+  border-color: $bg-aqua !important;
+}
+
+.btn-link {
+  font-weight: 400;
+  color: $bg-aqua;
+  text-decoration: none;
+}

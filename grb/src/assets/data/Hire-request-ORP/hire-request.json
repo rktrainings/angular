@@ -1,0 +1,43 @@
+[
+    {
+        "EmpId": 1,
+        "EmpName": "Arpita",
+        "Skill": "Not_active",
+        "DeptCode": "D06",
+        "band": 4.0,
+        "DOR": "sdf",
+        "GEO": "dfe",
+        "Process": "sfs",
+        "SUP_ID": 2324,
+        "Supe_name": "wqdqf",
+        "SubProcess": "eff"
+    },
+    {
+        
+        "EmpId": 2,
+        "EmpName": "XYZ",
+        "Skill": "Not_active",
+        "DeptCode": "GFK",
+        "band": 4.0,
+        "DOR": "sdf",
+        "GEO": "dfe",
+        "Process": "sfs",
+        "SUP_ID": 2324,
+        "Supe_name": "wqdqf",
+        "SubProcess": "eff"
+    },
+    {
+        
+        "EmpId": 3,
+        "EmpName": "ABC",
+        "Skill": "Not_active",
+        "DeptCode": "ABC",
+        "band": 4.0,
+        "DOR": "sdf",
+        "GEO": "dfe",
+        "Process": "sfs",
+        "SUP_ID": 2324,
+        "Supe_name": "wqdqf",
+        "SubProcess": "eff"
+    }
+]

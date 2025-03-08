@@ -1,0 +1,164 @@
+[{
+
+    "field_name": "Posting",
+    "field_type": "text",
+    "field_identifier": "posting",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 1
+
+  },
+  {
+
+    "field_name": "Request Type",
+    "field_type": "dropdown",
+    "field_identifier": "requestType",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, {
+
+    "field_name": "Employment Type",
+    "field_type": "dropdown",
+    "field_identifier": "employmentType",
+    "options": ["FULL TIME", "PART TIME"],
+    "default": "FULL TIME",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, 
+  {
+    "field_name": "Remote Work Possible",
+    "field_type": "dropdown",
+    "field_identifier": "remoteWorkPlacePossible",
+    "options": ["YES", "NO"],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 4
+  },
+  {
+
+    "field_name": "Workplace Indicator",
+    "field_type": "dropdown",
+    "field_identifier": "workplaceIndicator",
+    "options": [
+      "TRADITIONAL OFFICE(IBM BUILDING)",
+      "TRADITIONAL NON OFFICE(IBM BUILIDNG - NO OFFICE SPACE)",
+      "EXTENDED OFFICE",
+      "MOBILE / TELECOMMUTER(NO ASSIGNED WORKSAPCE)",
+      "WORK AT HOME(80 % OF REGULAR WORK AT HOME)",
+      "CLIENT LOCATION / ALTERNATIVE LOCATION"
+    ],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 5
+  },
+  {
+
+    "field_name": "Candidate Already Identified For Offer",
+    "field_type": "dropdown",
+    "field_identifier": "canditateAlreadyIdentified",
+    "options": ["YES", "NO"],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 7
+  },
+  {
+
+    "field_name": "Reason Candidate Has Been Identified",
+    "field_type": "dropdown",
+    "field_identifier": "reasonForCandidateBeenIdentified",
+    "options": ["MARKET HIRE - MANAGER CREATED ROLE", "INTERNAL TRANSFER WITHIN COUNTRY", "COUNTRY TO COUNTRY TRANFER", "VENDOR CONVERSION", "FIXED TERM - REGULAR CONVERSIONS - CONVERSION", "STUDENT - REGULAR", "VALID BUSINESS CASE-  REMAINING "],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 8
+  },
+  {
+
+    "field_name": "Shift",
+    "field_type": "dropdown",
+    "field_identifier": "shift",
+    "options": ["GENERAL SHIFT",
+      "EVENING",
+      "NIGHT",
+      "ON CALL",
+      "ROTATION BASIS"
+    ],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 9
+  },
+  {
+
+    "field_name": "Billable",
+    "field_type": "dropdown",
+    "field_identifier": "billable",
+    "options": ["YES", "NO"],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 10
+  },
+
+  {
+
+    "field_name": "Travel Required",
+    "field_type": "dropdown",
+    "field_identifier": "travelRequired",
+    "options": [
+      "NO TRAVEL",
+      "UPTO 10% OR ONE DAY A WEEK",
+      "UPTO 25% OR TWO DAYS A WEEK",
+      "UPTO 50% OR THREE DAYS A WEEK",
+      "UPTO 75% OR FOUR DAYS A WEEK",
+      "UPTO 100% OR FIVE DAYS A WEEK"
+    ],
+    "default": "NO TRAVEL",
+    "required": true,
+    "disabled": false,
+    "order": 12
+  },
+  {
+
+    "field_name": "Does your account have restriction?",
+    "field_type": "dropdown",
+    "field_identifier": "isAccountHasRestrictions",
+    "options": ["YES", "NO"],
+    "default": "NO",
+    "required": true,
+    "disabled": false,
+    "order": 13
+  },
+  {
+
+    "field_name": "ID Type",
+    "field_type": "text",
+    "field_identifier": "idType",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  }, {
+
+    "field_name": "Pool Type",
+    "field_type": "dropdown",
+    "field_identifier": "poolType",
+    "options": ["VOICE", "NON VOICE"],
+    "default": "",
+    "required": true,
+    "disabled": false,
+    "order": 13
+  }
+]

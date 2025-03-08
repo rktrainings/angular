@@ -1,0 +1,112 @@
+{
+    "Asia Pacific": {
+        "ANZ": [
+            "Australia",
+            "NewZealand"
+        ],
+        "ASEAN": [
+            "Indonesia",
+            "Malaysia",
+            "Philippines",
+            "Singapore",
+            "Thailand",
+            "Vietnam"
+        ],
+        "ISA": [
+            "India",
+            "Sri Lanka"
+        ],
+        "KOREA": [
+            "Korea"
+        ]
+    },
+    "Europe": {
+        "Benelux": [
+            "Belgium",
+            "Luxembourg",
+            "Netherlands"
+        ],
+        "CEE": [
+            "Azerbaijan",
+            "Bulgaria",
+            "Croatia",
+            "Czech Republic",
+            "Hungary",
+            "Lithuania",
+            "Poland",
+            "Romania",
+            "Russia",
+            "Serbia",
+            "Slovakia",
+            "Slovenia",
+            "Ukraine"
+        ],
+        "DACH": [
+            "Austria",
+            "Germany",
+            "Switzerland",
+            "France"
+        ],
+        "FRANCE": [
+            "FRANCE"
+        ],
+        "ITALY": [
+            "ITALY"
+        ],
+        "NORDIC": [
+            "Denmark",
+            "Finland",
+            "Norway",
+            "Sweden"
+        ],
+        "SPGI": [
+            "Cyprus",
+            "Greece",
+            "Israel",
+            "Portugal",
+            "Spain"
+        ],
+        "UKI": [
+            "Ireland",
+            "United Kingdom"
+        ]
+    },
+    "Latin America": {
+        "LA": [
+            "Argentina",
+            "Brazil",
+            "Chile",
+            "Colombia",
+            "Costa Rica",
+            "Ecuador",
+            "Mexico",
+            "Peru",
+            "Uruguay",
+            "Venezuela"
+        ]
+    },
+    "Middle East & Africa": {
+        "MEA": [
+            "Egypt",
+            "Ghana",
+            "Kenya",
+            "Kuwait",
+            "Middle East FZE",
+            "Morocco",
+            "Pakistan",
+            "Qatar",
+            "Saudi Arabia",
+            "South Africa",
+            "Tunisia",
+            "Turkey"
+        ]
+    },
+    "North America": {
+        "Canada/LCR": [
+            "Canada"
+        ],
+        "United States - Commercial": [
+            "United States of America"
+        ]
+    }
+}

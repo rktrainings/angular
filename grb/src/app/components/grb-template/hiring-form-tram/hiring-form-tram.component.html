@@ -1,0 +1,98 @@
+<div class="form-heading">
+  <div class="row firstRow">
+    <div class="col">
+      <b class="formName"> TRAM Details</b>
+    </div>
+  </div>
+  <div class="hiring-form">
+
+    <form [formGroup]="hiringForm" class="needs-validation" novalidate>
+      <div class="row">
+        <div *ngFor="let field of fields" [ngClass]="(field.field_type=='textarea')?'col-6':'col-3'">
+          <label class="lbl-gap">
+            {{field.field_name}}
+            <strong class="text-danger" *ngIf="field.required">*</strong>
+          </label>
+          <div [ngSwitch]="field.field_type">
+
+            <!-- text fild -->
+            <div class="form-group" *ngSwitchCase="'text'">
+
+              <input type="text" class="form-control" [name]="field.field_identifier"
+                [formControlName]="field.field_identifier" [ngClass]="hiringForm.controls[field.field_identifier].hasError('required')?'invalid-text':''" 
+                                   [readOnly]="field.disabled"
+                (change)="saveData(field.field_identifier,$event.target.value)">
+            </div>
+            <!-- dropdown -->
+            <div class="form-field" *ngSwitchCase="'dropdown'">
+              <mat-form-field class="dropdown" [ngClass]="hiringForm.controls[field.field_identifier].hasError('required')?'invalid-dropdown':'dropdown-field'">
+                <mat-select [(value)]="hiringForm[field.field_identifier]" [matTooltip]="hiringForm.value[field.field_identifier]" [formControlName]="field.field_identifier"
+                  (selectionChange)="dropdownChange(field.field_identifier,$event);saveData(field.field_identifier,$event)">
+                  <mat-option *ngFor="let option of field.options" [matTooltip]="option" [value]="option">{{option}}</mat-option>
+                </mat-select>
+                <!-- <mat-error *ngIf=" hiringForm.controls[field.field_identifier].hasError('required')">
+                  {{field.field_name}} is required.</mat-error> -->
+
+              </mat-form-field>
+
+            </div>
+            <!-- number -->
+            <div class="form-group" *ngSwitchCase="'number'">
+
+              <input type="number" class="form-control" [name]="field.field_identifier"
+                [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" [readOnly]="field.disabled"
+                (change)="saveData(field.field_identifier,$event.target.value)" required>
+            
+            </div>
+            <!-- date -->
+            <div class="form-group" *ngSwitchCase="'date'">
+              <mat-form-field [ngClass]="hiringForm.controls[field.field_identifier].hasError('required')?'invalid-datepicker':'datepicker'" class="datepick">
+                <input matInput [matDatepicker]="picker" [name]="field.field_identifier" [min]="minDate"
+                  [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" readonly="true" [disabled]="field.disabled"
+                  (dateChange)="saveData(field.field_identifier,$event.target.value)" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+               
+              </mat-form-field>
+            </div>
+            <!-- textarea -->
+            <div class="form-group" *ngSwitchCase="'textarea'">
+              <textarea rows="4" [maxlength]="field.field_identifier=='comments'?1000:1500" type="text"
+                class="form-control comments" [name]="field.field_identifier" [formControlName]="field.field_identifier"
+                [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" [readOnly]="field.disabled" (keyup)="countChar(field.field_identifier,$event)"
+                (change)="saveData(field.field_identifier,$event.target.value)" required></textarea>
+              <div *ngIf="field.field_identifier=='comments'" id="charNum">{{count}} characters are remaining</div>
+
+          
+            </div>
+
+
+
+
+      
+            <div>
+
+            </div>
+          </div>
+
+
+        </div>
+      
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+  [fullScreen]="true"><span class="loading-aqua"
+    style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:5vh;">Loading</span></ngx-spinner>

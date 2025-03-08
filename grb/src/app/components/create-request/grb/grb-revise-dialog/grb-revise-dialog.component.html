@@ -1,0 +1,104 @@
+
+<div class="row">
+  <div class="close">
+    <mat-icon (click)="close()">close</mat-icon>
+  </div>
+  <div class="header-text">
+    <span>GRB REVISE</span>
+  </div>
+</div>
+
+<mat-tab-group class="grb-revise-mat-tab tab-headers tab-wrapper" mat-align-tabs="start">
+  <mat-tab label="GRB DETAILS">
+
+    <table id='grbbox'>
+      <tr>
+        <td id="grbtext"> METRO NO.</td>
+        <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.metroNumber}} </td>
+      </tr>
+      <tr>
+        <td id="grbtext"> GRB NO.</td>
+        <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.grbNumber | uppercase}} </td>
+      </tr>
+      <tr>
+        <td id="grbtext"> DEPT CODE</td>
+        <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.deptCode}} </td>
+      </tr>
+      <tr>
+        <td id="grbtext"> DEPT NAME</td>
+        <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.deptName | uppercase}} </td>
+      </tr>
+      <tr>
+        <td id="grbtext"> CURRENT BAND</td>
+        <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.band}} </td>
+      </tr>
+    </table>
+
+  </mat-tab>
+  <mat-tab label="INTERNAL HIRE DETAILS">
+    <div class="table-height-grb-revise">
+      <table id='grbbox'>
+        <tr>
+          <td id="grbtext"> EMP ID <strong class="text-danger">*</strong></td>
+          <!-- <td id="grbtext"> {{grbDetails.grbNumber}} </td> -->
+          <td id="grbtextt"><input type="text" [(ngModel)]="empId" class="form-control" (change)="populateDetails()"
+              id="empId" required></td>
+        </tr>
+        <tr>
+          <td id="grbtext"> EMP NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.nominatedEmpName | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT CODE</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empDeptCode}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empDeptName | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> BAND</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empBand}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> SUP ID</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.supId}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> SUP NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.supName | uppercase}} </td>
+        </tr>
+
+        <tr>
+          <td id="grbtext"> TED <strong class="text-danger">*</strong> </td>
+          <td class="form-control">
+            <mat-form-field>
+              <input matInput [matDatepicker]="picker" [min]="todayDate" 
+                [(ngModel)]="roomsFilter.date" readonly="true">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker [(ngModel)]="roomsFilter.date" ngDefaultControl
+                (selectedChanged)="onDate($event)"></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td id="grbtext"> COMMENTS<strong class="text-danger">*</strong></td>
+          <td id="grbtextt"><textarea placeholder="Comments" [(ngModel)]="comment" class="form-control" id="comment"
+              rows="3"></textarea> </td>
+        </tr>
+
+      </table>
+    </div>
+
+    <div class="butt"> <button class="submitButton" mat-raised-button (click)="onSubmit()"
+        [disabled]="!checkEnable()">SUBMIT</button></div>
+    <!-- </div> -->
+    <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+      [fullScreen]="true"><span class="loading-aqua"
+        style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">{{loadingText}}</span></ngx-spinner>
+
+
+
+  </mat-tab>
+</mat-tab-group>

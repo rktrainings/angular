@@ -1,0 +1,145 @@
+@import "~src/styles";
+
+.acc-dialog-heading{
+  text-align: center;
+  font-family: $play;
+  font-size: 3vh;
+}
+.acc-heading-row{
+  padding-bottom: 3vh;
+}
+.container{
+  padding-left:0px !important;
+}
+.icon{
+  cursor:pointer;
+}
+td.mat-cell, th.mat-header-cell{
+  text-align: center;
+}
+
+.secondRow{
+  padding-top: 1.5vh;
+  width:97%;
+}
+.loading-msg{
+  margin: 10%;
+  font-weight: bold;
+  font-size: 5.0vh;
+  color:#0662C2 !important;
+  text-align: center;
+}
+
+.mat-header-row{
+  background-color: $bg-aqua  !important;
+}
+
+// th.mat-sort-header-sorted {
+//   color: black;
+// }
+
+th.mat-header-cell {
+  font-weight: bold;
+  color: black;
+  width: 10%;
+}
+.mat-card-accdialog {
+  box-shadow: none !important;
+}
+.cc-table{
+  height: 52vh;
+  overflow: auto;
+}
+.cc-table-container tr.mat-row:last-child {
+
+  background-color: lightblue;
+}
+
+
+.mat-form-field-search{
+  padding-top: 20px;
+}
+.mat-form-field{
+padding-right: 64px;
+}
+
+.descriptions{
+  padding: 15px 0px 0px 23px;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+tr.mat-header-row {
+  height: 53px;
+ 
+}
+
+
+.example-element-row td {
+  border-bottom-width: 0;
+}
+tr.mat-row {
+  height: 39px;
+}
+
+td.mat-cell:first-of-type{
+  text-align: left;
+}
+.col-11{
+  height: 24px;;
+}
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+th.mat-header-cell:first-of-type {
+  padding-left: 24px;
+  width: 13%;
+}
+button{
+  background-color: $bg-aqua;
+color: white;
+}
+.close-icon{
+  margin-left: 96%;
+}
+.col1{
+  max-width: 20%;
+}
+.col2
+{
+  padding-top: 11px;;
+}
+.submitButton {
+  color: white !important;
+  background: $bg-aqua !important;
+  float:right;
+  font-family: $play;
+  border-radius: 30px;
+}
+.no-data {
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin: 15vh;
+}

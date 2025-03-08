@@ -1,0 +1,79 @@
+{
+  "card": [
+    {
+      "key": "GRB",
+      "description": "GRB DETAILS",
+      "image": "./assets/icons/grb/contract.svg",
+      "type": [
+        "external",
+        "internal"
+      ],
+      "hiring": [
+        "backfill",
+        "New Growth-New Transition",
+        "New Growth-Move to Low Cost",
+        "New Growth-CCN/PCR",
+        "Subk-NewHire"
+      ]
+    },
+    {
+      "key": "EMP",
+      "description": "EMPLOYEE DETAILS",
+      "image": "./assets/icons/grb/employees.svg",
+      "type": [
+        "external",
+        "internal"
+      ],
+      "hiring": [
+        "backfill"
+      ],
+      "filled": "true"
+    },
+    {
+      "key": "GOM",
+      "description": "GOM DETAILS",
+      "image": "./assets/icons/grb/data-processing.svg",
+      "type": [
+        "external"
+      ],
+      "hiring": [
+        "backfill",
+        "New Growth-New Transition",
+        "New Growth-Move to Low Cost",
+        "New Growth-CCN/PCR",
+        "Subk-NewHire"
+      ]
+    },
+    {
+      "key": "TRAM",
+      "description": "TRAM DETAILS",
+      "image": "./assets/icons/grb/data-processing.svg",
+      "type": [
+        "external"
+      ],
+      "hiring": [
+        "backfill",
+        "New Growth-New Transition",
+        "New Growth-Move to Low Cost",
+        "New Growth-CCN/PCR",
+        "Subk-NewHire"
+      ]
+    },
+    {
+      "key": "Preview",
+      "description": "PREVIEW",
+      "image": "./assets/icons/grb/document-view.svg",
+      "type": [
+        "external",
+        "internal"
+      ],
+      "hiring": [
+        "backfill",
+        "New Growth-New Transition",
+        "New Growth-Move to Low Cost",
+        "New Growth-CCN/PCR",
+        "Subk-NewHire"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<div class="br-hiring-status-report">
+  <label id="br-hiring-radio-group-label">REPORT - Export GRB Requests</label>
+  <mat-icon (click)="goToMenu()">close</mat-icon>
+
+  <div class="radiorow">
+
+    <mat-radio-group aria-labelledby="br-hiring-radio-group-label" class="br-hiring-radio-group"
+      (change)="checkhire($event)" [(ngModel)]="selected">
+      <mat-radio-button class="br-hiring-radio-button" *ngFor="let option of options" [value]="option">
+        {{option | uppercase}}
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div *ngIf="displayUnApproved" class="radiorow">
+    <p>Select Under Un Approved requests to export:</p>
+    <mat-radio-group aria-labelledby="br-hiring-radio-group-label" class="br-hiring-radio-group" [(ngModel)]="selected">
+      <mat-radio-button class="br-hiring-radio-button" *ngFor="let unapproved of unapprovedlist" [value]="unapproved">
+        {{unapproved | uppercase}}
+      </mat-radio-button>
+
+    </mat-radio-group>
+  </div>
+  <button class="submitButton" style=" float:right;
+border-radius: 30px; font-family: 'Play', sans-serif;" mat-raised-button [disabled]="disableSubmit()"
+    (click)="onSubmit()">EXPORT</button>
+</div>

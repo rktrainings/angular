@@ -1,0 +1,22 @@
+[
+    {
+        "deptCode": "GFK",
+        "deptname": "GFK",
+        "iot": "EUROPE",
+        "geo": "EU",
+        "sdl": "RAJEEV"
+    },
+    {
+        "deptCode": "D06",
+        "deptname": "PROCESS SME-RTR",
+        "iot": "APAC",
+        "geo": "APJ",
+        "sdl": "BALA"
+    },
+    {
+        "deptCode": "V85",
+        "deptname": "AUDIT RECOVERY",
+        "iot": "APAC",
+        "geo": "APJ",
+        "sdl": "SIVA"
+    }]

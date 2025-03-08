@@ -1,0 +1,95 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+</div>
+<div [hidden]="hiddenFlag" style="padding-bottom: 15px;">
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+  </div>
+  <div class="grb-table">
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows class="approved-dialog">
+
+      <ng-container matColumnDef="metro">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> METRO </th>
+        <td mat-cell *matCellDef="let element" class="left-align">{{element.metro}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="band">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> BAND </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.band}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="grb">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> GRB </th>
+        <td mat-cell *matCellDef="let element" class="left-align" style="width:32vh"> {{element.grb}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="reqid">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> REQ ID </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.reqid}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="reqstatus">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> STATUS </th>
+        <td mat-cell *matCellDef="let element" class="left-align"> {{element.reqstatus | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="icon">
+        <th mat-header-cell *matHeaderCellDef class="left-align"> </th>
+        <td mat-cell *matCellDef="let element" class="left-align">
+          <mat-icon *ngIf="element.reqstatus === 'CI' || element.reqstatus === 'ANOB' || element.reqstatus === 'OB'"
+            (click)="onPlusClick(element)" style="cursor: pointer;">
+            {{expandedElement === element ? 'remove_circle_outline' : 'add_circle_outline'}}</mat-icon>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" class="nohover" [attr.colspan]="displayedColumns.length">
+          <div class="example-element-detail" [@detailExpand]="element == expandedElement ? 'expanded' : 'collapsed'">
+            <div class="example-element-diagram">
+              <table class="grb-data-table" *ngFor="let employee of onBoardEmployee;let i = index">
+                <tr>
+                  <td class="left-align"> CNum </td>
+                  <td class="left-align"> {{employee.cNum}} </td>
+                </tr>
+                <tr>
+                  <td class="left-align"> CANDIDATE NAME </td>
+                  <td class="left-align"> {{employee.firstName | uppercase}} {{employee.lastName | uppercase}} </td>
+                </tr>
+                <tr>
+                  <td class="left-align"> DOJ </td>
+                  <td class="left-align"> {{employee.doj}} </td>
+                </tr>
+              </table>
+              <div *ngIf="enableLoadingMsgEmployee">
+                <div class="loading-msg">
+                  <img width="20%" src="./assets/icons/spinner-2.gif" />
+                </div>
+              </div>
+              <div *ngIf="enabledNoDataMsgEmp" class="no-data">
+                NO DATA AVAILABLE
+              </div>
+            </div>
+            <div class="example-element-description">
+              <span class="example-element-description-attribution"> </span>
+            </div>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+      <tr mat-row *matRowDef="let element; columns: displayedColumns;" class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+    </table>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+    <div class="loading-msg">
+      <img width="23%" src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enabledNoDataMsg" class="no-data">
+    NO DATA AVAILABLE
+  </div>
+
+</div>

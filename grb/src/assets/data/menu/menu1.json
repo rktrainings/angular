@@ -1,0 +1,851 @@
+{
+  "menu": [
+    {
+      "key": "Dashboard",
+      "url": "/dashboard",
+      "imgURL": "./assets/icons/dashboard.svg",
+      "child": [
+        {
+          "key": "Current Cost Case",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "SDL",
+            "DPE",
+            "SPOC",
+            "PEM",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/current-cost-case",
+          "path": "/dashboard?active=0",
+          "child": []
+        },
+        {
+          "key": "Pending Hiring Request",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "SDL",
+            "DPE",
+            "SPOC",
+            "PEM",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/pending-hiring-request",
+          "path": "/dashboard?active=1",
+          "child": []
+        },
+        {
+          "key": "Approved Hiring Request",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "SDL",
+            "DPE",
+            "SPOC",
+            "PEM",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/approved-hiring-request",
+          "path": "/dashboard?active=2",
+          "child": []
+        },
+        {
+          "key": "CI Dashboard",
+          "role": [
+            "CISPOC",
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/ci-dashboard",
+          "path": "/dashboard?active=3",
+          "child": []
+        },
+        {
+          "key": "HR Hiring Requests",
+          "role": [
+            "HIRING",
+            "ADMIN"
+          ],
+          "url": "/hr-hiring-request",
+          "path": "/dashboard/hr-hiring-request",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "My Team",
+      "url": "/my-team",
+      "imgURL": "./assets/icons/teams.svg",
+      "child": [
+        {
+          "key": "My Span",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/my-span",
+          "path": "/my-team/my-span",
+          "child": []
+        },
+        {
+          "key": "My Reportees",
+          "role": [
+            "PEM"
+          ],
+          "url": "/my-reportees",
+          "path": "/my-team/my-reportees",
+          "child": []
+        },
+        {
+          "key": "Attrited Employees",
+          "role": [
+            "GRBEO",
+            "GRBEORD",
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "IOTINT"
+          ],
+          "url": "/attrited-employees",
+          "path": "/my-team/attrited-employees",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "Create Request",
+      "url": "/create-request",
+      "imgURL": "./assets/icons/add--alt.svg",
+      "child": [
+        {
+          "key": "New Growth",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/new-growth",
+          "path": "/create-request/new-growth",
+          "child": []
+        },
+        {
+          "key": "Backfill",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/backfill",
+          "path": "/create-request/backfill",
+          "child": []
+        },
+        {
+          "key": "Conversion",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/conversion",
+          "path": "/create-request/conversion",
+          "child": []
+        },
+        {
+          "key": "SubK",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/subk",
+          "path": "/create-request/subk",
+          "child": []
+        },
+        {
+          "key": "CI Release",
+          "role": [
+            "ADMIN",
+            "CISPOC"
+          ],
+          "url": "/ci-release",
+          "path": "/create-request/ci-release",
+          "child": []
+        },
+        {
+          "key": "Cost Case",
+          "role": [
+            "ADMIN",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/cost-case",
+          "path": "/create-request/cost-case",
+          "child": []
+        },
+        {
+          "key": "SUNDRY",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/grb-request",
+          "path": "/create-request/grb-request",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "My Request",
+      "url": "/my-request",
+      "imgURL": "./assets/icons/my-request.svg",
+      "role": [
+        "ADMIN",
+        "GRBEO",
+        "GRBEORD",
+        "SDL",
+        "DPE",
+        "SPOC",
+        "PEM",
+        "CISPOC"
+      ],
+      "child": [],
+      "path": "/my-request"
+    },
+    {
+      "key": "Approval Center",
+      "url": "/approval-center",
+      "imgURL": "./assets/icons/approved1.svg",
+      "child": [
+        {
+          "key": "Swap",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/swap",
+          "path": "/approval-center/swap",
+          "child": []
+        },
+        {
+          "key": "CI Release",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/ci-release",
+          "path": "/approval-center/ci-release",
+          "child": []
+        },
+        {
+          "key": "Hire Request",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD",
+            "HIRING"
+          ],
+          "url": "/hire-request",
+          "child": [
+            {
+              "key": "CC",
+              "role": [
+                "ADMIN",
+                "CC_SPOC"
+              ],
+              "url": "/cc",
+              "path": "/approval-center/hire-request/cc"
+            },
+            {
+              "key": "UTE",
+              "role": [
+                "ADMIN",
+                "UTE_SPOC"
+              ],
+              "url": "/ute",
+              "path": "/approval-center/hire-request/ute"
+            },
+            {
+              "key": "ORP",
+              "role": [
+                "ADMIN",
+                "ORP_SPOC"
+              ],
+              "url": "/orp",
+              "path": "/approval-center/hire-request/orp"
+            },
+            {
+              "key": "BM",
+              "role": [
+                "ADMIN",
+                "BM_SPOC"
+              ],
+              "url": "/bm",
+              "path": "/approval-center/hire-request/bm"
+            }
+          ]
+        },
+        {
+          "key": "SUNDRY",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/approval-grb",
+          "path": "/approval-center/approval-grb",
+          "child": []
+        },
+        {
+          "key": "IOT",
+          "role": [
+            "ADMIN",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/iot",
+          "path": "/approval-center/iot",
+          "child": []
+        },
+        {
+          "key": "Board",
+          "role": [
+            "ADMIN",
+            "BOARD"
+          ],
+          "url": "/board",
+          "child": [],
+          "path": "/approval-center/board"
+        },
+        {
+          "key": "BIZOPS",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/bizops",
+          "child": [],
+          "path": "/approval-center/bizops"
+        },
+        {
+          "key": "Early Attrition",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/early-attrition",
+          "child": [],
+          "path": "/approval-center/early-attrition"
+        },
+        {
+          "key": "Cost Case",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/cost-case",
+          "child": [],
+          "path": "/approval-center/cost-case"
+        }
+      ]
+    },
+    {
+      "key": "Grb Archive",
+      "url": "/grb-archive",
+      "imgURL": "./assets/icons/archive.svg",
+      "role": [
+        "ADMIN",
+        "GRBEO",
+        "GRBEORD",
+        "SDL",
+        "DPE",
+        "SPOC",
+        "PEM",
+        "IOTINT",
+        "IOTAG",
+        "IOTAPAC",
+        "IOTEMEA"
+      ],
+      "child": [],
+      "path": "/grb-archive"
+    },
+    {
+      "key": "Reports",
+      "url": "/reports",
+      "imgURL": "./assets/icons/reports.svg",
+      "child": [
+        {
+          "key": "COST CASE",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/ccn-pcr",
+          "path": "/reports/ccn-pcr",
+          "child": []
+        },
+        {
+          "key": "COST CASE MASTER",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/cost-case",
+          "path": "/reports/cost-case",
+          "child": []
+        },
+        {
+          "key": "RECRUITMENT STATUS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "HIRING",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "PEM",
+            "SPOC",
+            "DPE"
+          ],
+          "url": "/recruitment-status",
+          "path": "/reports/recruitment-status",
+          "child": []
+        },
+        {
+          "key": "EXPORT GRB REQUESTS",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD"
+          ],
+          "url": "/export-grb-requests",
+          "path": "/reports/export-grb-requests",
+          "child": []
+        },
+        {
+          "key": "GRB RAW DUMP",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/grb-dump",
+          "path": "/reports/grb-dump",
+          "child": []
+        },
+        {
+          "key": "BACKFILL DETAILS",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/backfill-details",
+          "path": "/reports/backfill-details",
+          "child": []
+        },
+        {
+          "key": "HC & ATT",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/hc&att",
+          "path": "/reports/hc&att",
+          "child": []
+        },
+        {
+          "key": "BR HIRING STATUS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/br-hiring-status",
+          "path": "/reports/br-hiring-status",
+          "child": []
+        },
+        {
+          "key": "CI REPORT",
+          "role": [
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "ADMIN",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/ci-report",
+          "path": "/reports/ci-report",
+          "child": []
+        },
+        {
+          "key": "BR BACKFILL REPORT",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD"
+          ],
+          "url": "/br-backfill",
+          "path": "/reports/br-backfill",
+          "child": []
+        },
+        {
+          "key": "TRAM Export REPORT",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "BIZOPS",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA"
+          ],
+          "url": "/tram",
+          "path": "/reports/tram",
+          "child": []
+        },
+        {
+          "key": "Pending Requests",
+          "role": [
+            "ADMIN",
+            "GRBEO",
+            "GRBEORD",
+            "BIZOPS",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "PEM",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/pending-hiring-request",
+          "path": "/reports/pending-hiring-request",
+          "child": []
+        },
+        {
+          "key": "BR OPEN POSITIONS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD"
+          ],
+          "url": "/br-open-positions",
+          "path": "/reports/br-open-positions",
+          "child": []
+        },
+        {
+          "key": "SUNDRY REPORT",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD"
+          ],
+          "url": "/sundry",
+          "path": "/reports/sundry",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "Upload",
+      "url": "/upload",
+      "imgURL": "./assets/icons/upload.svg",
+      "child": [
+        {
+          "key": "HC History",
+          "role": [
+            "ADMIN",
+            "GRBEO"
+          ],
+          "url": "/hc-history",
+          "path": "/upload/hc-history",
+          "child": []
+        },
+        {
+          "key": "HC Actual",
+          "role": [
+            "ADMIN",
+            "GRBEO"
+          ],
+          "url": "/hc-actual",
+          "path": "/upload/hc-actual",
+          "child": []
+        },
+        {
+          "key": "Head Count Update",
+          "role": [
+            "ADMIN",
+            "GRBEO"
+          ],
+          "url": "/hc-update",
+          "path": "/upload/hc-update",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "User Guide",
+      "url": "/user-guide",
+      "imgURL": "./assets/icons/user.svg",
+      "child": [
+        {
+          "key": "Cost Case",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "/cost-case",
+          "path": "/user-guide/cost-case",
+          "child": []
+        },
+        {
+          "key": "Hire Employee",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "/hire-employee",
+          "path": "/user-guide/hire-employee",
+          "child": []
+        },
+        {
+          "key": "Edit / View Employee",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "/edit-employee",
+          "path": "/user-guide/edit-employee",
+          "child": []
+        },
+        {
+          "key": "Pending GRB Approval",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "/pending-approval",
+          "path": "/user-guide/pending-approval",
+          "child": []
+        },
+        {
+          "key": "Approved / Open Positions",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "/approved-positions",
+          "path": "/user-guide/approved-positions",
+          "child": []
+        },
+        {
+          "key": "CI / Automation Release",
+          "role": [
+            "PEM",
+            "SPOC",
+            "CISPOC",
+            "DPE",
+            "SDL",
+            "GRBEO",
+            "GRBEORD",
+            "IOTINT",
+            "IOTAG",
+            "IOTAPAC",
+            "IOTEMEA",
+            "BOARD",
+            "HIRING",
+            "UTE_SPOC",
+            "CC_SPOC",
+            "ORP_SPOC",
+            "BM_SPOC"
+          ],
+          "url": "ci-automation",
+          "path": "/user-guide/ci-automation",
+          "child": []
+        }
+      ]
+    }
+  ]
+}

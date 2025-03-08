@@ -1,0 +1,38 @@
+<div class="ccn-pcr-report-dialog">
+  <label id="ccn-radio-group-label">REPORT-CCN/PCR</label>
+  <mat-icon (click)="goToMenu()">close</mat-icon>
+
+
+  <mat-radio-group aria-labelledby="ccn-radio-group-label" class="ccn-radio-group" [(ngModel)]="selected">
+    <mat-radio-button class="ccn-radio-button" *ngFor="let option of options" [value]="option">
+      {{option | uppercase}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <div class="row datepickerRow">
+    <div class="col">
+      <label class="lbl-gap">
+        FROM DATE:
+        <strong class="text-danger">*</strong>
+      </label>
+      <mat-form-field class="datepicker">
+        <input matInput [matDatepicker]="fromDatePicker" [max]="toDate" [(ngModel)]="fromDate" readonly="true" required>
+        <mat-datepicker-toggle matSuffix [for]="fromDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #fromDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <label class="lbl-gap">
+        TO DATE:
+        <strong class="text-danger">*</strong>
+      </label>
+      <mat-form-field class="datepicker">
+        <input matInput [matDatepicker]="toDatePicker" [max]="maxDate" [(ngModel)]="toDate" readonly="true" required>
+        <mat-datepicker-toggle matSuffix [for]="toDatePicker"></mat-datepicker-toggle>
+        <mat-datepicker #toDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+  </div>
+  <button class="submitButton" style=" float:right;" mat-raised-button [disabled]="disableSubmit()"
+    (click)="onSubmit()">EXPORT</button>
+
+</div>

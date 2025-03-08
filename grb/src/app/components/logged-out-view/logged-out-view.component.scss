@@ -1,0 +1,25 @@
+@import "~src/styles";
+
+.session-card {
+    margin: 25vh;
+    margin-left: 25vh;
+    margin-right: 25vh;
+    padding: 12vh;
+    margin-top: 20vh;
+}
+mat-card-content {
+    font-family: $play;
+    text-align: center;
+}
+
+mat-card-actions {
+    text-align: center;
+}
+
+.goBack {
+    background-color: $bg-aqua;
+    color: white !important;
+    border-radius: 30px;
+    padding-left: 12vh;
+    padding-right: 12vh;
+}

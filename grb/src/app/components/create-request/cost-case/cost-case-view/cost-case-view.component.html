@@ -1,0 +1,114 @@
+<div class="create-request-costcase">
+    <mat-card class="create-request-costcase">
+        <div class="costcase-form" *ngIf="fields.length>0">
+
+            <form [formGroup]="costCaseForm" class="needs-validation" novalidate>
+                <div class="row">
+                    <div *ngFor="let field of fields" class="col-2">
+                        <label class="lbl-gap">
+                            {{field.field_name}}
+                            <strong class="text-danger" *ngIf="field.required">*</strong>
+                        </label>
+                        <div [ngSwitch]="field.field_type">
+
+                            <!-- text field -->
+                            <div class="form-group" *ngSwitchCase="'text'">
+
+                                <input type="text" class="form-control" [name]="field.field_identifier"
+                                    [maxlength]="field.field_identifier=='deptCode'?3:200"
+                                    [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                          submitted && field.required &&
+                                          fieldCtrl[field.field_identifier].errors
+                                          }" [readOnly]="field.disabled" style="text-transform:uppercase"
+                                    (change)="saveData(field.field_identifier,$event.target.value)">
+
+                            </div>
+                            <!-- dropdown -->
+                            <div class="form-field" *ngSwitchCase="'dropdown'">
+                                <mat-form-field class="dropdown-field ">
+                                    <mat-select [(value)]="costCaseForm[field.field_identifier]"
+                                        [formControlName]="field.field_identifier"
+                                        (selectionChange)="dropdownChange(field.field_identifier,$event);saveData(field.field_identifier,$event.value)">
+                                        <mat-option *ngFor="let option of field.options" [matTooltip]="option"  [value]="option">{{option}}
+                                        </mat-option>
+                                    </mat-select>
+
+                                </mat-form-field>
+
+                            </div>
+                            <div class="form-field" *ngSwitchCase="'select-multiple'">
+
+                                <mat-form-field class="dropdown-field ">
+                                    <mat-select [(value)]="costCaseForm[field.field_identifier]"
+                                        [formControlName]="field.field_identifier"
+                                        (selectionChange)="dropdownChange(field.field_identifier,$event)" multiple>
+                                        <mat-option *ngFor="let option of field.options" [matTooltip]="option"  [value]="option">{{option}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                            <!-- number -->
+                            <div class="form-group" *ngSwitchCase="'number'">
+
+                                <input type="number" class="form-control" [name]="field.field_identifier"
+                                    [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                          submitted && field.required &&
+                                          fieldCtrl[field.field_identifier].errors
+                                          }" [readOnly]="field.disabled"
+                                    (change)="saveData(field.field_identifier,$event.target.value)" required>
+                                <!-- <div *ngIf="submitted &&
+                      field.required &&
+                      fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                        <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                          {{field.field_name}} is required.
+                        </div>
+                      </div> -->
+                            </div>
+                            <!-- date -->
+                            <div class="form-group" *ngSwitchCase="'date'">
+                                <mat-form-field class="datepicker">
+                                    <input matInput [matDatepicker]="picker" [name]="field.field_identifier"
+                                        [min]="minDate" [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                          submitted && field.required &&
+                                          fieldCtrl[field.field_identifier].errors
+                                          }" readonly="true" [disabled]="field.disabled"
+                                        (dateChange)="saveData(field.field_identifier,$event.target.value)" required>
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                    <div *ngIf="submitted &&
+                        field.required &&
+                        fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                                        <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                                            {{field.field_name}} is required.
+                                        </div>
+                                    </div>
+                                </mat-form-field>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <mat-divider></mat-divider>
+        <app-cost-case-template *ngIf="showTemplate" [costCaseType]="costCaseType" [actualCostCase]="actualCostCase" 
+            [debandValue]="debandValue"></app-cost-case-template>
+        <div *ngIf="showSpinner">
+            <div class="loading-msg">
+                <img src="./assets/icons/spinner-2.gif" />
+            </div>
+        </div>
+        <div class="noType" *ngIf="!showTemplate && !showSpinner">
+            <span>PLEASE SELECT THE REQUIRED FIELDS</span>
+        </div>
+        <div class="row buttonRowCC">
+            <button type="submit" mat-raised-button class="form-submit submit-button-cc" [disabled]="isDisable()"
+                (click)="onSubmit()">Submit</button>
+        </div>
+    </mat-card>
+</div>
+
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+        [fullScreen]="true"><span class="loading-aqua"
+          style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Submitting Request</span></ngx-spinner>

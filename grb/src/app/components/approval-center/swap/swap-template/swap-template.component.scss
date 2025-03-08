@@ -1,0 +1,114 @@
+@import "~src/styles";
+
+#swap {
+    position: relative;
+    padding: 0vh 2vh 0vh 2vh;
+  
+}
+.countDiv-swap {
+    right: 0vh;
+    position: absolute;
+    top: 4vh;
+  }
+  .count-swap {
+    font-size: 2.5vh !important;
+    font-weight: bold !important;
+    text-align: end !important;
+    margin-right: 4vh;
+    font-family: $play;
+  }
+.mat-card-swap {
+    box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+    padding: 1vh;
+    border-radius: 3vh;
+    height: 80vh;
+}
+.clickable {
+   cursor: pointer;
+}
+#search {
+    padding-top: 2vh !important;
+}
+#search>input {
+    border-radius: 15px !important;
+    margin-left: 3vh !important;
+    margin-bottom: 2vh !important;
+    padding: 1vh !important;
+} 
+.searchBar {
+    width: 30vh !important;
+}
+#buttonColor {
+    background-color: $bg-aqua;
+    color: white;
+}
+.swap-ap{
+    height: 67vh;
+
+}
+#table-wrapper-swap-ap{
+    height: 67vh !important;
+    overflow: auto;
+}
+#table-wrapper-swap-ap table thead th .text {
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+    height: 20px;
+    width: 35%;
+}
+.word-wrap{
+    word-wrap: break-word;
+}
+.left-align {
+    text-align: left !important;
+}
+  
+.center-align {
+    text-align: center !important;
+}
+// tr:hover {
+//     background-color: #e0f5fd !important;
+//     cursor: auto;
+// }
+.mat-header-cell{
+    font-weight: bolder !important;
+    color: white !important;
+    font-size: 2.1vh !important;
+}
+.mat-cell {
+  font-size: 1.7vh !important;
+  font-weight: 500 ;
+}
+// input:not([type]){
+//     border: inset !important;
+//     border-bottom: 1px solid #9e9e9e;
+//     border-radius: 0;
+//     outline: none;
+//     // height: 2rem !important;
+//     width: 100%;
+//     font-size: 16px;
+//     margin: 0 0 8px 0;
+//     padding: 0;
+// }
+.no-data {
+    text-align: center;
+    font-size: 2.5vh !important;
+    font-weight: bold;
+    margin: 15vh;
+}
+::ng-deep .mat-snackbar{
+    background-color: $bg-aqua !important;
+    font-size: 2.5vh !important;
+    color: white !important;
+    .mat-simple-snackbar-action {
+        color: #303030 !important;
+        flex-shrink: 0 !important;
+        margin: -8px -8px -8px 145px !important;
+        }
+}
+.clickableText {
+    cursor: pointer;
+    font-weight: bold;
+    color: $bg-aqua;
+}

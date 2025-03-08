@@ -1,0 +1,81 @@
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b>BAND CHANGE AUDIT LOGS [{{grbNumber}}]</b>
+    </div>
+    <div class="downloadIcon">
+      <mat-icon class="download" (click)="exportData()">cloud_download</mat-icon>
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+    <!-- <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div> -->
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+    <div class="audit-container-bandchange">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="metroNum">
+          <th mat-header-cell *matHeaderCellDef> METRO </th>
+          <td mat-cell *matCellDef="let element"> {{element.metroNum}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="grbNum">
+          <th mat-header-cell *matHeaderCellDef> GRB </th>
+          <td mat-cell *matCellDef="let element"> {{element.grbNum | uppercase}} </td>
+        </ng-container>
+
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="currentBand">
+          <th mat-header-cell *matHeaderCellDef class="bandcolumn"> CURRENT BAND</th>
+          <td mat-cell *matCellDef="let element"> {{element.currentBand}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="reqBand">
+          <th mat-header-cell *matHeaderCellDef class="bandcolumn">REQUESTED BAND </th>
+          <td mat-cell *matCellDef="let element"> {{element.reqBand}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="requestedDate">
+          <th mat-header-cell *matHeaderCellDef class="datecolumn"> REQUESTED DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.requestedDate}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+
+        <ng-container matColumnDef="requestedBy">
+          <th mat-header-cell *matHeaderCellDef>REQUESTED BY</th>
+          <td mat-cell *matCellDef="let element"> {{element.requestedBy | uppercase}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bizopsUpdateDate">
+          <th mat-header-cell *matHeaderCellDef class="datecolumn">BIZOPS UPDATED DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.bizopsUpdateDate}} </td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>STATUS</th>
+          <td mat-cell *matCellDef="let element"> {{element.bandChangeStatus | uppercase}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="bizopsremarks">
+          <th mat-header-cell *matHeaderCellDef>BIZOPS REMARKS</th>
+          <td mat-cell *matCellDef="let element"> {{element.bizopsremarks | uppercase}} </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div *ngIf="enabledNoDataMsg" class="no-data">
+        NO DATA AVAILABLE
+      </div>
+      <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+  [fullScreen]="true"><span class="loading-aqua"
+    style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+    </div>

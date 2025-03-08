@@ -1,0 +1,43 @@
+@import "~src/styles";
+
+.container {
+  margin-top: 4vh;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+b{
+  font-family: $play;
+  font-size:3vh;
+}
+.submitButton:not([disabled]){
+  color: white !important;
+  background: $bg-aqua !important;
+  font-family: $play;
+  border-radius: 30px;
+}
+.submitButton {
+  background: $bg-aqua;
+  color: white;
+  border-radius: 30px;
+  float: right;
+}
+
+.submitButtonCol {
+  top: 2vh;
+
+}
+
+.lossReason{
+  width: 100%;
+}
+// #lossReason:active,
+// #lossReason:focus {
+//   border-color: unset !important;
+//   box-shadow: unset !important
+// }
+
+.date-full-width {
+  width: 100% !important;
+}

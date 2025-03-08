@@ -1,0 +1,197 @@
+@import "~src/styles";
+
+.pageHeader {
+    text-align: end;
+    font-family: "Russo One", sans-serif !important;
+    font-size: 4vh;
+    padding-right: 4vh;
+    color: white;
+}
+#bizops {
+    position: relative;
+    padding: 2vh;
+}
+.mat-card-bizops {
+    // box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+    padding: 3vh;
+    // border: 2px solid black;
+    border-radius: 3vh;
+    height: 77.5vh;
+}
+#search {
+    padding-top: 2vh;
+}
+#search > input {
+    border-radius: 15px;
+    margin-left: 3vh;
+    margin-bottom: 2vh;
+    padding: 1vh;
+}
+.searchBar {
+    width: 30vh;
+}
+#buttonColor {
+    background-color: $bg-aqua;
+    color: white;
+}
+#table-wrapper-bizops {
+    height: 63vh !important;
+    overflow: auto;
+    border: 1px solid lightgray;
+}
+#table-wrapper-bizops table thead th .text {
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+    height: 20px;
+    width: 35%;
+}
+.left-align {
+    text-align: left !important;
+}
+
+.center-align {
+    text-align: center !important;
+}
+// tr:hover {
+//     background-color: #e0f5fd !important;
+//     cursor: context-menu !important;
+// }
+.countDiv-bizops {
+    right: 0vh;
+    position: absolute;
+    top: 5.5vh;
+  }
+  .count-bizops {
+    font-size: 2.5vh !important;
+    font-weight: bold !important;
+    text-align: end !important;
+    margin-right: 4vh;
+    font-family: $play;
+  }
+.mat-header-cell {
+    font-weight: bolder !important;
+    color: white !important;
+    font-size: 1.9vh !important;
+}
+.mat-cell {
+    font-size: 1.7vh !important;
+    font-weight: 500 ;
+}
+// .clickable {
+// //    cursor: pointer;
+// }
+.rTableRow {
+    display: table-row;
+}
+
+.rTableCell,
+.rTableHead {
+    display: table-cell;
+    padding: 3px 10px;
+    // border: 1px solid #999999;
+}
+
+.mat-download-icon {
+    padding: 3vh 0vh;
+}
+.download-sample-text {
+    padding-left: 5vh;
+}
+
+.download {
+    position: absolute;
+    right: 0vh;
+}
+.table-style {
+    width: 50%;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.btn,
+.btn-large,
+.btn-small {
+    text-decoration: none;
+    color: #fff;
+    background-color: $bg-aqua !important;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+}
+.btn i,
+.btn-large i,
+.btn-small i,
+.btn-floating i,
+.btn-large i,
+.btn-small i,
+.btn-flat i {
+    font-size: 1.6rem;
+    line-height: inherit;
+}
+.btn,
+.btn-large,
+.btn-small,
+.btn-flat {
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: capitalize !important;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+// input:not([type]) {
+//     border: inset !important;
+//     border-bottom: 1px solid #9e9e9e;
+//     border-radius: 0;
+//     outline: none;
+//     // height: 2rem !important;
+//     // width: 100%;
+//     font-size: 16px;
+//     margin: 0 0 8px 0;
+//     padding: 0;
+// }
+.no-data {
+    text-align: center;
+    font-size: 2.5vh !important;
+    font-weight: bold;
+    margin: 15vh;
+}
+.loading-msg {
+    margin: 6%;
+    font-weight: bold;
+    font-size: 5vh;
+    color: $bg-aqua !important;
+    text-align: center;
+}
+::ng-deep .mat-snackbar {
+    background-color: $bg-aqua !important;
+    font-size: 2.5vh !important;
+    color: white !important;
+    .mat-simple-snackbar-action {
+        color: #303030 !important;
+        flex-shrink: 0 !important;
+        margin: -8px -8px -8px 145px !important;
+    }
+}

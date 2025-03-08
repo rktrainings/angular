@@ -1,0 +1,119 @@
+<div class="form-heading">
+  <div class="row firstRow">
+    <div class="col">
+      <b class="formName"> {{formName}}</b> 
+    </div>
+  </div>
+  <div class="hiring-form">
+
+    <form [formGroup]="hiringForm" class="needs-validation" novalidate>
+      <div class="row">
+        <div *ngFor="let field of fields"  [ngClass]="(field.field_type=='textarea' || field.field_type=='attachment')?'col-4':'col-4'">
+          <label class="lbl-gap">
+            {{field.field_name}}
+            <strong class="text-danger" *ngIf="field.required">*</strong>
+          </label>
+          <div [ngSwitch]="field.field_type">
+
+            <!-- text fild -->
+            <div class="form-group" *ngSwitchCase="'text'">
+
+              <input type="text" class="form-control" [name]="field.field_identifier" 
+                [formControlName]="field.field_identifier"  [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" [matTooltip]="hiringForm.value[field.field_identifier]" [readOnly]="field.disabled" (change)="saveData(field.field_identifier,$event.target.value)" >
+              <!-- <div *ngIf="
+              field.required &&
+              fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                  {{field.field_name}} is required.
+                </div> -->
+              <!-- </div> -->
+            </div>
+            <!-- dropdown -->
+            <div class="form-field" *ngSwitchCase="'dropdown'">
+              <mat-form-field class="dropdown" [ngClass]="hiringForm.controls[field.field_identifier].hasError('required')?'invalid-dropdown':'dropdown-field'">
+                <mat-select [(value)]="hiringForm[field.field_identifier]" [formControlName]="field.field_identifier" [matTooltip]="hiringForm.value[field.field_identifier]" (selectionChange)="dropdownChange(field.field_identifier,$event,false);saveData(field.field_identifier,$event)">
+                  <mat-option *ngFor="let option of field.options"  [matTooltip]="option" [value]="option">{{option}}</mat-option>
+                </mat-select>
+                <!-- <mat-error *ngIf=" hiringForm.controls[field.field_identifier].hasError('required')">
+                  {{field.field_name}} is required.</mat-error> -->
+
+              </mat-form-field>
+
+            </div>
+            <!-- number -->
+            <div class="form-group" *ngSwitchCase="'number'">
+
+              <input type="text" min="0" step="1" class="form-control number" [name]="field.field_identifier"
+              [matTooltip]="hiringForm.value[field.field_identifier]"
+                [formControlName]="field.field_identifier"  [ngClass]="hiringForm.controls[field.field_identifier].hasError('required')?'invalid-text':''"
+                 [readOnly]="field.disabled" (keyup)="check()" (change)="saveData(field.field_identifier,$event.target.value)" required>
+              <!-- <div *ngIf="
+              field.required &&
+              fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                  {{field.field_name}} is required.
+                </div>
+              </div> -->
+            </div>
+            <!-- date -->
+            <div class="form-group" *ngSwitchCase="'date'">
+              <mat-form-field class="datepicker">
+                <input matInput [matDatepicker]="picker" [name]="field.field_identifier"
+                  [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" [readOnly]="field.disabled"  (change)=" saveData(field.field_identifier,$event.target.value)" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <!-- <div *ngIf="
+                field.required &&
+                fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                  <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                    {{field.field_name}} is required.
+                  </div>
+                </div> -->
+              </mat-form-field>
+            </div>
+            <!-- textarea -->
+            <div class="form-group" *ngSwitchCase="'textarea'">
+              <textarea rows="4" maxlength="500" type="text" class="form-control comments"
+                [name]="field.field_identifier" [formControlName]="field.field_identifier"
+                [ngClass]="{ 'is-invalid':
+                                   field.required &&
+                                  fieldCtrl[field.field_identifier].errors
+                                  }" [readOnly]="field.disabled" (keyup)="countChar($event)" (change)="saveData(field.field_identifier,$event.target.value)" required></textarea>
+              <div id="charNum">{{count}} characters are remaining</div>
+
+              <!-- <div *ngIf="
+              field.required &&
+              fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                  {{field.field_name}} is required.
+                </div>
+              </div> -->
+            </div>
+            <!-- attachement -->
+            <!-- <div class="form-group" *ngSwitchCase="'attachment'">
+
+              <div id="file-pond-wrapper">
+                <file-pond #myPond [options]="pondOptions" [files]="pondFiles" (oninit)="pondHandleInit()"
+                  (onaddfile)="pondHandleAddFile($event)">
+                </file-pond>
+              </div>
+            </div> -->
+            <div>
+
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+  
+    </form>
+  </div>
+</div>

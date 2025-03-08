@@ -1,0 +1,62 @@
+@import "~src/styles";
+.convert-heading {
+    font-size: 3vh;
+    font-family: $play;
+    padding-left: 5vh;
+}
+.convert-internal-row {
+    padding: 5vh;
+}
+
+::ng-deep .convert-internal-row .mat-select-value {
+    padding-left: 1vh !important;
+}
+.convert-internal-buttons {
+    margin-right: 6vh;
+    float: right;
+    #buttonColor {
+        // background-color: $bg-aqua;
+        // color: white;
+        border-radius: 30px;
+        padding-left: 5vh;
+        padding-right: 5vh;
+    }
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.dropdown-field {
+    width: 100% !important;
+}
+::ng-deep .dropdown-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+    border: 1px solid #ced4da !important;
+    border-radius: 8px;
+    height: calc(1.5em + 0.75rem + 2px) !important;
+    border-style: solid !important;
+    border-left-width: 6px !important;
+    border-radius: 8px !important;
+    border-left-color: $bg-aqua !important;
+    align-items: center !important;
+}
+
+::ng-deep .convert-to-internal .mat-form-field-appearance-legacy .mat-form-field-underline {
+    height: unset !important;
+    width: unset !important;
+}
+
+.nextButton-convert:not([disabled]) {
+    color: white !important;
+    background: $bg-aqua !important;
+    float: right;
+    font-family: $play;
+}
+
+.loading-button > img {
+    width: 45px;
+}
+
+.mat-select-value {
+    padding-left: 1vh !important;
+}

@@ -1,0 +1,123 @@
+<div>
+  <div class="row">
+    <div *ngIf="lowcost" style="width: 90%;">
+      <div class="col-17">
+        <p class="heading-lowcost">
+          NEW GROWTH-MOVE TO LOW COST
+        </p>
+      </div>
+    </div>
+    <div *ngIf="!lowcost" style="width: 90%;">
+      <div class="col-17">
+        <p class="heading-newtransition">
+          NEW GROWTH-NEW TRANSITION
+        </p>
+      </div>
+    </div>
+    <div class="col-1">
+      <div class="close-icon">
+        <mat-icon class="icon" (click)="close()">close</mat-icon>
+      </div>
+    </div>
+  </div>
+
+
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="width: 100%;">
+    <div class="row firstRow">
+      <div class="col-3">
+        <label class="lbl-gap">
+          BAND
+          <strong class="text-danger">*</strong>
+        </label>
+        <div class="form-field bandList">
+          <mat-form-field class="dropdown-field ">
+            <mat-select [(value)]="bandlist" formControlName="bandlist">
+              <mat-option *ngFor="let bandlist of bandlists" [matTooltip]="bandlist" [value]="bandlist">{{bandlist}}</mat-option>
+            </mat-select>
+
+          </mat-form-field>
+
+        </div>
+        <!-- <mat-form-field>
+          <mat-label>Band</mat-label>
+          <mat-select [(value)]="bandlist" formControlName="bandlist">
+            <mat-option *ngFor="let bandlist of bandlists" [matTooltip]="bandlist" [value]="bandlist">{{bandlist}}</mat-option>
+          </mat-select>
+        </mat-form-field> -->
+      </div>
+      <div class="col-3">
+
+        <label class="lbl-gap">
+          DEPT CODE
+          <strong class="text-danger">*</strong>
+        </label>
+        <div class="form-group">
+          <div *ngIf="!roleBased">
+
+            <input type="text" class="form-control textcss"  maxlength="3" formControlName="deptCode"
+              [(ngModel)]="deptCode" (change)="populatedetails()" [readonly]="enableLoadingMsg">
+
+          </div>
+          <div class="form-field bandList" *ngIf="roleBased">
+
+            <mat-form-field class="dropdown-field ">
+              <mat-select [(ngModel)]="deptCode" formControlName="deptCode" (selectionChange)="populatedetails()">
+                <mat-option *ngFor="let deptCode of loggedInDepartments" [matTooltip]="deptCode" [value]="deptCode">{{deptCode}}
+                </mat-option>
+              </mat-select>
+
+            </mat-form-field>
+
+          </div>
+        </div>
+
+      </div>
+      <div class="col-3 textb">
+        <label class="lbl-gap">
+          DEPT NAME
+
+        </label>
+        <div class="form-group">
+
+          <input type="text" class="form-control" formControlName="deptName" [(ngModel)]="deptName">
+
+        </div>
+
+        <!-- <mat-form-field>
+          <mat-label>Dept Name</mat-label>
+          <input matInput type="text" formControlName="deptName" class="form-control " step="1" [(ngModel)]="deptName">
+        </mat-form-field> -->
+      </div>
+    </div>
+    <!-- <label class="lbl-gap">Note: Enter Department Code in Caps</label>  -->
+    <div class="form-group">
+
+      <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+        [fullScreen]="true"><span class="loading-aqua"
+          style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+      <button mat-raised-button class="submitButton" [disabled]="nextbutton">
+        <!-- <div *ngIf="enableLoadingMsg">
+          <div class="loading-msg">
+            <img class="imgspin" src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div> -->
+
+        <div *ngIf="enableLoadingMsg" class="loading-button">
+          <img src="./assets/icons/spinner-2.gif" />
+        </div>
+        <div *ngIf="!enableLoadingMsg">
+          NEXT
+        </div>
+
+      </button>
+
+    </div>
+  </form>
+
+
+  <!-- <div class="row">
+    <button mat-raised-button (click)="OPRsubmit()">Next</button>
+
+  </div>  -->
+
+</div>

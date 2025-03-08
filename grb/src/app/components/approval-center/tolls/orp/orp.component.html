@@ -1,0 +1,19 @@
+<div id="orp" *ngIf="!enableLoadingMsg">
+  <!-- <p class="pageHeader">ORP</p> -->
+  <mat-card class="mat-card-orp">
+    <!-- <div *ngIf="enableLoadingMsg">
+      <div class="loading-msg">
+        <img src="./assets/icons/spinner-2.gif" />
+        <p>Loading ...</p>
+      </div>
+    </div>     -->
+    <div>
+      <!-- <app-toll-template></app-toll-template> -->
+      <app-toll-template *ngIf="isORPAPICallEnabled" [enabledORP]="enabledORP" [dataSourceORP]="dataSourceORP"></app-toll-template>
+
+    </div>
+  </mat-card>
+</div>
+<div *ngIf="enableLoadingMsg">
+  <app-loader></app-loader>
+</div>

@@ -1,0 +1,18 @@
+<div id="footer">
+  <div id="ibmLogo">
+    <img src="./assets/icons/ibmLogo.svg" />
+  </div>
+  <div id="cps">
+    <b>CPS</b>
+  </div>
+  <div *ngIf="download">
+    <p class="loading showDownload">Downloading
+
+      <span *ngFor="let fileName of fileNames">
+        {{fileName}}
+        <img class="excel-icon" src="./assets/icons/excel-icon.png" />
+
+      </span>
+    </p>
+  </div>
+</div>

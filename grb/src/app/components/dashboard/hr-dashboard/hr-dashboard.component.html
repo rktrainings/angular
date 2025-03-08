@@ -1,0 +1,16 @@
+<div id="dashboard">
+  <mat-card class="mat-card-dashboard">
+    <div *ngIf="!approvedRequestStatus">
+      <div class="loading-msg">
+        <img src="./assets/icons/spinner-2.gif" />
+      </div>
+    </div>
+    <app-approved-request *ngIf="approvedRequestStatus" [approvedDataSources]="approvedDataSources"
+      [enabledApproved]="enabledApproved"></app-approved-request>
+
+  </mat-card>
+  <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+
+</div>

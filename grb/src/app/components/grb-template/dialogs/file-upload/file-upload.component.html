@@ -1,0 +1,12 @@
+<div class="close-icon">
+  <mat-icon (click)="dialogRef.close()">close</mat-icon>
+</div>
+<div class="reject-content">
+  <div>
+    <p class="center-align">Are you sure you want proceed with existing uploaded file ?</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button id='buttonColor' (click)="onClickYes()">Yes</button>
+    <button mat-raised-button id='buttonColor' (click)="onClickNo()">No</button>
+  </div>
+</div>

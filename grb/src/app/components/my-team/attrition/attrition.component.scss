@@ -1,0 +1,101 @@
+@import "~src/styles";
+
+.my-attrition-container{
+  height: 66.5vh;
+  overflow: auto;
+};
+#search>input {
+  border-radius: 15px;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+
+}
+
+.nextButton:not([disabled]) {
+  color: white !important;
+  background: $bg-aqua !important;
+  float:right;
+  font-family: $play;
+  border-radius: 30px;
+}
+.nextButton{
+  float:right;
+  border-radius: 30px;
+  font-family: $play;
+  padding:0vh 5vh !important;
+}
+
+.searchBar {
+  width: 30vh;
+}
+.make-gold {
+  background-color:  #e0f5fd !important;
+}
+
+
+#attrition {
+  position: relative;
+  padding:2vh;
+}
+
+.mat-card-attrition {
+  padding: 2vh;
+  border-radius: 3vh;
+}
+
+.mat-form-field-search{
+  padding-top: 20px;
+}
+.descriptions{
+  padding: 15px 0px 0px 23px;
+}
+
+.text{
+  text-align: left;
+}
+.no-data{
+  text-align:center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin:15vh;
+}
+
+.downloadIcon {
+  right: 5vh;
+  position: absolute;
+  top: 4vh;
+  margin-right: 60px;
+
+  mat-icon {
+    font-size: 4vh !important;
+    cursor: pointer;
+  }
+}
+
+th.mat-header-cell {
+  text-align: left !important;
+  width: 5% !important; 
+}
+
+td.mat-cell {
+  text-align: left !important;
+}
+
+.center {
+  text-align: right !important;
+}
+
+.countDiv {
+  right: -3vh;
+  position: absolute;
+  top: 4vh;
+  margin-right: 15px;
+}
+.count {
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: end !important;
+  margin-right: 4vh;
+  font-family: $play;
+}

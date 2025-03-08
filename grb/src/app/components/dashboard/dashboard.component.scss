@@ -1,0 +1,165 @@
+@import "~src/styles";
+
+#dashboard {
+  position: relative;
+  padding-left: 2vh;
+  padding-right: 2vh;
+
+}
+
+
+::ng-deep .mat-tab-body-content {
+  overflow: hidden !important;
+}
+
+
+.mat-tab-group{
+  height: 74vh !important;
+}
+
+
+#tableheader{
+  width:14%;
+}
+.mat-card-dashboard {
+  box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+  padding-left: 3vh;
+  padding-right: 3vh;
+  height: 79vh;
+  border-radius: 3vh;
+  
+}
+
+.mat-label {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.mat-form-field-search {
+  padding-top: 20px;
+}
+
+.tab-descriptions {
+  padding-top: 1.5vh;
+  padding-left: 3vh;
+  font-family: "Play", sans-serif !important;
+}
+
+//Arpita
+table {
+  width: 100%;
+}
+
+tr.example-detail-row {
+  height: 0;
+}
+
+// tr.mat-header-row {
+//   // height: 56px;
+//   background: darkturquoise;
+// }
+
+tr.example-element-row:not(.example-expanded-row):hover {
+  background: #e0f5fd;
+}
+
+
+
+tr.example-detail-row {
+  height: 0;
+}
+.example-element-detail {
+  overflow: hidden;
+  display: flex;
+}
+tr {
+  border: 1px solid lightgray;
+}
+
+.no-data{
+  text-align:center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin:15vh;
+}
+.example-element-diagram {
+  min-width: 80px;
+  border: 2px solid black;
+  padding: 8px;
+  font-weight: lighter;
+  margin: 8px 0;
+  height: 104px;
+}
+
+.example-element-symbol {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.example-element-description {
+  padding: 16px;
+}
+
+.example-element-description-attribution {
+  opacity: 0.5;
+}
+
+
+.cc-table-container th.mat-header-cell {
+  font-weight: bold;
+  color: black;
+  width: 10%;
+}
+
+.cc-table-container .td.mat-cell{
+  text-align: left;
+}
+
+// th.mat-header-cell:last-of-type {
+//   padding-right: 0px;
+//   // width: 100px;
+// }
+.td.mat-cell:last-of-type{
+  padding:unset !important;
+}
+.mat-icon-cc,
+.clickableText {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.clickableText {
+  color: $bg-aqua;
+}
+.loading-msg{
+  margin-top: 8%;
+  font-weight: bold;
+  font-size: 5.0vh;
+  color:$bg-aqua !important;
+  text-align: center;
+}
+// tbody>tr:hover {
+//   background-color: #e0f5fd !important;
+//   cursor: auto;
+// }
+.mat-header-cell{
+  font-weight: bolder !important;
+  color: white !important;
+  font-size: 2.1vh !important;
+}
+.mat-cell {
+font-size: 1.7vh !important;
+font-weight: 500 !important;
+}
+.left-align {
+  text-align: left !important;
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+marquee{
+  font-family: $play;
+}

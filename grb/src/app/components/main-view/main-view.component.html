@@ -1,0 +1,79 @@
+<div class="main-view">
+  <div class="row">
+    <div class="col-2">
+      <!-- <h1 class="header-text-1">GRB</h1> -->
+
+    </div>
+
+    <div class="headerText col-10">
+      <span class="welcome">
+        Welcome to Global Resource Board (GRB) !!
+      </span>
+    </div>
+  </div>
+  <div class="row text-row">
+    <div class="col-2">
+    </div>
+    <div class="headerText col-10">
+      <span>
+        <p class="welcomeText">
+          <span>One Click - Real time status update of all open positions</span>
+          <br />
+          <span> One stop shop for all people requirement with designated access</span>
+          <br />
+          <span> Simple, transparent and collaborative GRB process flow from submission ➯ approval ➯ onboard</span>
+        </p>
+      </span>
+
+    </div>
+  </div>
+  <div class="row parentRow1">
+    <div class="col" *ngFor="let parent of menu">
+      <mat-card class="example-card" (click)="assignChild(parent);navigateParent(parent.url,parent.key);"
+        [class.active]="getActiveParent(parent)">
+        <div><img class="example-header-image" [src]="parent.imgURL"></div>
+        <mat-card-content>
+          <p class="parent-key">
+            {{parent.key | uppercase}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row childRow1">
+    <div class="col"  *ngFor="let child of child1;let i=index">
+      <mat-card class="example-child-card" [ngClass]="(child1.length==2)?'twoChilds':''" [ngClass]="(child1.length==1)?'oneChild':''"  (click)="navigate(child.url,child.key,i);assignSubchild(child)"
+        [class.active]="getActiveChild(child)">
+        <mat-card-content>
+          <p class="child-key">
+            {{child.key | uppercase}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div class="row childRow2">
+    <div class="col"  *ngFor="let child of child2;let i=index" (click)="navigate(child.url,child.key,i);assignSubchild(child)"
+      [class.active]="getActiveChild(child)">
+      <mat-card class="example-child-card" [ngClass]="(child2.length==2)?'twoChilds twoChilds'+i :''" [ngClass]="(child2.length==1)?'oneChild':''" >
+        <mat-card-content>
+          <p class="child-key">
+            {{child.key | uppercase}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <mat-divider *ngIf="subChild.length>0" class="divider"></mat-divider>
+  <div class=" row sub-childRow">
+    <div class="col" *ngFor="let sub of subChild">
+      <mat-card class="example-child-card" (click)="navigateSubChild(sub.url,sub.key);">
+        <mat-card-content>
+          <p class="sub-child-key">
+            {{sub.key | uppercase}}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

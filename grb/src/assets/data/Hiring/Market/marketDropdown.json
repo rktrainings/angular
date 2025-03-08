@@ -1,0 +1,133 @@
+{
+    "ANZ": {
+        "APAC": {
+            "ANZ": [
+                "AUSTRALIA",
+                "NEW ZEALAND"
+            ]
+        }
+    },
+    "APJ": {
+        "APAC": {
+            "ASEAN": [
+                "INDONESIA",
+                "MALAYSIA",
+                "PHILIPPINES",
+                "SINGAPORE",
+                "THAILAND",
+                "VIETNAM"
+            ],
+            "ISA": [
+                "INDIA",
+                "SRI LANKA"
+            ],
+            "KOREA": [
+                "KOREA"
+            ],
+            "GCG": [
+                "CHINA ONSHORE",
+                "HONG KONG / CHINA OFFSHORE",
+                "TAIWAN"
+            ],
+            "JAPAN": [
+                "JAPAN"
+            ]
+        }
+    },
+    "EU": {
+        "EMEA": {
+            "BENELUX": [
+                "BELGIUM",
+                "LUXEMBOURG",
+                "NETHERLANDS"
+            ],
+            "CEE": [
+                "AZERBAIJAN",
+                "BULGARIA",
+                "CROATIA",
+                "CZECH REPUBLIC",
+                "HUNGARY",
+                "LITHUANIA",
+                "POLAND",
+                "ROMANIA",
+                "RUSSIA",
+                "SERBIA",
+                "SLOVAKIA",
+                "SLOVENIA",
+                "UKRAINE"
+            ],
+            "DACH": [
+                "AUSTRIA",
+                "GERMANY",
+                "SWITZERLAND"
+            ],
+            "FRANCE": [
+                "FRANCE"
+            ],
+            "ITALY": [
+                "ITALY"
+            ],
+            "NORDIC": [
+                "DENMARK",
+                "FINLAND",
+                "NORWAY",
+                "SWEDEN"
+            ],
+            "SPGI": [
+                "CYPRUS",
+                "GREECE",
+                "ISRAEL",
+                "PORTUGAL",
+                "SPAIN"
+            ],
+            "UKI": [
+                "IRELAND",
+                "UNITED KINGDOM"
+            ]
+        }
+    },
+    "MEA": {
+        "EMEA": {
+            "MEA": [
+                "EGYPT",
+                "GHANA",
+                "KENYA",
+                "KUWAIT",
+                "MIDDLE EAST FZE",
+                "MOROCCO",
+                "PAKISTAN",
+                "QATAR",
+                "SAUDI ARABIA",
+                "SOUTH AFRICA",
+                "TUNISIA",
+                "TURKEY"
+            ]
+        }
+    },
+    "LA": {
+        "AG": {
+            "LA": [
+                "ARGENTINA",
+                "BRAZIL",
+                "CHILE",
+                "COLOMBIA",
+                "COSTA RICA",
+                "ECUADOR",
+                "MEXICO",
+                "PERU",
+                "URUGUAY",
+                "VENEZUELA"
+            ]
+        }
+    },
+    "NA": {
+        "AG": {
+            "CANADA/LCR": [
+                "CANADA"
+            ],
+            "UNITED STATES - COMMERCIAL": [
+                "UNITED STATES OF AMERICA"
+            ]
+        }
+    }
+}

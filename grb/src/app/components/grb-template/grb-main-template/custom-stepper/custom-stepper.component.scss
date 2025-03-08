@@ -1,0 +1,128 @@
+@import "~src/styles";
+
+#template {
+    position: relative;
+    padding: 2vh; 
+}
+.mat-card-template {
+    padding: 3vh;
+    border-radius: 3vh;
+}
+.mat-icons{
+    text-align: center;
+    padding-right: 20px;
+    margin: 5px;
+}
+.svg-icons{
+    text-align: center;
+    padding-right: 20px;
+}
+.review-stepper-text{
+    text-align: center;
+    padding-right: 15px;
+}
+
+.review{
+    padding-left: 200px;
+}
+
+.rTableRow {
+    display: table-row;
+  }
+  .rTableCell {
+    display: table-cell;
+  }
+  svg:hover {
+    fill: green;
+  }
+
+.stepper-label {
+    width: 20vh;
+    font-family: "Play", sans-serif;
+    font-size: 3vh;
+}
+.stepper-line{
+    border: 1px solid lightblue;
+    position: absolute;
+    padding-left: 262px;
+    margin: 95px 0px 0px -38px;
+}
+
+::ng-deep .mat-step-header .mat-step-icon {
+    background-color: $bg-aqua;
+    color: #fff;
+}
+
+// // External GRB
+// ::ng-deep .external .paddingOne {
+//     background-color: var(--ext-var1) !important;
+//  } 
+//  ::ng-deep .external .paddingTwo {
+//     background-color: var(--ext-var1) !important;
+//  } 
+ 
+//  // Internal GRB
+//  ::ng-deep .internal .paddingOne {
+//     background-color: var(--int-var1);
+//  } 
+
+// ::ng-deep .internal .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(2) .mat-step-icon {
+//     background-color: var(--int-var2);
+//  } 
+
+// ::ng-deep .internal .mat-horizontal-stepper-header-container .mat-step-header:nth-of-type(3) .mat-step-icon {
+//     background-color: var(--int-var3);
+//  } 
+ 
+::ng-deep .mat-stepper-label-position-bottom 
+.mat-horizontal-stepper-header {
+    box-sizing: border-box;
+    flex-direction: column;
+    height: auto;
+    padding: 0px 24px 20px 24px !important;
+}
+
+::ng-deep .mat-horizontal-stepper-header{
+    pointer-events: none !important;
+}
+
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::before, 
+::ng-deep .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:first-child)::after, [dir=rtl] .mat-stepper-label-position-bottom .mat-horizontal-stepper-header:not(:last-child)::before {
+    border-top-width: 1px;
+    border-top-style: solid;
+    content: '';
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    top: 13px !important;
+    width: calc(50% - 20px);
+}
+
+::ng-deep .mat-stepper-label-position-bottom 
+.mat-stepper-horizontal-line {
+    margin: 0;
+    min-width: 0;
+    position: relative;
+    top: 13px !important;
+}
+
+h1:nth-of-type(1) {
+    color: blue;
+  }
+svg {
+    width: 60px;
+    height: 80px;
+    fill: currentColor;
+    vertical-align: bottom;
+  }
+
+  
+.clickedMenu {
+    text-align: end;
+    font-family: $play !important;
+    font-size: 4vh;
+    padding-right: 3vh;
+    // padding-top: 1vh;
+    margin-bottom: 0 !important;
+    color: white;
+  }

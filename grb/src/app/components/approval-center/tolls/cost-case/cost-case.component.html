@@ -1,0 +1,14 @@
+<div *ngIf="enableLoadingMsg">
+  <app-loader></app-loader>
+</div>
+
+<div id="costcase" *ngIf="!enableLoadingMsg">
+    <mat-card class="mat-card-costcase">
+      <div>
+        <app-toll-template *ngIf="isCCAPICallEnabled" [enabledCC]="enabledCC" [dataSourceCC]="dataSourceCC">
+        </app-toll-template>
+
+      </div>
+    </mat-card>
+</div>
+

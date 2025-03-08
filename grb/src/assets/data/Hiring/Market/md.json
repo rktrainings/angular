@@ -1,0 +1,133 @@
+{
+    "APJ": {
+        "ANZ": {
+            "Asia Pacific": {
+                "ANZ": [
+                    "Australia",
+                    "NewZealand"
+                ]
+            }
+        },
+        "APAC": {
+            "Asia Pacific": {
+                "ASEAN": [
+                    "Indonesia",
+                    "Malaysia",
+                    "Philippines",
+                    "Singapore",
+                    "Thailand",
+                    "Vietnam"
+                ],
+                "ISA": [
+                    "India",
+                    "Sri Lanka"
+                ],
+                "KOREA": [
+                    "Korea"
+                ]
+            }
+        }
+    },
+    "EU":{
+        "EUROPE":{
+            "EUROPE": {
+                "Benelux": [
+                    "Belgium",
+                    "Luxembourg",
+                    "Netherlands"
+                ],
+                "CEE": [
+                    "Azerbaijan",
+                    "Bulgaria",
+                    "Croatia",
+                    "Czech Republic",
+                    "Hungary",
+                    "Lithuania",
+                    "Poland",
+                    "Romania",
+                    "Russia",
+                    "Serbia",
+                    "Slovakia",
+                    "Slovenia",
+                    "Ukraine"
+                ],
+                "DACH": [
+                    "Austria",
+                    "Germany",
+                    "Switzerland",
+                    "France"
+                ],
+                "FRANCE": [
+                    "FRANCE"
+                ],
+                "ITALY": [
+                    "ITALY"
+                ],
+                "NORDIC": [
+                    "Denmark",
+                    "Finland",
+                    "Norway",
+                    "Sweden"
+                ],
+                "SPGI": [
+                    "Cyprus",
+                    "Greece",
+                    "Israel",
+                    "Portugal",
+                    "Spain"
+                ],
+                "UKI": [
+                    "Ireland",
+                    "United Kingdom"
+                ]
+            },
+            "MIDDLE EAST & AFRICA": {
+                "MEA": [
+                    "Egypt",
+                    "Ghana",
+                    "Kenya",
+                    "Kuwait",
+                    "Middle East FZE",
+                    "Morocco",
+                    "Pakistan",
+                    "Qatar",
+                    "Saudi Arabia",
+                    "South Africa",
+                    "Tunisia",
+                    "Turkey"
+                ]
+            }
+        }
+    },
+    "AG":{
+        "LA":{
+            "LATIN AMERICA": {
+                "LA": [
+                    "Argentina",
+                    "Brazil",
+                    "Chile",
+                    "Colombia",
+                    "Costa Rica",
+                    "Ecuador",
+                    "Mexico",
+                    "Peru",
+                    "Uruguay",
+                    "Venezuela"
+                ]
+            }
+        },
+        "NA":{
+            "NORTH AMERICA": {
+                "Canada": [
+                    "Canada"
+                ],
+                "LCR": [
+                    "Canada"
+                ],
+                "United States - Commercial": [
+                    "United States of America"
+                ]
+            }
+        }
+    }
+}

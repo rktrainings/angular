@@ -1,0 +1,93 @@
+<div id="dashboard">
+  <mat-card class="mat-card-dashboard">
+    <mat-tab-group [(selectedIndex)]="tabIndex" (selectedTabChange)="onTabChangeEvent($event.index)">
+      <!-- Current Cost View -->
+      <mat-tab *ngIf="!isCISPOC" label="CURRENT COST CASE VIEW {{ccviewCount}}" [ngClass]="tabIndex== 0 ? 'active' : '' ">
+
+        <div class="tab-descriptions">
+          <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+            onmouseout="this.start();">
+            Band level view of CC, HC, Att, submitted positions, open positons, with simple calculation to identify
+            the vacant positions to submit the hiring request
+          </marquee>
+        </div>
+        <div *ngIf="!costCaseRequestStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+
+
+        <app-currentcc *ngIf="costCaseRequestStatus" [ccDataSource]="ccDataSource" [enabledCCView]="enabledCCView">
+        </app-currentcc>
+
+
+      </mat-tab>
+
+      <!-- Pending Hiring Request -->
+      <mat-tab *ngIf="!isCISPOC" label="PENDING HIRING REQUESTS {{pendingCount}}">
+        <div class="tab-descriptions">
+          <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+            onmouseout="this.start();">
+            Hiring Request that are submitted by the Hiring Managers / Spoc and are pending with Biz-Ops / IOT / Board
+            for review and approvals.
+          </marquee>
+        </div>
+        <div *ngIf="!pendingRequestStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-pending-request *ngIf="pendingRequestStatus" [pendingDataSource]="pendingDataSource"
+          [enabledPending]="enabledPending">
+        </app-pending-request>
+      </mat-tab>
+
+      <!-- Approved Hiring Request -->
+      <mat-tab *ngIf="!isCISPOC" label="APPROVED HIRING REQUESTS {{approvedCount}}">
+        <div class="tab-descriptions">
+          <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+            onmouseout="this.start();">
+            GRB Triggerd with Recruitment WIP
+          </marquee>
+        </div>
+        <div *ngIf="!approvedRequestStatus">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+          </div>
+        </div>
+        <app-approved-request *ngIf="approvedRequestStatus" [approvedDataSources]="approvedDataSources"
+          [enabledApproved]="enabledApproved"></app-approved-request>
+      </mat-tab>
+
+      <!-- CI Request -->
+      <div *ngIf="showCi">
+        <mat-tab label="CI DASHBOARD {{ciCount}}">
+          <div class="tab-descriptions">
+            <marquee behavior="scroll" direction="left" scrollamount="5" onmouseover="this.stop();"
+              onmouseout="this.start();">
+              Once updated the employee id as CI release, backfill request cannot be submitted for the same employee id.
+              Backfill request submitted for hiring cannot be utilized as CI release untill the request is cancelled (If
+              not approved)
+            </marquee>
+          </div>
+          <div *ngIf="!ciRequestStatus">
+            <div class="loading-msg">
+              <img src="./assets/icons/spinner-2.gif" />
+            </div>
+          </div>
+          <app-ci-dashboard *ngIf="ciRequestStatus" [ciDataSources]="ciDataSources" [enabledCi]="enabledCi">
+          </app-ci-dashboard>
+        </mat-tab>
+      </div>
+    </mat-tab-group>
+  </mat-card>
+  <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+
+</div>
+
+<!-- <div *ngIf="(showLoader)">
+  <app-loader></app-loader>
+</div> -->

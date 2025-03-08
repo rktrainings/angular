@@ -1,0 +1,76 @@
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b> BAND CHANGE AUDIT LOGS </b>
+    </div>
+    <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+    <div class="audit-container-bandchange table-border">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="metronum">
+          <th mat-header-cell *matHeaderCellDef> METRO# </th>
+          <td mat-cell *matCellDef="let element"> {{element.metroNum}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="grbnum">
+          <th mat-header-cell *matHeaderCellDef> GRB# </th>
+          <td mat-cell *matCellDef="let element"> {{element.grbNum | uppercase}} </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="currentBand">
+          <th mat-header-cell *matHeaderCellDef> CURRENT BAND </th>
+          <td mat-cell *matCellDef="let element"> {{element.currentBand}} </td>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="RequestedBand">
+          <th mat-header-cell *matHeaderCellDef>REQUESTED BAND</th>
+          <td mat-cell *matCellDef="let element"> {{element.reqBand}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="requestedBy">
+          <th mat-header-cell *matHeaderCellDef>REQUESTED BY</th>
+          <td mat-cell *matCellDef="let element"> {{element.requestedBy | uppercase}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="requestedDate">
+          <th mat-header-cell *matHeaderCellDef> REQUESTED DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.requestedDate| date: 'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="bizopsActionDate">
+          <th mat-header-cell *matHeaderCellDef> BIZOPS ACTION DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.bizopsUpdateDate| date: 'yyyy-MM-dd'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef> STATUS </th>
+          <td mat-cell *matCellDef="let element"> {{element.bandChangeStatus | uppercase}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bizopsRemarks">
+          <th mat-header-cell *matHeaderCellDef> BIZOPS REMARKS</th>
+          <td mat-cell *matCellDef="let element">{{element.bizopsremarks | uppercase}} </td>
+        </ng-container>
+
+
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>

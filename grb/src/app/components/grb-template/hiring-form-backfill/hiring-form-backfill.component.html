@@ -1,0 +1,102 @@
+<div id="backfill">
+  <div class="backfill-container ">
+    <div class="header" *ngIf="!displayHeader">
+      <b> Backfill Employees Details </b>
+    </div>
+    <div class="header" *ngIf="displayHeader && !subkHeader">
+      <b>Conversion Employees Details</b>
+    </div>
+    <div class="header" *ngIf="displayHeader && subkHeader">
+      <b>Subk Employees Details</b>
+    </div>
+    <div class="backfill-table-container">
+      <table mat-table [dataSource]="dataSource">
+        <!-- Checkbox Column -->
+        <ng-container matColumnDef="select" *ngIf="showCheckBox">
+          <th mat-header-cell *matHeaderCellDef>
+            SELECT
+          </th>
+          <td mat-cell *matCellDef="let row" style="text-align: left;padding-left: 4vh;">
+            <mat-checkbox [(ngModel)]="row.checked" [disabled]="row.checked && disableCandidate"
+              (change)="backfillChecked($event, row)">
+            </mat-checkbox>
+          </td>
+        </ng-container>
+
+        <ng-container *ngFor="let item of displayedColumns;let i=index" [matColumnDef]="item">
+          <th mat-header-cell *matHeaderCellDef [ngClass]="getClassTableHeader(displayedHeaders[i])"
+            [ngStyle]="{'width':getHeaderWidth(displayedHeaders[i])}">
+            <div class="backfillEmpHeader"> {{displayedHeaders[i] | uppercase}} </div>
+          </th>
+          <td mat-cell *matCellDef="let element" [ngClass]="getClass(item)">
+            <!-- <span>{{element[item] | uppercase}} </span> -->
+
+            <div *ngIf="displayedHeaders[i] ==='CED' && !cedCheck && !(childFormName==='Preview'); else existFlow ">
+
+              <!-- {{element[item] }} -->
+              <mat-form-field class="ced-date">
+                <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" class="field-font"
+                  placeholder="" [(ngModel)]="element.lwd" (dateChange)="handleCEDChange($event, element)" readonly>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+            </div>
+
+
+            <ng-template #existFlow>
+              {{element[item] | uppercase}}
+            </ng-template>
+
+          </td>
+
+
+        </ng-container>
+
+        <ng-container *ngIf="conversionExt" matColumnDef="newContractEndDate">
+          <th mat-header-cell *matHeaderCellDef class="extensionperiod">
+            <div class="backfillEmpHeader newCED">PROPOSED CED</div>
+          </th>
+          <td class="extensionperiod" mat-cell *matCellDef="let element">
+            <mat-form-field class="ced-date">
+              <input matInput [min]="minDate" [matDatepicker]="picker" class="field-font" placeholder=""
+                [disabled]="(childFormName=='Preview') || this.formName == 'iot' || this.formName == 'board' || this.formName == 'tolls'"
+                [value]="element.newContractEndDate" (dateChange)="handleCEDChange($event, element)" readonly>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+          </td>
+        </ng-container>
+
+        <ng-container *ngIf="conversionExt" matColumnDef="extensionperiod">
+          <th mat-header-cell *matHeaderCellDef class="extensionperiod">
+            <div class="backfillEmpHeader">TENURE(IN MONTHS) </div>
+          </th>
+          <td class="extensionperiod" mat-cell *matCellDef="let element">
+
+            <input type="text " class="form-control tenure" disabled [(ngModel)]="element.extensionPeriod">
+
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="submittedBy" *ngIf="showCurrentUser">
+          <th mat-header-cell *matHeaderCellDef class="submittedBy">
+            <div class="backfillEmpHeader submittedByHeader">SUBMITTED BY</div>
+          </th>
+          <td class="submittedByTd" mat-cell *matCellDef="let element">
+            <span>{{username | uppercase}} </span>
+
+          </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="AllColumns;sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: AllColumns;"></tr>
+
+      </table>
+      <!-- <div class="noData" *ngIf='showNoData'> NO DATA AVAILABLE </div> -->
+    </div>
+  </div>
+</div>

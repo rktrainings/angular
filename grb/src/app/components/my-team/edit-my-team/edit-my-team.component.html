@@ -1,0 +1,50 @@
+<div id="audit-logs">
+
+  <div class="row">
+    <div class="col-11">
+      <b class="edit-my-team"> EDIT </b>
+    </div>
+    <div class="col-1">
+      <mat-icon (click)="onNoClick()">close</mat-icon>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <mat-form-field>
+          <mat-label>IOT</mat-label>
+          <mat-select [(value)]="editRequest.updatedIot">
+            <mat-option *ngFor="let item of IOT" [matTooltip]="item" [value]="item">{{item | uppercase}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <mat-label>Tower</mat-label>
+          <mat-select [(value)]="editRequest.updatedtower">
+            <mat-option *ngFor="let item of dropdown" [matTooltip]="item" [value]="item.tower" (click)="filterSubProcess(item)">
+              {{item.tower}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field>
+          <mat-label>SUB-PROCESS</mat-label>
+          <mat-select [(value)]="editRequest.updatedsubProcess">
+            <mat-option *ngFor="let item of dropdownSubProcess" [matTooltip]="item" [value]="item">{{item | uppercase}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-10">
+
+      </div>
+      <div class="col submitButtonCol">
+        <button class="submitButton" mat-raised-button [disabled]="isDisable()" (click)="onSubmit()">SUBMIT</button>
+      </div>
+
+    </div>
+
+  </div>
+</div>

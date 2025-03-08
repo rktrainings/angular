@@ -1,0 +1,67 @@
+
+<div class="swap-dialog">
+  <div class="close-icon">
+    <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+  </div>
+  <div class="header-text">
+    <span>BAND CHANGE</span>
+  </div>
+  <!-- <div class="sub-header-text">
+    <span>Add Comments </span>
+  </div> -->
+
+  <form [formGroup]="approvalForm" style="width: 100%;">
+    <table id='bandchangebox'>
+      <tr>
+        <td id="grbheading"> <label for="metroNum">METRO#</label> </td>
+        <td id="grbtext"> <input type="text" formControlName="metroNum" [(ngModel)]="metroNum" class="form-control">
+
+        </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="grbNum">GRB#</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="grbNum" [(ngModel)]="grbNum"
+            > </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="deptCode">DEPT CODE</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="deptCode" [(ngModel)]="deptCode"
+         > </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="deptName">DEPT NAME</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="deptName" [(ngModel)]="deptName"
+           > </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="currentBand">CURRENT BAND</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="currentBand"
+            [(ngModel)]="currentBand" > </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="requestedBand">REQUESTED BAND</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="requestedBand"
+            [(ngModel)]="requestedBand"> </td>
+      </tr>
+      <tr>
+        <td id="grbheading"> <label for="resourceContractType">RESOURCE CONTRACT TYPE</label> </td>
+        <td id="grbtext"> <input type="text" class="form-control" formControlName="resourceContractType"
+            [(ngModel)]="resourceContractType"> </td>
+      </tr>
+      <tr>
+        <td id="grbheading">COMMENTS<strong class="text-danger">*</strong></td>
+        <td id="grbtext"> <textarea placeholder="Comments" formControlName="bandComments" [(ngModel)]="bandComments" class="form-control"
+            id="bandComments" rows="3"></textarea></td>
+      </tr>
+
+    </table>
+    <div mat-dialog-actions>
+      <!-- <div mat-dialog-actions *ngIf='hideModifyButtons'> -->
+      <button mat-raised-button class="submitButton" [disabled]="buttonActions()" (click)="onAcceptClick()">ACCEPT</button>
+      <button mat-raised-button class="submitButton" [disabled]="buttonActions()" (click)="onRejectClick()">REJECT</button>
+    </div>
+  </form>
+  <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+  [fullScreen]="true"><span class="loading-aqua"
+    style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">{{loadingText}}</span></ngx-spinner>
+</div>

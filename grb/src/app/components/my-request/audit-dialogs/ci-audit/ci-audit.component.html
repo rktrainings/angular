@@ -1,0 +1,80 @@
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b> CI AUDIT LOGS [{{value}}] </b>
+    </div>
+    <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+    <div class="audit-container-ci table-border">
+      <table mat-table [dataSource]="dataSource">
+
+        <!-- Position Column -->
+        <!-- <ng-container matColumnDef="empid">
+          <th mat-header-cell *matHeaderCellDef> EMP ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.empid || 'NA'}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="ccnpcr">
+          <th mat-header-cell *matHeaderCellDef> CCNPCR </th>
+          <td mat-cell *matCellDef="let element"> {{element.ccnpcr || 'NA'}} </td>
+        </ng-container> -->
+
+        <!-- Name Column -->
+        <!-- <ng-container matColumnDef="requesttype">
+          <th mat-header-cell *matHeaderCellDef> REQUEST TYPE </th>
+          <td mat-cell *matCellDef="let element"> {{element.requesttype}} </td>
+        </ng-container> -->
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="requeststatus">
+          <th mat-header-cell *matHeaderCellDef>REQUEST STATUS</th>
+          <td mat-cell *matCellDef="let element"> {{element.requeststatus=='CANCELLED'?'REJECTED':element.requeststatus}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="submittedby">
+          <th mat-header-cell *matHeaderCellDef>SUBMITTED BY</th>
+          <td mat-cell *matCellDef="let element"> {{element.submittedby || 'NA'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="submitteddate">
+          <th mat-header-cell *matHeaderCellDef> SUBMITTED DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.submitteddate || 'NA'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="comments">
+          <th mat-header-cell *matHeaderCellDef> COMMENTS</th>
+          <td mat-cell *matCellDef="let element"> {{element.comments || 'NA'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="approvedby">
+          <th mat-header-cell *matHeaderCellDef>ACTION BY</th>
+          <td mat-cell *matCellDef="let element"> {{element.approvedby || 'NA'}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="approveddate">
+          <th mat-header-cell *matHeaderCellDef> ACTION DATE</th>
+          <td mat-cell *matCellDef="let element"> {{element.approveddate || 'NA'}} </td>
+        </ng-container>
+        <ng-container matColumnDef="approvalcomments">
+          <th mat-header-cell *matHeaderCellDef> APPROVER COMMENTS</th>
+          <td mat-cell *matCellDef="let element"> {{element.approvalcomments || 'NA'}} </td>
+        </ng-container>
+
+
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+  </div>

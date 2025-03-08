@@ -1,0 +1,160 @@
+<div class="band-dialog">
+  <div class="close-icon">
+    <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+  </div>
+  <div class="header-text">
+    <span>BAND CHANGE</span>
+  </div>
+  <div class="sub-header-text">
+    <span>CHOOSE THE NEW BAND</span>
+  </div>
+
+
+  <div class="band-change">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="width: 100%;">
+      <table id='bandchangebox'>
+        <tr>
+          <td id="grbheading"> METRO NO.</td>
+          <td id="grbtext"> <input type="text" class="form-control" formControlName="metroNum" [(ngModel)]="metroNum">
+          </td>
+        </tr>
+        <tr>
+          <td id="grbheading"> GRB NO.</td>
+          <td id="grbtext"> <input type="text" class="form-control" formControlName="grbNum" [(ngModel)]="grbNum"> </td>
+        </tr>
+        <tr>
+          <td id="grbheading"> DEPT CODE</td>
+          <td id="grbtext"> <input type="text" class="form-control" formControlName="deptCode" [(ngModel)]="deptCode">
+          </td>
+        </tr>
+        <tr>
+          <td id="grbheading"> DEPT NAME</td>
+          <td id="grbtext"> <input type="text" class="form-control" formControlName="deptName" [(ngModel)]="deptName">
+          </td>
+        </tr>
+        <tr>
+          <td id="grbheading"> CURRENT BAND</td>
+          <td id="grbtext"> <input type="text" class="form-control" formControlName="currentBand"
+              [(ngModel)]="currentBand">
+          </td>
+        </tr>
+        <tr>
+          <td id="grbheading">ACTIONS</td>
+          <td id="grbtext">
+            <mat-form-field class="dropdown-field ">
+              <mat-select [(value)]="action" formControlName="action" (selectionChange)="getAction($event)">
+                <mat-option *ngFor="let actionlist of actionlists"   [value]="actionlist">{{actionlist | uppercase}}</mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <div *ngIf="displayUpgrade" style='width: 100%;'>
+        <table id='bandchangebox'>
+          <tr>
+            <td id="grbheading"> NEW BAND<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <mat-form-field class="dropdown-field ">
+                <mat-select [(value)]="reqBand" formControlName="reqBand">
+                  <mat-option *ngFor="let reqBand of reqBandlists"   [value]="reqBand">{{reqBand}}</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </td>
+            <!-- <td id="grbtext"> <input type="text" class="form-control" formControlName="newBand" [(ngModel)]="newBand"></td> -->
+          </tr>
+          <tr>
+            <td id="grbheading"> RESOURCE CONTRACT TYPE<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <mat-form-field class="dropdown-field ">
+                <mat-select [(ngModel)]="resourceType" formControlName="resourceType">
+                  <mat-option *ngFor="let resourceType of resourceTypelists"   [value]="resourceType">{{resourceType | uppercase}}
+                  </mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td id="grbheading">ATTACH FILE<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <div class="tableRow uploadIcon">
+                <div class="tableCellheading">
+                  <div class="file-upload">
+                    <span class="btn btn-file clickable" style="padding-right: 11vh !important;">
+                      <i class="material-icons left"
+                        style="padding-right: 1vh !important; margin-top: -2vh;">cloud_upload</i>
+                      <span style="position: absolute; margin-top: -5px;">Upload</span>
+                      <input id='upload' type="file" (change)="fileUpload($event.target.files);" />
+                    </span>
+                  </div>
+                </div>
+                <div *ngIf="hideFileAction" class="tableCell">
+                  <div class="uploaded-file">
+                    <p class="file-name"> {{fileName}}</p>
+                  </div>
+                </div>
+                <div *ngIf="hideFileAction" class="tableCellremove">
+                  <button *ngIf="hideFileAction" mat-raised-button id='remove-button'
+                    (click)="removeFile()">REMOVE</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td id="grbheading">COMMENTS<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <textarea placeholder="Comments" [(ngModel)]="hManagerComments" formControlName="hManagerComments"
+                class="form-control" id="comment" rows="4"></textarea>
+            </td>
+          </tr>
+
+        </table>
+      </div>
+
+      <div *ngIf="displayDowngrade" style='width: 100%;'>
+        <table id='bandchangebox'>
+          <tr>
+            <td id="grbheading"> NEW BAND<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <mat-form-field class="dropdown-field ">
+                <mat-select [(value)]="reqBand" formControlName="reqBand">
+                  <mat-option *ngFor="let reqBand of reqBandlists"  [value]="reqBand">{{reqBand}}</mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+            <td id="grbheading"> RESOURCE CONTRACT TYPE<strong class="text-danger">*</strong></td>
+            <td id="grbtext">
+              <mat-form-field class="dropdown-field ">
+                <mat-select [(ngModel)]="resourceType" formControlName="resourceType">
+                  <mat-option *ngFor="let resourceType of resourceTypelists"  [value]="resourceType">{{resourceType | uppercase}}
+                  </mat-option>
+                </mat-select>
+
+              </mat-form-field>
+            </td>
+          </tr>
+
+          <tr>
+            <td id="grbheading">COMMENTS<strong class="text-danger">*</strong></td>
+            <td id="grbtext"> <textarea placeholder="Comments" [(ngModel)]="hManagerComments"
+                formControlName="hManagerComments" class="form-control" id="comment" rows="4"></textarea></td>
+          </tr>
+
+        </table>
+
+      </div>
+      <div mat-dialog-actions>
+        <button type="submit" mat-raised-button class="submitButton" [disabled]="!checkEnable()">SUBMIT</button>
+      </div>
+    </form>
+  </div>
+  <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+</div>

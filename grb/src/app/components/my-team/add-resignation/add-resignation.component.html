@@ -1,0 +1,46 @@
+<div id="add-Resignation">
+  <div class="row">
+    <div class="col-10">
+      <b> ADD RESIGNATION </b>
+    </div>
+    <div class="col-2">
+      <mat-icon (click)="close()">close</mat-icon>
+    </div>
+  </div>
+  <div class="container">
+
+    <div class="row">
+      <mat-form-field class="date-full-width" appearance="fill">
+        <mat-label>DATE OF RESIGNATION</mat-label>
+        <input matInput [matDatepicker]="picker1" [(value)]="data.dor" (dateChange)="enableLWD($event)" readonly />
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="date-full-width" appearance="fill">
+        <mat-label>LAST WORKING DAY</mat-label>
+        <input matInput [min]="minDate" [matDatepicker]="picker2" [disabled]="LWDenabled"[(value)]="data.lwd" (dateChange)="onChangeLWD($event)"
+          readonly />
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field class="lossReason">
+        <mat-label>LOSS REASON</mat-label>
+        <mat-select [(value)]="data.reason">
+          <mat-option *ngFor="let item of lossReason" [matTooltip]="item" [value]="item">
+            {{item | uppercase}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <div class="col submitButtonCol">
+        <button class="submitButton" mat-raised-button [disabled]="isDisable()"
+          (click)="onSubmit()">SUBMIT</button>
+      </div>
+
+    </div>
+  </div>
+</div>

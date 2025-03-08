@@ -1,0 +1,80 @@
+<div id="iot" *ngIf="!enableLoadingMsg">
+  <mat-card class="mat-card-iot">
+   
+    <div class="rTableRow download"> 
+      <div class="rTableCell">
+        <button type="button" (click)="onClickUpload()" class="btn btn-file clickable"
+          style="padding: 0vh 12vh 0vh 3vh !important">
+          <mat-icon class="material-icons left" style="margin:1vh 2vh 0vh 0vh">cloud_upload</mat-icon>
+          <span style="position: absolute;">UPLOAD</span>
+        </button>
+        <!-- <p class="heading">IOT</p> -->
+      </div>
+
+    </div> 
+  <div  style="margin-top: 4vh;">
+    <mat-tab-group  style="margin-top: 5vh;" [(selectedIndex)]="activeTabIndex"
+      (selectedTabChange)="onTabChangeEvent($event)">
+      <!-- *ngIf="enableAG" -->
+      <mat-tab *ngIf="enableAG"  label="AG {{displayAGCount}}">
+        <div *ngIf="enableLoadingMsg">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+            <!-- <p>Loadddding ...</p> -->
+          </div>
+        </div>
+        <div>
+          <app-iot-template *ngIf="passAGData" [activeTab]="activeTab" [storageAGData]="storageAGData">
+          </app-iot-template>
+        </div>
+      </mat-tab>
+
+      <!-- *ngIf="enableEMEA" -->
+      <mat-tab  *ngIf="enableEMEA" label="EMEA {{displayEMEACount}}">
+        <div *ngIf="enableLoadingMsg">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+            <!-- <p>Loading ...</p> -->
+          </div>
+        </div>
+        <div>
+          <app-iot-template *ngIf="passEMEAData" [activeTab]="activeTab" [storageEMEAData]="storageEMEAData">
+          </app-iot-template>
+        </div>
+      </mat-tab>
+
+      <!-- *ngIf="enableAPAC" -->
+      <mat-tab  *ngIf="enableAPAC" label="APAC {{displayAPACCount}}">
+        <div *ngIf="enableLoadingMsg">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+            <!-- <p>Loading ...</p> -->
+          </div>
+        </div>
+        <div>
+          <app-iot-template *ngIf="passAPACData" [activeTab]="activeTab" [storageAPACData]="storageAPACData">
+          </app-iot-template>
+        </div>
+      </mat-tab>
+      <!-- *ngIf="enableINT" -->
+      <mat-tab  *ngIf="enableINT" label="INTERNAL {{displayINTERNALCount}}">
+        <div *ngIf="enableLoadingMsg">
+          <div class="loading-msg">
+            <img src="./assets/icons/spinner-2.gif" />
+            <!-- <p>Loading ...</p> -->
+          </div>
+        </div>
+
+        <div>
+          <app-iot-template *ngIf="passINTERNALData" [activeTab]="activeTab"
+            [storageINTERNALData]="storageINTERNALData"></app-iot-template>
+        </div>
+      </mat-tab>
+
+    </mat-tab-group>
+  </div>
+  </mat-card>
+</div>
+<div *ngIf="enableLoadingMsg">
+  <app-loader></app-loader>
+</div>

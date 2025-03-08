@@ -1,0 +1,22 @@
+@import "~src/styles";
+
+.clickable {
+    cursor: pointer;
+}
+#buttonColor {
+    background-color: $bg-aqua;
+    color: white;
+}
+.close-icon{
+    margin-left: 96%;
+}
+
+.mat-dialog-actions {
+    padding: 8px 0px 0px 100px !important;
+    align-items: center !important;
+    margin-bottom: 0px !important
+}
+.center-align{
+    text-align: center;
+    font-family: "Play", sans-serif !important;
+}

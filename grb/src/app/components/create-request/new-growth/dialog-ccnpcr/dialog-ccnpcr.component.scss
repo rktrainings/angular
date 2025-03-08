@@ -1,0 +1,127 @@
+@import "~src/styles";
+
+.firstRow {
+  padding-left: 3vh;
+}
+.heading-ccn-pcr {
+  font-size: 2.7vh;
+  text-align: center;
+  font-family: $play;
+}
+.textb {
+  padding-right: 28px;
+  width: 194px;
+}
+.textl {
+  width: 161px;
+}
+.textb {
+  padding-right: 28px;
+  width: 194px;
+}
+.textl {
+  width: 161px;
+}
+.mat-input-element {
+  border: 1;
+}
+.mat-cell {
+  font-size: 1.7vh !important;
+  font-weight: 500 ;
+}
+.icon {
+  cursor: pointer;
+}
+.close-icon {
+  margin-left: 7vh;
+}
+.mat-divider {
+  padding-bottom: 14px;
+}
+th.mat-header-cell {
+  text-align: center;
+}
+th.mat-header-cell:first-of-type {
+  padding-left: 0px;
+}
+// .mat-select {
+//     display: inline-block;
+//     width: 100%;
+//     outline: 0;
+//     padding-top: 23px;
+// }
+.clickableText {
+  color: blue;
+  cursor: pointer;
+}
+.row {
+  margin-right: 10px;
+}
+.tablerow {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+.form-control {
+  border-style: solid;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua !important;
+  // border-right-width: 6px;
+  // border-right-color: $bg-aqua
+}
+
+.form-control:active,
+.form-control:focus {
+  border-right-color: unset !important;
+  border-top-color: unset !important;
+
+  border-bottom-color: unset !important;
+  box-shadow: unset !important;
+}
+.form-alg {
+  margin-bottom: 0.5rem;
+
+  .lbl-gap {
+    margin-bottom: 0.1rem;
+    color: #010101;
+
+    .mandatory-clr {
+      color: #ff0000;
+    }
+  }
+}
+::ng-deep .dropdown-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+  border: 1px solid #ced4da !important;
+  border-radius: 8px;
+  height: calc(1.5em + 0.75rem + 2px) !important;
+  border-style: solid !important;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua !important;
+  align-items: center !important;
+}
+::ng-deep .mat-select-value-text {
+  padding-left: 1vh !important;
+}
+
+//   .form-control:disabled, .form-control[readonly] {
+//     background-color:grey;
+//     opacity: 1;
+//   }
+
+::ng-deep .ccnList .mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: unset !important;
+  width: unset !important;
+}
+.btn {
+  font-size: 2.4vh !important;
+  color: $bg-aqua;
+}
+.btn.btn-link[disabled] {
+  // cursor: default;
+  // pointer-events: none;        
+  // text-decoration: none;
+  font-size: 2.4vh !important;
+  color: grey;
+}

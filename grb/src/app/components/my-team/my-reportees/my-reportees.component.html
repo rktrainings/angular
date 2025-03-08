@@ -1,0 +1,8 @@
+<div id="my-span" *ngIf="ELEMENT_DATA.length>0">
+  <app-tabular-view [PARENT]="'MY_REPORTEES'" [ELEMENT_DATA]="ELEMENT_DATA" [displayedHeaders]="displayedHeaders"
+    [displayedColumns]="displayedColumns" [AllColumns]="AllColumns" [showActions]="showActions"
+     [fetchData]="fetchData" [showCheckBox]="showCheckBox" [showSearchFilter]="false"></app-tabular-view>
+</div>
+<div *ngIf="showLoader">
+  <app-loader></app-loader>
+</div>

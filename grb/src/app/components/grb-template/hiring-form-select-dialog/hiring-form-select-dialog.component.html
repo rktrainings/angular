@@ -1,0 +1,13 @@
+<div id="form-select-dialog">
+  <div class="radio"> 
+    <label id="radio-group-label"><b>Select an option</b></label>
+    <mat-radio-group aria-labelledby="radio-group-label"
+    class="radio-group" [(ngModel)]="selected">
+      <mat-radio-button class="internal" value="internal">Internal Hire</mat-radio-button>
+      <mat-radio-button class="external" value="external">External Hire</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+  </div>
+</div>

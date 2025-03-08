@@ -1,0 +1,78 @@
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b> HIRE REQUEST AUDIT LOGS </b>
+    </div>
+    <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+  <div class="audit-container-hire table-border">
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="metro">
+        <th mat-header-cell *matHeaderCellDef> METRO </th>
+        <td mat-cell *matCellDef="let element"> {{element.metro}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="band">
+        <th mat-header-cell *matHeaderCellDef> BAND </th>
+        <td mat-cell *matCellDef="let element"> {{element.band}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="deptCode">
+        <th mat-header-cell *matHeaderCellDef> DEPT CODE </th>
+        <td mat-cell *matCellDef="let element"> {{element.deptCode}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="submittedBy">
+        <th mat-header-cell *matHeaderCellDef> SUBMITTED BY</th>
+        <td mat-cell *matCellDef="let element"> {{element.submittedBy | uppercase}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="submittedDate">
+        <th mat-header-cell *matHeaderCellDef> SUBMITTED DATE</th>
+        <td mat-cell *matCellDef="let element"> {{element.submittedDate| date: 'yyyy-MM-dd'}} </td>
+      </ng-container>
+
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="lastUpdatedBy">
+        <th mat-header-cell *matHeaderCellDef> LAST UPDATED BY </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastUpdatedBy | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastUpdatedDate">
+        <th mat-header-cell *matHeaderCellDef> LAST UPDATED DATE </th>
+        <td mat-cell *matCellDef="let element">{{element.lastUpdatedDate| date: 'yyyy-MM-dd'}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef> STATUS </th>
+        <td mat-cell *matCellDef="let element"> {{element.status | uppercase}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="comments">
+        <th mat-header-cell *matHeaderCellDef> COMMENTS </th>
+        <td mat-cell *matCellDef="let element"> {{element.comments | uppercase}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+</div>
+

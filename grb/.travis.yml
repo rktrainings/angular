@@ -1,0 +1,24 @@
+language: node_js
+node_js:
+  - "12"
+dist: trusty
+sudo: required
+branches:
+  only:
+  - sprint-3
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng lint
+  - npm run test-headless
+  - ng build --prod --base-href https://cbommad1.github.io/travis-demo/
+
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: "irRRdF2VO3bQXDYGbms-2A"
+  local_dir: dist/MUDRA-GRB
+  on:
+    branch: sprint-3

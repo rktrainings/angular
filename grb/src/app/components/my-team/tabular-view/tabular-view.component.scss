@@ -1,0 +1,161 @@
+@import "~src/styles";
+.my-team-container {
+  height: 64.5vh;
+  overflow: auto;
+  border: 1px solid lightgray;
+}
+
+th.mat-header-cell:last-of-type,td.mat-cell:last-of-type {
+  padding-right: 0px !important;
+}
+
+td.mat-header-cell:last-of-type {
+  padding-right: 0px !important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: $bg-aqua !important;
+}
+
+.container {
+  margin-left: 0px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-card-table {
+  padding: 2vh;
+  border-radius: 3vh;
+  height: 77vh;
+}
+
+.mat-card-table {
+  //box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+
+  box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+}
+
+#search > input {
+  border-radius: 15px;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+
+th.mat-header-cell {
+  // width: 4vh !important;
+}
+
+.actionsCell {
+  width: 10vh !important;
+}
+.mat-select-value {
+  color: $white !important;
+}
+
+.mat-select-arrow {
+  color: $white !important;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
+.col {
+  max-width: max-content !important;
+}
+
+.checbox-filter {
+  top: 1.5vh;
+}
+
+.downloadIcon {
+  right: 13vh;
+  position: absolute;
+  cursor: pointer;
+    font-size: 4vh !important;
+}
+
+.mat-checkbox-background,
+.mat-checkbox-background:active {
+  background: $bg-aqua !important;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: black;
+}
+
+.downloadIcon {
+  cursor: pointer;
+}
+
+.auditTH,
+.auditTD {
+  text-align: center !important;
+  // width: 8vh !important;
+  cursor: pointer;
+}
+
+.searchBar {
+  width: 30vh;
+}
+
+::ng-deep .noData {
+  margin: 20vh !important;
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+.countDiv {
+  right: -3vh;
+  position: absolute;
+  top: 4vh;
+}
+.count {
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: end !important;
+  margin-right: 4vh;
+  font-family: $play;
+}
+
+::ng-deep th {
+  font-size: 1.5vh !important;
+  font-weight: 550 !important;
+}
+
+.actions-icon-1 {
+  padding-right: 6vh !important;
+}
+
+.left-align {
+  text-align: left !important;
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+.actions {
+  // width: 9vh !important;
+}
+
+.loading-msg {
+  margin-top: 8%;
+  font-weight: bold;
+  font-size: 5vh;
+  color: $bg-aqua !important;
+  text-align: center;
+}
+
+
+.deptName{
+  width: 100px;
+}
+.isManager{
+  width:53px;
+}

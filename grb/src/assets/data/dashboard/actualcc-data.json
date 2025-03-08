@@ -1,0 +1,134 @@
+[{
+    "january": {
+        "band3": 0.1,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "february": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "march": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "april": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "may": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "june": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "july": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "august": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "september": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "october": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "november": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    },
+    "december": {
+        "band3": 0.0,
+        "band4": 1.0,
+        "band5": 1.0,
+        "band6": 2.0,
+        "band7": 0.0,
+        "band8": 0.0,
+        "band9": 0.0,
+        "band10": 0.0,
+        "total": 4.0
+    }
+}]

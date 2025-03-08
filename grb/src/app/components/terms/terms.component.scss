@@ -1,0 +1,45 @@
+@import "~src/styles";
+
+#terms {
+  padding: 5vh;
+  margin-top: 10vh;
+  // position: fixed;
+  // overflow: hidden;
+}
+
+.terms-card {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  padding: 5vh;
+}
+
+#privacy {
+  color: blue;
+  cursor: pointer;
+}
+
+.termsActions {
+  padding-left: 5vh !important;
+}
+
+.termsSubmit {
+  background-color: $bg-aqua !important;
+  color: white !important;
+  border-radius: 30px !important;
+  width: 11vh;
+  height: 6vh;
+  font-size: 2vh;
+}
+
+li {
+  padding: 1vh;
+}
+
+
+.mat-card-title {
+  font-size: 2.5vh !important;
+}
+
+.mat-card-subtitle,
+.mat-card-content {
+  font-size: 2vh !important;
+}

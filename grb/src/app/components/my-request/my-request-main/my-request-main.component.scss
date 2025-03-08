@@ -1,0 +1,143 @@
+@import "~src/styles";
+
+#my-request {
+    position: relative;
+    // padding: 2vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+}
+th.mat-header-cell {
+    text-align: left !important;
+    width: 1% !important;
+}
+td.mat-cell {
+    text-align: left;
+}
+.mat-card-my-request {
+    box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+    padding-left: 3vh;
+    padding-right: 3vh;
+    height: 79vh;
+    // border: 2px solid black;
+    border-radius: 3vh;
+}
+
+::ng-deep .mat-card-my-request .mat-tab-body-content {
+    overflow: hidden !important;
+}
+.tab-descriptions {
+    padding-top: 1.5vh;
+    padding-left: 3vh;
+}
+.rTableRow {
+    display: table-row;
+}
+
+.clickableText {
+    cursor: pointer;
+    font-weight: bold;
+}
+.clickableText {
+    color: $bg-aqua;
+}
+
+.mat-download-icon {
+    padding: 3vh 0vh;
+}
+.download-sample-text {
+    padding-left: 5vh;
+}
+
+.download {
+    position: absolute;
+    right: 0vh;
+}
+.table-style {
+    width: 50%;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    padding-left: 4vh !important;
+}
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.btn,
+.btn-large,
+.btn-small {
+    text-decoration: none;
+    color: #fff;
+    background-color: $bg-aqua !important;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+}
+.btn i,
+.btn-large i,
+.btn-small i,
+.btn-floating i,
+.btn-large i,
+.btn-small i,
+.btn-flat i {
+    font-size: 1.6rem;
+    line-height: inherit;
+}
+.btn,
+.btn-large,
+.btn-small,
+.btn-flat {
+    padding-left: 2vh;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 62px;
+    text-transform: capitalize !important;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.loading-msg {
+    margin-top: 15vh;
+    font-weight: bold;
+    font-size: 5vh;
+    color: $bg-aqua !important;
+    text-align: center;
+}
+.tablecontent {
+    height: 400px;
+    overflow: auto;
+}
+#search {
+    padding-top: 2vh !important;
+}
+#search > input {
+    border-radius: 15px !important;
+    margin-left: 3vh !important;
+    margin-bottom: 2vh !important;
+    padding: 1vh !important;
+}
+.searchBar {
+    width: 30vh !important;
+}
+// .no-data {
+//     text-align: center;
+//     font-size: 2.5vh !important;
+//     font-weight: bold;
+//     margin: 15vh;
+// }

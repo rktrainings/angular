@@ -1,0 +1,163 @@
+@import "~src/styles";
+was-validated .form-control:invalid,
+.form-control.is-invalid,
+.select-invalid,
+::ng-deep .mat-select-invalid,
+::ng-deep .mat-form-field-invalid .mat-form-field-wrapper .mat-form-field-flex
+// ::ng-deep .ng-invalid .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix,
+// ::ng-deep .ng-invalid .mat-form-field-wrapper .mat-form-field-flex 
+{
+  border-color: #dc3545 !important;
+  border-left-color: red !important;
+  // padding-right: 0px;
+  // background-image: none;
+  // background-repeat: no-repeat;
+  // background-position: 0px;
+  // background-size: 0px;
+}
+.hiring-form {
+  padding-left: 2vh;
+  padding-right: 2vh;
+}
+.toll-mat-icon{
+  padding: 11px 0px 0px 0px;
+  font-size: 3vh;
+}
+
+.tr-icon{
+  border: 1px solid;
+}
+.td-icon{
+  text-align: center;
+  border: 1px solid;
+}
+.icon-name{
+  padding-left: 5px;
+  margin-bottom: -3px;
+  font-size: 1.5vh;
+  font-family: "Play", sans-serif !important;
+}
+.pending-table-row{
+  border:none !important;
+}
+.standard-button {
+  padding: 0vh 8vh !important;
+}
+.toll-mat-icon{
+  padding: 5px 0px 0px 0px;
+  // color: brown;
+  font-size: 36px;
+}
+.firstRow {
+  padding-left: 3vh;
+}
+
+b {
+  font-size: 3vh;
+}
+.formName{
+  font-family: "play";
+    padding-bottom: 3vh
+}
+
+.close{
+  cursor:pointer;
+  float:right;
+}
+.mat-card {
+  height: 78vh;
+  overflow: auto;
+}
+
+.dropdown-field {
+  width: 100%;
+}
+
+.mat-card:before,
+.mat-card:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  -moz-border-radius: 100px / 10px;
+  border-radius: 100px / 10px;
+}
+
+.mat-card:after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+}
+
+.buttonRow {
+  float: right;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.mat-raised-button:not([disabled]) {
+  float: right;
+  background: $bg-aqua !important;
+  border-radius: 20px;
+  margin-right: 2vh;
+  color: white !important;
+  padding:0vh 5vh !important;
+  // height: 5vh;
+}
+.table-heading {
+  font-size: 2vh;
+}
+
+.dropdown-field {
+  width: 100% !important;
+}
+
+.form-control {
+  border-style: solid !important;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua ;
+  // border-right-width: 6px;
+  // border-right-color: $bg-aqua
+}
+.form-control:active,
+.form-control:focus {
+  border-right-color: unset !important;
+  border-top-color: unset !important;
+  border-bottom-color: unset !important;
+  box-shadow: unset !important;
+}
+
+::ng-deep .cdk-overlay-pane {
+  align-items: center !important;
+}
+
+
+.buttonLeft{
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+.backButton{
+  float: left !important;
+  padding: 0 7vh;
+
+}
+.nextButton{
+  float: right !important;
+  padding: 0 7vh;
+}
+
+::ng-deep .hiring-form .mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: unset !important;
+  width: unset !important;
+}

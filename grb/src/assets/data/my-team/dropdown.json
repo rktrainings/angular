@@ -1,0 +1,36 @@
+[{
+  "tower": "PTP",
+  "subProcess": ["Exception Resolutions", "Help Desk", 
+    "Invoice Processing", "Others - PTP", "Payments", 
+    "T&E Automated", "T&E Manual", "Vendor Master Data"]
+},
+{
+    "tower":"RTR",
+    "subProcess":["Account Reconciliations","Accounting Policy Maintenance",
+        "Close Process Coordination","Fixed Assets Accounting","GL Master Data Maintenance",
+        "Intercompany Accounting","Journal Entry Processing","Consolidation","Cost & Inventory Accounting",
+        "Financial Management & Reporting","Financial Planning & Analysis","Others - RTR","Tax Accounting & Reporting",
+        "Unique Project Accounting- Complex"
+    ]
+},{
+    "tower":"OTC",
+    "subProcess":["Billing","Cash Applications","Collections","Credit Management","Disputes & Deductions",
+        "Master Data Management","Order Management","Others - OTC","Reporting"]
+},
+{
+  "tower": "ALL",
+  "subProcess": ["Exception Resolutions", "Help Desk",
+    "Invoice Processing", "Others - PTP", "Payments",
+    "T&E Automated", "T&E Manual", "Vendor Master Data",
+    "Account Reconciliations", "Accounting Policy Maintenance",
+    "Close Process Coordination", "Fixed Assets Accounting", "GL Master Data Maintenance",
+    "Intercompany Accounting", "Journal Entry Processing", "Consolidation", "Cost & Inventory Accounting",
+    "Financial Management & Reporting", "Financial Planning & Analysis", "Others - RTR", "Tax Accounting & Reporting",
+    "Unique Project Accounting- Complex",
+    "Billing", "Cash Applications", "Collections", "Credit Management", "Disputes & Deductions"
+  ]
+},{
+"tower": "OTHERS",
+"subProcess": ["NA","Risk & Compliance","Support"
+]
+}]

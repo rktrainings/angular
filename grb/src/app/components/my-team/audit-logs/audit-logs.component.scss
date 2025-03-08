@@ -1,0 +1,46 @@
+@import "~src/styles";
+
+b,
+.container {
+  padding: 2vh;
+}
+.close {
+  cursor: pointer;
+}
+b {
+  font-size: 3vh;
+  font-family: $play;
+}
+
+table {
+  width: 100%;
+}
+
+.audit-container-myteam{
+  height: 400px ;
+  overflow: auto;
+  margin-top: 2vh;
+  border: 1px solid lightgray;
+}
+
+.audit-spinner-myteam {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.audit-container table tr th {
+  text-align: left;
+}
+
+.audit-container table tr td{
+  text-align: left;
+}
+
+.noData {
+  margin: 20vh !important;
+  // height: 5vh !important;
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: center !important;
+
+}

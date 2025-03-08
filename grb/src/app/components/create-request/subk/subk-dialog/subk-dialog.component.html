@@ -1,0 +1,15 @@
+
+<label id="subk-radio-group-label">SUBK</label>
+<mat-icon (click)="goToMenu()">close</mat-icon>
+
+
+<mat-radio-group aria-labelledby="subk-radio-group-label" class="subk-radio-group" [(ngModel)]="selected">
+  <mat-radio-button class="attrition-radio-button" *ngFor="let option of options" [value]="option">
+    {{option | uppercase}}
+  </mat-radio-button>
+</mat-radio-group>
+<button class="submitButton" style=" float:right;
+border-radius: 30px; font-family: 'Play', sans-serif;" mat-raised-button [disabled]="disableSubmit()" (click)="onSubmit()">SUBMIT</button>
+
+
+

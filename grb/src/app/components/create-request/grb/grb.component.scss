@@ -1,0 +1,114 @@
+@import "~src/styles";
+
+#search > input {
+  border-radius: 15px;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+.searchBar {
+  width: 30vh !important;
+}
+
+.my-grb-container {
+  height: 65.5vh;
+  overflow: auto;
+}
+
+#grb {
+  position: relative;
+  padding: 2vh;
+}
+
+.buttonColor {
+  float: right;
+  border-radius: 30px;
+  font-family: $play;
+  padding: 0vh 5vh !important;
+  background-color: $bg-aqua;
+  color: white;
+  margin-right: 20px;
+  width: 165px;
+  // text-align: center;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  margin-left: 45px;
+  padding-top: 15px;
+}
+
+.left-align {
+  text-align: left !important;
+}
+
+.center-align {
+  text-align: center !important;
+}
+
+.mat-header-cell {
+  font-weight: bolder !important;
+  color: white !important;
+  font-size: 1.9vh !important;
+}
+.mat-cell {
+  font-size: 1.7vh !important;
+  font-weight: 500 ;
+}
+
+.no-data {
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin: 15vh;
+}
+
+.clickableText {
+  cursor: pointer;
+  font-weight: bold;
+  color: $bg-aqua;
+  // text-decoration: underline;
+}
+
+.mat-card-dashboard {
+  // box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+  padding: 2vh;
+  border-radius: 3vh;
+}
+
+.space {
+  width: 155px;
+}
+
+.standard {
+  padding: 0vh 8vh !important;
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  // margin-right: -15px;
+  // margin-left: 70px;
+  justify-content: center;
+}
+.auditTH,
+.auditTD {
+  text-align: center !important;
+  cursor: pointer;
+}
+
+.btn {
+  font-size: 2.1vh !important;
+  color: $bg-aqua;
+}
+.btn.btn-link[disabled] {
+  // cursor: default;
+  // pointer-events: none;        
+  // text-decoration: none;
+  font-size: 2.1vh !important;
+  color: grey;
+}
+

@@ -1,0 +1,32 @@
+[
+    {
+        "grbNumber": "CPSEH201806111179",
+        "reqId": "159173BR",
+        "reqStatus": "OB"
+    },
+    {
+        "grbNumber": "CPSEO201806111180",
+        "reqId": "159172BR",
+        "reqStatus": "OB"
+    },
+    {
+        "grbNumber": "CPSEO201806111181",
+        "reqId": "159171BR",
+        "reqStatus": "OB"
+    },
+    {
+        "grbNumber": "CPSEO201806111182",
+        "reqId": "",
+        "reqStatus": ""
+    },
+    {
+        "grbNumber": "CPSEO201806111183",
+        "reqId": "",
+        "reqStatus": ""
+    },
+    {
+        "grbNumber": "CPSEO201806111184",
+        "reqId": "",
+        "reqStatus": ""
+    }
+]

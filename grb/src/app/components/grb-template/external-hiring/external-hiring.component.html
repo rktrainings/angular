@@ -1,0 +1,290 @@
+<div class="hiring-form" *ngIf="childFormName!='Preview'">
+  <div class="row firstRow formName">
+    <div class="col">
+      <b class="name"> External Hiring </b> <b *ngIf="showMetro">- {{metroNo}}</b>
+    </div>
+    <div class="tolls col-8" *ngIf="showTolls">
+      <table style="width: 60%;">
+        
+        <!-- <tr>
+      <td style="text-align: center;" *ngFor="let detail of tollDetails;let i = index">
+        <mat-icon id="{{allTolls[i]}}" class='toll-mat-icon' matTooltip="{{detail.toll}}" matTooltipPosition="above"
+          l.toll)">
+          {{detail.iconName}}
+        </mat-icon>
+      </td>
+    </tr> -->
+        <tr class="tr-icon">
+          <td class="td-icon">
+            <mat-icon id="costcase" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('costcase')}}" matTooltipPosition="above"
+              >
+              assignment
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="bandmix" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('bandmix')}}" matTooltipPosition="above"
+              >
+              description
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="ute" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('ute')}}" matTooltipPosition="above" >
+              announcement
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="orp" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('orp')}}" matTooltipPosition="above" >
+              assessment
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="soc" style="color: green;" class="toll-mat-icon" matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('soc')}}" matTooltipPosition="above">
+              assignment_late
+            </mat-icon>
+          </td>
+        </tr>
+        <tr class="pending-table-row">
+          <td *ngFor="let toll of tollNames" style="text-align: center;">
+            <p class="icon-name">{{toll}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-1">
+      <mat-icon class="close" (click)="closeDialog()">close</mat-icon>
+    </div>
+  </div>
+  <div class="row firstRow">
+    <div class="col-md-3 mb-3">
+      <label for="validationServer03">Metro Number</label>
+      <strong class="text-danger">*</strong>
+      <input type="text" class="form-control number" maxlength="8"
+        [ngClass]="(commonFieldsJSON.metro && commonFieldsJSON.metro.length==0 || !metroValid)?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.metro" (input)="keyUpMetro();check()" id="validationServer03"
+        [disabled]="metroDisable||childFormName=='Preview'" required>
+      <div class="invalid-feedback">
+        {{metroText}}
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer04">Band</label>
+      <strong class="text-danger">*</strong>
+      <input *ngIf="bandType=='text'" type="text" maxlength="2" class="form-control "
+        [ngClass]="(commonFieldsJSON.band && commonFieldsJSON.band.length==0)?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.band" id="validationServer04" (change)="bandChange()" [disabled]="bandDisable()"
+        required>
+      <div class="form-field" *ngIf="bandType=='dropdown'">
+        <mat-form-field class="dropdown-field ">
+          <mat-select [(value)]="commonFieldsJSON.band" (selectionChange)="bandChange()" [disabled]="bandDisable()">
+            <mat-option *ngFor="let option of filterBands" [matTooltip]="option" [value]="option">{{option}}</mat-option>
+          </mat-select>
+          <!-- <mat-error *ngIf="submitted && hiringForm.controls[field.field_identifier].hasError('required')">
+                {{field.field_name}} is required.</mat-error> -->
+
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer05">Total Quantity</label>
+      <strong class="text-danger">*</strong>
+      <input type="number" [min]="1" [max]="maxtotalQty" step="1" id="qty" class="form-control"
+        [ngClass]="commonFieldsJSON.totalQty && commonFieldsJSON.totalQty.length==0?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.totalQty"
+        [readOnly]="disableTotalQty||childFormName=='Preview'|| formType == 'tolls'|| formType==='iot'"
+        id="validationServer05" (input)="check();qtyChange($event)" required>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+  <app-hiring-form-grb *ngIf="GRBfields.length>0 &&  marketDropdownCalled && (childFormName=='GRB' || childFormName=='Preview')"
+    [formName]="'GRB Details'" [childFormName]="childFormName" [marketDropdown]="marketDropdown" (submitForm)="submitGRBForm($event)" [fields]="GRBfields"
+    [backFillData]="backFillDataFields" (validate)="validate($event)"
+    (updateChildFormName)="updateChildFormName($event)" (bandChange)="bandChange()">
+  </app-hiring-form-grb>
+  <div class="row buttonRow" *ngIf="childFormName=='GRB' && childFormName!='Preview'">
+    <button type="submit" *ngIf="showSave" mat-raised-button class="form-submit" (click)="saveAll('GRB')">Save</button>
+    <button type="submit" mat-raised-button class="form-submit standard-button" (click)="onNext()">Next</button>
+  </div>
+  <app-hiring-form-backfill *ngIf="backFillData.length>0 && showBackfill && (childFormName=='EMP')"
+    [ELEMENTS_DATA]="backFillData" [childFormName]="childFormName">
+  </app-hiring-form-backfill>
+  <app-hiring-form-transfer *ngIf="orpData.length>0 && (childFormName=='EMP')" [ELEMENTS_DATA]="orpData">
+  </app-hiring-form-transfer>
+
+  <div class="row" *ngIf="backFillData.length>0 && showBackfill">
+    <div class="col buttonLeft" *ngIf="childFormName=='EMP' && childFormName!='Preview'">
+      <button type="submit" mat-raised-button class="form-submit backButton" (click)="onBack()">Back</button>
+    </div>
+    <div class="row buttonRow" *ngIf="childFormName=='EMP' && childFormName!='Preview' && showSaveButton">
+      <button type="submit" *ngIf="showSave" mat-raised-button class="form-submit"
+        (click)="saveAll('EMP')">Save</button>
+      <button type="submit" mat-raised-button class="form-submit standard-button" (click)="onNext()">Next</button>
+    </div>
+    <div class="col buttonRow" *ngIf="childFormName=='EMP' && childFormName!='Preview' && !showSaveButton">
+      <button type="submit" mat-raised-button class="form-submit nextButton standard-button"
+        (click)="onNext()">Next</button>
+    </div>
+  </div>
+
+
+  <app-hiring-form-gom *ngIf="GOMfields.length>0 && showGOM && (childFormName=='GOM' || childFormName=='Preview')"
+    [formName]="'GOM Details'" [childFormName]="childFormName" (submitForm)="submitGRBForm($event)" [fields]="GOMfields"
+    (validate)="validate($event)" (bandChange)="bandChange()">
+  </app-hiring-form-gom>
+  <div class="row">
+    <div class="col buttonLeft" *ngIf="childFormName=='GOM' && childFormName!='Preview'">
+      <button type="submit" mat-raised-button class="form-submit backButton" (click)="onBack()">Back</button>
+    </div>
+    <div class="col buttonRow" *ngIf="childFormName=='GOM' && childFormName!='Preview'">
+      <button type="submit" mat-raised-button class="form-submit nextButton" 
+        (click)="onNext()">Next</button>
+      <button type="submit" *ngIf="showSave" mat-raised-button class="form-submit nextButton"
+        (click)="saveAll('GOM')">Save</button>
+    </div>
+  </div>
+  <!-- *ngIf="TRAMfields.length>0 && (childFormName=='TRAM' || childFormName=='Preview')" -->
+  <app-hiring-form-tram *ngIf="TRAMfields.length>0 && TRAMfields.length>0 && (childFormName=='TRAM' || childFormName=='Preview') && !hideTram"
+    [formName]="'TRAM Details'" [childFormName]="childFormName" (submitForm)="submitGRBForm($event)" [fields]="TRAMfields"
+    (validate)="validate($event)" >
+  </app-hiring-form-tram>
+  <div class="row">
+    <div class="col buttonLeft" *ngIf="childFormName=='TRAM' && childFormName!='Preview'">
+      <button type="submit" mat-raised-button class="form-submit backButton" (click)="onBack()">Back</button>
+    </div>
+    <div class="col buttonRow" *ngIf="childFormName=='TRAM' && childFormName!='Preview'">
+      <button type="submit" mat-raised-button class="form-submit previewButton" [disabled]="previewDisable()"
+        (click)="onPreview()">Preview</button>
+      <button type="submit" *ngIf="showSave" mat-raised-button class="form-submit nextButton"
+        (click)="saveAll('TRAM')">Save</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="hiring-form" *ngIf="childFormName=='Preview'">
+  <div class="row firstRow formName">
+    <div class="col">
+      <b class="name"> {{formName}}</b>
+    </div>
+    <div class="tolls col-8" *ngIf="showTolls">
+      <table style="width: 60%;">
+        
+        <!-- <tr>
+      <td style="text-align: center;" *ngFor="let detail of tollDetails;let i = index">
+        <mat-icon id="{{allTolls[i]}}" class='toll-mat-icon' matTooltip="{{detail.toll}}" matTooltipPosition="above"
+          l.toll)">
+          {{detail.iconName}}
+        </mat-icon>
+      </td>
+    </tr> -->
+        <tr class="tr-icon">
+          <td class="td-icon">
+            <mat-icon id="costcase" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('costcase')}}" matTooltipPosition="above"
+              >
+              assignment
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="bandmix" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('bandmix')}}" matTooltipPosition="above"
+              >
+              description
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="ute" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('ute')}}" matTooltipPosition="above" >
+              announcement
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="orp" class='toll-mat-icon' matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('orp')}}" matTooltipPosition="above" >
+              assessment
+            </mat-icon>
+          </td>
+          <td class="td-icon">
+            <mat-icon id="soc" style="color: green;" class="toll-mat-icon" matTooltipClass="toll-icon-tooltip"
+              matTooltip="{{getFocalInfo('soc')}}" matTooltipPosition="above">
+              assignment_late
+            </mat-icon>
+          </td>
+        </tr>
+        <tr class="pending-table-row">
+          <td *ngFor="let toll of tollNames" style="text-align: center;">
+            <p class="icon-name">{{toll}}</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-1">
+      <mat-icon class="close" (click)="closeDialog()">close</mat-icon>
+    </div>
+  </div>
+  <div class="row firstRow">
+    <div class="col-md-3 mb-3">
+      <label for="validationServer03">Metro Number</label>
+      <strong class="text-danger">*</strong>
+      <input type="text" class="form-control number" maxlength="8"
+        [ngClass]="(commonFieldsJSON.metro && commonFieldsJSON.metro.length==0 || !metroValid)?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.metro" (input)="keyUpMetro();check()" id="validationServer03"
+        [disabled]="metroDisable||childFormName=='Preview'" required>
+      <div class="invalid-feedback">
+        Please enter a valid metro number.
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer04">Band</label>
+      <strong class="text-danger">*</strong>
+      <input *ngIf="bandType=='text'" type="text" maxlength="2" class="form-control "
+        [ngClass]="(commonFieldsJSON.band && commonFieldsJSON.band.length==0)?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.band" id="validationServer04" (change)="bandChange()"
+        [disabled]="metroDisable||childFormName=='Preview' ||  formType == 'tolls' ||   formType==='iot' || formType=='board'"
+        required>
+      <div class="form-field" *ngIf="bandType=='dropdown'">
+        <mat-form-field class="dropdown-field ">
+          <mat-select [(value)]="commonFieldsJSON.band" (selectionChange)="bandChange()">
+            <mat-option *ngFor="let option of filterBands" [matTooltip]="option" [value]="option">{{option}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationServer05">Total Quantity</label>
+      <strong class="text-danger">*</strong>
+      <input type="number" [min]="1" [max]="maxtotalQty" step="1" class="form-control"
+        [ngClass]="commonFieldsJSON.totalQty && commonFieldsJSON.totalQty.length==0?'is-invalid':''"
+        [(ngModel)]="commonFieldsJSON.totalQty"
+        [readOnly]="disableTotalQty||childFormName=='Preview' || formType == 'tolls' || formType==='iot' "
+        id="validationServer05" (input)="check();qtyChange($event)" required>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <app-hiring-form-grb *ngIf="GRBfields.length>0  && marketDropdownCalled" [formName]="'GRB Details'" [childFormName]="childFormName"
+    (submitForm)="submitGRBForm($event)" [fields]="GRBfields" [marketDropdown]="marketDropdown" [backFillData]="backFillDataFields"
+    (validate)="validate($event)" (updateChildFormName)="updateChildFormName($event)" (bandChange)="bandChange()">
+  </app-hiring-form-grb>
+
+  <app-hiring-form-backfill *ngIf="backFillData.length>0 && showBackfill" [childFormName]="childFormName" [ELEMENTS_DATA]="backFillData">
+  </app-hiring-form-backfill>
+
+  <app-hiring-form-transfer *ngIf="orpData.length>0 " [ELEMENTS_DATA]="orpData">
+  </app-hiring-form-transfer>
+
+  <app-hiring-form-gom *ngIf="GOMfields.length>0 && showGOM" [formName]="'GOM Details'" [childFormName]="childFormName"
+    (submitForm)="submitGRBForm($event)" [fields]="GOMfields" (validate)="validate($event)" (bandChange)="bandChange()">
+  </app-hiring-form-gom>
+
+  
+  <app-hiring-form-tram *ngIf="TRAMfields.length>0 && !hideTram" [formName]="'TRAM Details'" [childFormName]="childFormName"
+    (submitForm)="submitGRBForm($event)"  (validate)="validate($event)"  [fields]="TRAMfields" >
+  </app-hiring-form-tram>
+</div>

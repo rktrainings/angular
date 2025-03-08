@@ -1,0 +1,377 @@
+[{
+
+  "field_name": "Sub Band",
+  "field_type": "text",
+  "field_identifier": "subBand",
+  "options": "",
+  "default": "NA",
+  "required": true,
+  "disabled": true,
+  "order": 3
+
+},{
+
+    "field_name": "Department Code",
+    "field_type": "text",
+    "field_identifier": "deptCode",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, {
+
+    "field_name": "Department Name",
+    "field_type": "text",
+    "field_identifier": "deptName",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, {
+
+    "field_name": "Sup Id",
+    "field_type": "text",
+    "field_identifier": "supId",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 3
+
+  },
+  {
+    "field_name": "Sup Name",
+    "field_type": "text",
+    "field_identifier": "supName",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 4
+  },
+  {
+
+    "field_name": "GP %",
+    "field_type": "number",
+    "field_identifier": "gpPercentage",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 5
+  },
+  {
+
+    "field_name": "Attrition YTD %",
+    "field_type": "number",
+    "field_identifier": "attritionYTDPercentage",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 7
+  },
+  {
+
+    "field_name": "Account UTE %",
+    "field_type": "number",
+    "field_identifier": "accountUTEPercentage",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 8
+  },
+  {
+
+    "field_name": "Practice",
+    "field_type": "text",
+    "field_identifier": "practice",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 9
+  },
+  {
+
+    "field_name": "Account Type",
+    "field_type": "text",
+    "field_identifier": "accountType",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 10
+  },
+  {
+
+    "field_name": "Location",
+    "field_type": "text",
+    "field_identifier": "location",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 11
+  },
+  {
+
+    "field_name": "Geo",
+    "field_type": "text",
+    "field_identifier": "geo",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 12
+  },
+  {
+
+    "field_name": "IOT",
+    "field_type": "text",
+    "field_identifier": "iot",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  },
+  {
+
+    "field_name": "Tower",
+    "field_type": "text",
+    "field_identifier": "tower",
+    "options": ["PTP","RTR","OTC","ALL","OTHERS"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  },
+  {
+
+    "field_name": "Sub-Process",
+    "field_type": "dropdown",
+    "field_identifier": "subProcess",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  },
+  {
+
+    "field_name": "Country",
+    "field_type": "text",
+    "field_identifier": "country",
+    "options": "",
+    "default": "India",
+    "required": true,
+    "disabled": true,
+    "order": 15
+  },
+  {
+
+    "field_name": "Actual HC",
+    "field_type": "text",
+    "field_identifier": "actualHeadCount",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 16
+  },
+  {
+
+    "field_name": "Revenue Type",
+    "field_type": "dropdown",
+    "field_identifier": "revenueType",
+    "options": ["BALANCE SHEET", "P&L FTE BASED", "P&L NON FTE BASED"],
+    "default": "Balance Sheet",
+    "required": true,
+    "disabled": true,
+    "order": 17
+  },
+  {
+
+    "field_name": "Workforce Solutions",
+    "field_type": "dropdown",
+    "field_identifier": "workforceSolution",
+    "options": ["NEW HIRE-EXTERNAL", "NEW HIRE-OTHER IBM UNITS", "C2C TRANSFERS"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 18
+  },
+  {
+
+    "field_name": "Skill",
+    "field_type": "dropdown",
+    "field_identifier": "skill",
+    "options": [
+      "AUTOMATION",
+      "ANALYTICS",
+      "BMO",
+      "BUSINESS OPERATIONS ",
+      "CI",
+      "IC&T / CONTROLS AND COMPLIANCE",
+      "OTC",
+      "PTP",
+      "RTR EXEPTION PROCESS",
+      "RTR GENERAL ACCOUNTING",
+      "RISK AND COMPLIANCE",
+      "SOLUTIONING",
+      "TRANSITION",
+      "WFM",
+      "BLOCK CHAIN",
+      "DELIVERY EXCELLENCE",
+      "INTERNAL BMO",
+      "IT",
+      "MMS",
+      "PLATFORM",
+      "RPA",
+      "OTHER - EXECUTIVES",
+      "IPS",
+      "T&T"
+
+    ],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 19
+  },
+ 
+  {
+
+    "field_name": "Job Title",
+    "field_type": "dropdown",
+    "field_identifier": "jobTitle",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 20
+  },
+  {
+
+    "field_name": "Expected On-Board(EOB)",
+    "field_type": "date",
+    "field_identifier": "eob",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "Resource Contract Type",
+    "field_type": "dropdown",
+    "field_identifier": "resourceContractType",
+    "options": ["REGULAR FULL TIME","REGULAR PART TIME","NON REGULAR", ""],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "GIC Resource Type",
+    "field_type": "dropdown",
+    "field_identifier": "gicResourceType",
+    "options": ["REGULAR", "NON REGULAR", "SUB-CONTRACTOR"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "JRS",
+    "field_type": "dropdown",
+    "field_identifier": "jrs",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "TCV",
+    "field_type": "number",
+    "field_identifier": "tcv",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "SLA",
+    "field_type": "text",
+    "field_identifier": "slaPenalityPerMonth",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "Revenue Loss / Month",
+    "field_type": "text",
+    "field_identifier": "revenueLossPerMonth",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+
+    "field_name": "Hiring Reasons",
+    "field_type": "dropdown",
+    "field_identifier": "hiringReason",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+    "field_name": " Cost Saving",
+    "field_type": "text",
+    "field_identifier": "costSaving",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+    "field_name": "Comments",
+    "field_type": "textarea",
+    "field_identifier": "comments",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  },
+  {
+    "field_name": "Business Justification",
+    "field_type": "textarea",
+    "field_identifier": "businessJustification",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 21
+  }
+]

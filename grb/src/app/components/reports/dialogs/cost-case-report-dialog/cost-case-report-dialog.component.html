@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-10">
+    <label id="hc-selection-group-label">REPORT - COST CASE</label>
+  </div>
+  <div class="col">
+    <mat-icon (click)="goToMenu()">close</mat-icon>
+  </div>
+</div>
+<div>
+  <label class="lbl-gap">
+    SELECT
+    <strong class="text-danger">*</strong>
+  </label>
+  <div class="form-field bandList">
+    <mat-form-field class="dropdown-field ">
+      <mat-select (selectionChange)="yearChange($event)">
+        <mat-option *ngFor="let selectedYear of years" [value]="selectedYear">
+          {{selectedYear }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+
+
+
+<button class="submitButton" style=" float:right;
+border-radius: 30px; font-family: 'Play', sans-serif;" mat-raised-button [disabled]="enableButton"
+  (click)="onSubmit()">EXPORT</button>

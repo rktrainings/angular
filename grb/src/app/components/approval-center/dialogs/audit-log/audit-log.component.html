@@ -1,0 +1,76 @@
+
+
+<div id="audit-logs">
+  <div class="row">
+    <div class="col-11">
+      <b> GRB REVISE AUDIT LOGS [{{ grbNumber | uppercase}}] </b>
+    </div>
+    <div class="downloadIcon">
+      <mat-icon class="download" (click)="exportData()">cloud_download</mat-icon>
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div>
+    <!-- <div class="col-1">
+      <mat-icon (click)="dialogRef.close()">close</mat-icon>
+    </div> -->
+  </div>
+  <div *ngIf="!enableLoadingMsg">
+    <div class="loading-msg">
+      <img src="./assets/icons/spinner-2.gif" />
+    </div>
+  </div>
+  <div *ngIf="enableLoadingMsg">
+  <div class="audit-container-approval">
+    <table mat-table [dataSource]="dataSource">
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="metroNum">
+        <th mat-header-cell *matHeaderCellDef> METRO </th>
+        <td mat-cell *matCellDef="let element"> {{element.metroNum}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="grbNum">
+        <th mat-header-cell *matHeaderCellDef> GRB </th>
+        <td mat-cell *matCellDef="let element"> {{element.grbNum | uppercase}} </td>
+      </ng-container>
+
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="band">
+        <th mat-header-cell *matHeaderCellDef> BAND </th>
+        <td mat-cell *matCellDef="let element"> {{element.currentBand}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="empBand">
+        <th mat-header-cell *matHeaderCellDef> EMP BAND </th>
+        <td mat-cell *matCellDef="let element"> {{element.empBand}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="requestedDate">
+        <th mat-header-cell *matHeaderCellDef> REQUESTED DATE</th>
+        <td mat-cell *matCellDef="let element"> {{element.requestedDate}} </td>
+      </ng-container>
+
+      <!-- Weight Column -->
+
+      <ng-container matColumnDef="requestedBy">
+        <th mat-header-cell *matHeaderCellDef>REQUESTED BY</th>
+        <td mat-cell *matCellDef="let element"> {{element.requestedBy | uppercase}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="bizopsUpdateDate">
+        <th mat-header-cell *matHeaderCellDef>BIZOPS UPDATED DATE</th>
+        <td mat-cell *matCellDef="let element"> {{element.bizopsUpdateDate  || 'NA'}} </td>
+      </ng-container>
+     
+      <ng-container matColumnDef="bizopsremarks">
+        <th mat-header-cell *matHeaderCellDef>BIZOPS REMARKS</th>
+        <td mat-cell *matCellDef="let element"> {{element.bizopsremarks || 'NA'}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <div *ngIf="enabledNoDataMsg" class="no-data">
+      NO DATA AVAILABLE
+    </div>
+</div>
+

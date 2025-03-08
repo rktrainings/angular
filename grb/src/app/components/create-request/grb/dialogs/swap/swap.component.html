@@ -1,0 +1,76 @@
+<div class="swap-dialog">
+  <div class="close-icon">
+    <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+  </div>
+  <div class="header-text">
+    <span>SWAP NOMINATION</span>
+  </div>
+  <div class="sub-header-text">
+    <span>
+      ENTER THE EMPLOYEE ID & PRESS ENTER
+    </span>
+  </div>
+
+  <form [formGroup]="swapForm" (ngSubmit)="onSubmit(swapForm.value)">
+    <div class="table-height">
+      <table style="width: 96% !important;">
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="empId">EMP ID</label><strong
+              class="text-danger">*</strong> </td>
+          <td> <input id="empId" class="input-style" type="text" formControlName="empId" maxlength="6"
+              (change)="getEmpDetails(swapForm.value.empId)">
+          </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="empName">EMP NAME</label> </td>
+          <td> <input id="empName" class="input-style disable-fields" type="text" formControlName="empName" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="deptName">DEPT NAME</label> </td>
+          <td> <input id="deptName" class="input-style disable-fields" type="text" formControlName="deptName" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="band">BAND</label> </td>
+          <td> <input id="band" class="input-style disable-fields" type="text" formControlName="band" disabled> </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="supId">SUP ID</label> </td>
+          <td> <input id="supId" class="input-style disable-fields" type="text" formControlName="supId" disabled> </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="supName">SUP NAME</label> </td>
+          <td> <input id="supName" class="input-style disable-fields" type="text" formControlName="supName" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td class="td-styles"> <label class="field-font" for="transferDate">TED</label> </td>
+          <td>
+            <mat-form-field class="swap-date datepicker swap-date-padding">
+              <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="picker" class="field-font"
+                (dateChange)="handleTEDChange($event)" placeholder="" formControlName="transferDate" readonly>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div mat-dialog-actions style="float: right;">
+      <button mat-raised-button [ngClass]="disableSubmit ? 'none' : 'enabled-button'"
+        [disabled]="disableSubmit">
+        <div *ngIf="enableLoadingMsg" class="loading-button">
+          <img src="./assets/icons/spinner-2.gif" />
+        </div>
+        <div *ngIf="!enableLoadingMsg">
+          SUBMIT
+        </div></button>
+    </div>
+  </form>
+
+</div>
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+  [fullScreen]="true"><span class="loading-aqua"
+    style="color:#50a3c3 ;font-size:4vh;font-family:'play';padding-top:5vh;">Loading</span></ngx-spinner>

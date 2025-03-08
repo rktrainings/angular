@@ -1,0 +1,8 @@
+<app-external-hiring *ngIf="hireType=='external' && invokeExternal" (close)="close()" [childFormName]="childFormName"
+    [GRBfields]="GRBfields" [GOMfields]="GOMfields" [TRAMfields]="TRAMfields" [backFillData]="backFillData" [orpData]="orpData"
+    [templateData]="templateData" [postServiceUrl]="postServiceUrl"></app-external-hiring>
+
+
+<app-internal-hiring *ngIf="hireType=='internal' && invokeInternal" (close)="close()" [childFormName]="childFormName"
+    [GRBfields]="GRBfields" [backFillData]="backFillData" [orpData]="orpData" [templateData]="templateData"
+    [postServiceUrl]="postServiceUrl"></app-internal-hiring>

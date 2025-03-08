@@ -1,0 +1,89 @@
+<div class="approval-band-change">
+  <div class="close-icon">
+    <mat-icon (click)="dialogRef.close()" class="clickable">close</mat-icon>
+  </div>
+  <div class="header-text">
+    <span>GRB REVISE</span>
+  </div>
+  <mat-tab-group mat-align-tabs="start">
+    <mat-tab label="GRB DETAILS">
+
+      <table id='grbbox'>
+        <tr>
+          <td id="grbtext"> METRO NO.</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.metroNumber}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> GRB N0.</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.grbNumber | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT CODE</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.deptCode}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.deptName | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> CURRENT BAND</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{grbDetails.band}} </td>
+        </tr>
+      </table>
+
+    </mat-tab>
+    <mat-tab label="CONVERSION DETAILS">
+      <!-- <div class="sub-header-text">
+      <span>Please enter the employee Id</span>
+    </div> -->
+
+      <table id='grbbox'>
+        <tr>
+          <td id="grbtext"> EMP ID</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empId}} </td>
+
+        </tr>
+        <tr>
+          <td id="grbtext"> EMP NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empName | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT CODE</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empDeptCode}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> DEPT NAME</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empDeptName | uppercase}} </td>
+        </tr>
+        <tr>
+          <td id="grbtext"> BAND</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.empBand}} </td>
+        </tr>
+
+        <tr>
+          <td id="grbtext"> TED</td>
+          <td id="grbtext" class="form-control" readonly="true"> {{internalDetails.ted}} </td>
+        </tr>
+
+        <tr>
+          <td id="grbtext"> COMMENTS<strong class="text-danger">*</strong></td>
+          <td id="grbtextt"><textarea placeholder="Comments" [(ngModel)]="comment" class="form-control" id="comment"
+              rows="3"></textarea> </td>
+        </tr>
+
+      </table>
+
+      <div class="butt">
+        <button class="submitButton" mat-raised-button [disabled]="!checkEnable()"
+          (click)="approveGrbRevise()">APPROVE</button>
+        <button class="submitButton" mat-raised-button [disabled]="!checkEnable()"
+          (click)="rejectGrbRevise()">REJECT</button>
+      </div>
+
+
+      <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+        [fullScreen]="true"><span class="loading-aqua"
+          style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">{{loadingText}}</span></ngx-spinner>
+    </mat-tab>
+  </mat-tab-group>
+</div>

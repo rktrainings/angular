@@ -1,0 +1,93 @@
+[
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000TXI",
+        "empName":"MOHAN RAJ K",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000XYZ",
+        "empName":"CHANDU",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000TXI",
+        "empName":"MOHAN RAJ K",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000TXI",
+        "empName":"MOHAN RAJ K",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000TXI",
+        "empName":"MOHAN RAJ K",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000ABC",
+        "empName":"SUYOG",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    },
+    {
+        "metroNo": "32190612",
+        "grbNo":"CPSES20191205",
+        "metroDeptName":"GPS R & CM OPERATIONS",
+        "metroBand":"5",
+        "empID":"000XYZ",
+        "empName":"ARPITA",
+        "empDeptName":"SOLUTION F&A",
+        "empBand":"7",
+        "submittedDate":"2020-01-02",
+        "requesterName":"ANUSHKA",
+        "swapStatus":"SWAP INITIATED"
+    }
+]

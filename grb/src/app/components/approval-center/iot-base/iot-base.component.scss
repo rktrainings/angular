@@ -1,0 +1,126 @@
+@import "~src/styles";
+
+.pageHeader {
+    text-align: end;
+    font-family: "Russo One", sans-serif !important;
+    font-size: 4vh;
+    padding-right: 4vh;
+    color: white;
+}
+#iot {
+    position: relative;
+    padding: 2vh;
+}
+.clickable {
+    cursor: pointer;
+}
+.mat-card-iot {
+    box-shadow: inset -4px 6px 31px -8px rgba(0, 0, 0, 0.75);
+    padding: 2vh;
+    // border: 2px solid black;
+    border-radius: 3vh;
+    height: 77.5vh;
+}
+.tab-descriptions {
+    padding-top: 1.5vh;
+    padding-left: 3vh;
+}
+.rTableRow {
+    display: table-row;
+    
+}
+
+.rTableCell,
+.rTableHead {
+    display: table-cell;
+    padding: 0px 10px;
+    
+  //  padding-left: 170%;
+    // border: 1px solid #999999;
+}
+
+.mat-download-icon {
+    padding: 3vh 0vh;
+}
+.download-sample-text {
+    padding-left: 5vh;
+}
+
+.download {
+   position: absolute;
+    right: 0vh;
+}
+.table-style {
+    width: 50%;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    padding-left: 4vh !important;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.btn,
+.btn-large,
+.btn-small {
+    text-decoration: none;
+    color: #fff;
+    background-color: $bg-aqua !important;
+    text-align: center;
+    letter-spacing: 0.5px;
+    -webkit-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
+    cursor: pointer;
+}
+.btn i,
+.btn-large i,
+.btn-small i,
+.btn-floating i,
+.btn-large i,
+.btn-small i,
+.btn-flat i {
+    font-size: 1.6rem;
+    line-height: inherit;
+}
+.btn,
+.btn-large,
+.btn-small,
+.btn-flat {
+    padding-left: 2vh;
+    border: none;
+    border-radius: 10px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 62px;
+    text-transform: capitalize !important;
+    vertical-align: middle;
+    -webkit-tap-highlight-color: transparent;
+}
+.loading-msg {
+    margin: 6%;
+    font-weight: bold;
+    font-size: 5vh;
+    color: $bg-aqua !important;
+    text-align: center;
+}
+.heading {
+    font-family: "Russo One", sans-serif !important;
+    font-size: 3.5vh !important;
+    float: right;
+    padding-right: 5px;
+    padding-left: 5px;
+}

@@ -1,0 +1,21 @@
+@import "~src/styles";
+#audit-logs-tabs {
+    height: 67vh;
+    overflow: hidden;
+}
+b {
+    font-size: 3.5vh;
+    font-family: $play;
+}
+b,
+.container {
+    padding: 2vh;
+}
+.close {
+    cursor: pointer;
+}
+
+.audit-spinner {
+    margin-top: 17vh;
+    text-align: center;
+}

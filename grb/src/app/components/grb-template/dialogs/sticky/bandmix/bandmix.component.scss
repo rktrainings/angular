@@ -1,0 +1,37 @@
+@import "~src/styles";
+
+.close-icon {
+  margin-left: 40vh;
+}
+
+.header-text {
+  width: 20vh;
+  font-size: 3.2vh;
+}
+.close{
+  cursor: pointer;
+}
+.rTableRow {
+  display: table-row;
+}
+
+.rTableCell,
+.rTableHead {
+  display: table-cell;
+  padding: 3px 15px;
+}
+
+.input-style {
+  width: 25vh;
+  border-style: solid !important;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua;
+}
+
+.main-text {
+  text-align: center;
+  font-size: 4.5vh;
+  color: #1c95c5;
+  padding: 8vh;
+}

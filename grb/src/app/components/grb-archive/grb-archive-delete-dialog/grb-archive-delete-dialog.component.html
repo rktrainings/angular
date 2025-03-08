@@ -1,0 +1,23 @@
+
+<div id="archive-delete" role="tooltip">
+  <div class="row">
+    <div class="col-10 delete-heading">
+      <p>Delete Metro</p>
+    </div>
+    <div class="col-2">
+      <mat-icon class="close-delete" (click)="dialogRef.close()">close</mat-icon>
+    </div>
+  </div>
+  <div>
+    <div class="delete-text">
+      <p>Are you sure you want to delete the metro #{{archiveDetails.metroNo}}</p>
+    </div>
+    <div class="delete-buttons-row">
+      <button type="submit" mat-raised-button class="delete-button" (click)="dialogRef.close()">No</button>
+      <button type="submit" mat-raised-button class="delete-button" (click)="delete()">Yes</button>
+    </div>
+    <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Loading</span></ngx-spinner>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+@import "~src/styles";
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  // background-color: $bg-aqua;
+  background: #35393c;
+  color: white;
+  text-align: center;
+  z-index: 1000;
+  height: 6vh;
+  border-top: 1px solid #303030;
+}
+
+#ibmLogo {
+  width: 10vh;
+  float: left;
+}
+
+#cps {
+  float: left;
+  margin-top: -4px;
+  font-family: $play;
+}
+
+b {
+  font-size: 4vh;
+  margin-right: 1vh;
+}
+
+.showDownload {
+  font-family: $play;
+  font-size: 2.5vh;
+}
+

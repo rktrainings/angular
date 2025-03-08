@@ -1,0 +1,187 @@
+<div>
+  <mat-card class="mat-card-accdialog" style="box-shadow: none;">
+    <div class="row acc-heading-row">
+      <div class="col-11">
+        <p class="acc-dialog-heading">
+          DEPT NAME: {{ dept | uppercase }}
+        </p>
+
+      </div>
+      <div class="col-1">
+        <div class="close-icon">
+          <mat-icon class="icon" (click)="dialogRef.close()">close</mat-icon>
+        </div>
+      </div>
+    </div>
+    <mat-tab-group (selectedTabChange)="onTabChangeEvent($event.index)">
+      <!-- Current Cost View -->
+      <mat-tab label="CURRENT COST CASE VIEW" [ngClass]="tabIndex== 0 ? 'active' : '' ">
+        <ng-template matTabContent>
+
+          <div *ngIf="enableLoadingMsg1">
+            <div class="loading-msg">
+              <img src="./assets/icons/spinner-2.gif" />
+            </div>
+          </div>
+          <div *ngIf="!enableLoadingMsg1">
+            <br>
+            <div class="cc-table-container">
+              <table mat-table [dataSource]="ccDataSource" multiTemplateDataRows class="">
+
+
+                <ng-container matColumnDef="description">
+                  <th mat-header-cell *matHeaderCellDef> # </th>
+
+                  <td mat-cell *matCellDef="let element"> {{ccJSON[element.description] | uppercase}} </td>
+
+                </ng-container>
+
+                <ng-container matColumnDef="band3">
+                  <th mat-header-cell *matHeaderCellDef> BAND 3 </th>
+                  <td mat-cell *matCellDef="let element"> {{element.band3}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band4">
+                  <th mat-header-cell *matHeaderCellDef> BAND 4 </th>
+                  <td mat-cell *matCellDef="let element"> {{element.band4}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band5">
+                  <th mat-header-cell *matHeaderCellDef> BAND 5 </th>
+                  <td mat-cell *matCellDef="let element"> {{element.band5}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band6">
+                  <th mat-header-cell *matHeaderCellDef> BAND 6 </th>
+                  <td mat-cell *matCellDef="let element"> {{element.band6}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band7">
+                  <th mat-header-cell *matHeaderCellDef> BAND 7 </th>
+                  <td mat-cell *matCellDef="let element2"> {{element2.band7}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band8">
+                  <th mat-header-cell *matHeaderCellDef> BAND 8 </th>
+                  <td mat-cell *matCellDef="let element2"> {{element2.band8}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band9">
+                  <th mat-header-cell *matHeaderCellDef> BAND 9</th>
+                  <td mat-cell *matCellDef="let element2"> {{element2.band9}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="band10">
+                  <th mat-header-cell *matHeaderCellDef> BAND 10 </th>
+                  <td mat-cell *matCellDef="let element2"> {{element2.band10}} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="total">
+                  <th mat-header-cell *matHeaderCellDef> TOTAL </th>
+                  <td mat-cell *matCellDef="let element2"> {{element2.total}} </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="columnsToDisplay2;sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: columnsToDisplay2;"></tr>
+
+
+
+              </table>
+
+              <div *ngIf="enabledNoDataMsg" class="no-data">
+                NO DATA AVAILABLE
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </mat-tab>
+      <mat-tab label="ACTUAL COST CASE">
+        <div class="row secondRow">
+          <div class="col-3">
+            <mat-form-field>
+              <mat-label>Select Year</mat-label>
+              <mat-select [(value)]="selectedFilter" (selectionChange)="getAccData($event)" [disabled]="disabledYear">
+                <mat-option *ngFor="let year of availableYears" [matTooltip]="year.id" [value]="year.id">{{year.id}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="col-2" *ngIf="showValidate">
+            <button mat-raised-button class="submitButton" (click)="ValidateButton()"> Validate </button>
+          </div>
+        </div>
+
+        <div class="view-cc-table">
+          <div *ngIf="enableLoadingMsg2">
+            <div class="loading-msg">
+              <img src="./assets/icons/spinner-2.gif" />
+            </div>
+          </div>
+          <div *ngIf="!enableLoadingMsg2" class="cc-table">
+            <table mat-table [dataSource]="accDataSource" matSort multiTemplateDataRows class="">
+
+              <ng-container matColumnDef="Month">
+                <th mat-header-cell *matHeaderCellDef> Month </th>
+                <td mat-cell *matCellDef="let element"> {{element.Month.toUpperCase()}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band3">
+                <th mat-header-cell *matHeaderCellDef> Band 3 </th>
+                <td mat-cell *matCellDef="let element"> {{element.band3}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band4">
+                <th mat-header-cell *matHeaderCellDef> Band 4 </th>
+                <td mat-cell *matCellDef="let element"> {{element.band4}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band5">
+                <th mat-header-cell *matHeaderCellDef> Band 5 </th>
+                <td mat-cell *matCellDef="let element"> {{element.band5}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band6">
+                <th mat-header-cell *matHeaderCellDef> Band 6 </th>
+                <td mat-cell *matCellDef="let element"> {{element.band6}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band7">
+                <th mat-header-cell *matHeaderCellDef> Band 7 </th>
+                <td mat-cell *matCellDef="let element2"> {{element2.band7}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band8">
+                <th mat-header-cell *matHeaderCellDef> Band 8 </th>
+                <td mat-cell *matCellDef="let element2"> {{element2.band8}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band9">
+                <th mat-header-cell *matHeaderCellDef> Band 9</th>
+                <td mat-cell *matCellDef="let element2"> {{element2.band9}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="band10">
+                <th mat-header-cell *matHeaderCellDef> Band 10 </th>
+                <td mat-cell *matCellDef="let element2"> {{element2.band10}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="total">
+                <th mat-header-cell *matHeaderCellDef> Total </th>
+                <td mat-cell *matCellDef="let element2"> {{element2.total}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="columnsToAccDisplay;sticky: true">
+              <tr mat-row *matRowDef="let row; columns: columnsToAccDisplay;"></tr>
+            </table>
+
+            <div *ngIf="enabledACCNoDataMsg" class="no-data">
+              NO DATA AVAILABLE
+            </div>
+          </div>
+        </div>
+        <ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+      style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Validating</span></ngx-spinner>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+
+</div>

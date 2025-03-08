@@ -1,0 +1,59 @@
+@import "~src/styles";
+
+.audit-container-swap{
+  border:1px solid lightgray;
+  height: 48vh;
+  overflow: auto;
+  margin-top: 2vh;
+}
+.container {
+  padding: 2vh;
+}
+
+b {
+  font-size: 3vh;
+  font-family: $play;
+}
+
+table {
+  width: 100%;
+}
+.no-data {
+  text-align: center;
+  margin-top: 15vh;
+  font-size: 2.5vh;
+}
+
+
+th.mat-header-cell {
+  text-align: left !important;
+  width: 13%;
+}
+
+td.mat-cell {
+  text-align: left !important;
+  padding-right: 35px;
+}
+
+.loading-msg {
+  font-weight: bold;
+  font-size: 5vh;
+  color: $bg-aqua !important;
+  text-align: center;
+  margin-top:10vh;
+}
+
+.downloadIcon {
+  right: 5vh;
+  top: 4vh;
+  float: right;
+}
+.mat-icon {
+  //  margin-right: 30px;
+  font-size: 4vh !important;
+  cursor: pointer;
+  margin-left: 60px;
+}
+.col-11 {
+  max-width: 80%;
+}

@@ -1,0 +1,86 @@
+ <div *ngIf="heading" class="clickedMenu" >
+  <p>{{ hiringAs | uppercase }}</p>
+</div> 
+<div id="template">
+
+  <mat-card class="mat-card-template">
+    <b class="metroNum && showMetro" *ngIf="metroNo">Metro # - {{metroNo}}</b>
+    <!-- <app-custom-stepper></app-custom-stepper> -->
+
+    <!-- <div>
+      <div class="rTableRow">
+        <div class="rTableCell" [ngStyle]="{'padding-left': true ? '45px' : 'none' }">
+          <svg viewBox="3 10 55 40" [ngStyle]="{'fill': activeGRBDetails ? 'green' : '$bg-aqua' }">
+            <use xlink:href="../../../../assets/icons/grb/list.svg#list"></use>
+          </svg>
+        </div>
+        <div class="rTableCell" *ngIf="isExternalGRB" [ngStyle]="{'padding-left': true ? '292px' : 'none' }">
+          <svg viewBox="3 10 55 40" [ngStyle]="{'fill': activeGOMDetails ? 'green' : '$bg-aqua' }">
+            <use xlink:href="../../../../assets/icons/grb/list.svg#list"></use>
+          </svg>
+        </div>
+        <div class="rTableCell" [ngStyle]="{'padding-left': isExternalGRB ? '318px' : '492px' }">
+          <svg viewBox="0 0 55 50" [ngStyle]="{'fill': activeEmpDetails ? 'green' : '$bg-aqua' }">
+            <use xlink:href="../../../../assets/icons/grb/employees.svg#employee"></use>
+          </svg>
+        </div>
+        <div class="rTableCell" [ngStyle]="{'padding-left': isExternalGRB ? '290px' : '470px' }">
+          <svg viewBox="0 0 30 30" [ngStyle]="{'fill': activePreview ? 'green' : '$bg-aqua' }">
+            <use xlink:href="../../../../assets/icons/grb/accessibility--color.svg#icon"></use>
+          </svg>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- <div class='myVarTwo'>
+      <div class='myVarThree'>
+        <div class='myVarFour'>
+          <mat-horizontal-stepper [ngClass]="isExternalGRB ? 'external' : 'internal'" labelPosition="bottom" #stepper
+            [selectedIndex]="activeIndex" (selectionChange)="selectedStepper($event)">
+
+            <ng-template matStepperIcon="done">
+              <mat-icon>done_all</mat-icon>
+            </ng-template>
+            <ng-template matStepperIcon="edit">
+              <mat-icon>clear</mat-icon>
+            </ng-template>
+
+            <mat-step [state]="activeGRBDetails ? 'done' : 'edit'">
+              <form>
+                <ng-template matStepLabel>
+                  <span [ngStyle]="{'color': activeGRBDetails ? 'green' : '$bg-aqua'}">GRB DETAILS</span>
+                </ng-template>
+              </form>
+            </mat-step>
+            <mat-step *ngIf="isExternalGRB" [state]="activeGOMDetails ? 'done' : 'edit'">
+              <form>
+                <ng-template matStepLabel>
+                  <span [ngStyle]="{'color': activeGOMDetails ? 'green' : '$bg-aqua'}">GOM DETAILS</span>
+                </ng-template>
+              </form>
+            </mat-step>
+            <mat-step [state]="activeEmpDetails ? 'done' : 'edit'">
+              <form>
+                <ng-template matStepLabel>
+                  <span [ngStyle]="{'color': activeEmpDetails ? 'green' : '$bg-aqua'}">EMPLOYEE DETAILS</span>
+                </ng-template>
+              </form>
+            </mat-step>
+            <mat-step [state]="activePreview ? 'done' : 'edit'">
+              <ng-template matStepLabel>
+                <span [ngStyle]="{'color': activePreview ? 'green' : '$bg-aqua'}">PREVIEW</span>
+              </ng-template>
+            </mat-step>
+
+          </mat-horizontal-stepper>
+        </div>
+      </div>
+    </div> -->
+
+    <div>
+      <app-card-grb-template></app-card-grb-template>
+    </div>
+
+  </mat-card>
+  
+</div>

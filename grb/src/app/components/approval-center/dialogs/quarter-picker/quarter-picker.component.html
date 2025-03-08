@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="input-group mb-3">
+    <input style="text-transform: uppercase" [formControl]="control" placeholder="QQ YYYY" readonly>
+    <div class="input-group-append">
+      <div ngbDropdown #drop="ngbDropdown" class="d-inline-block" autoClose="outside" placement="bottom-right"
+        (openChange)="showQuarter=true">
+        <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle></button>
+        <div ngbDropdownMenu style="width:13rem">
+          <div class="selectYear">
+
+            <div class="ngb-dp-arrow">
+              <button class="btn btn-link ngb-dp-arrow-btn" type="button" [disabled]="disablePreButton">
+                <span class="ngb-dp-navigation-chevron"
+                  (click)="showQuarter?changeYear((year||yearDefault)-1):year10=year10-10">
+                </span>
+              </button>
+            </div>
+
+            <button type="button" class="btn btn-link" (click)="changeShowQuarter()">
+              {{showQuarter?year?year:yearDefault:(year10+' - '+(year10+9))}}
+            </button>
+
+            <div class="ngb-dp-arrow right">
+              <button class="btn btn-link ngb-dp-arrow-btn" type="button"
+                (click)="showQuarter?changeYear((year||yearDefault)+1):year10=year10+10">
+                <span class="ngb-dp-navigation-chevron"></span>
+              </button>
+            </div>
+          </div>
+
+          <ng-container *ngIf="showQuarter">
+            <button [ngClass]="{'bg-primary':item.value==quarter}" ngbDropdownItem *ngFor="let item of options"
+              (click)="click(item.value,drop)" [disabled]="item.disabled">
+              <span class="col" *ngFor="let month of item.months">{{month}}</span>
+            </button>
+          </ng-container>
+
+          <ng-container *ngIf="!showQuarter">
+            <button [ngClass]="{'bg-primary':(year10+item)==year}" ngbDropdownItem
+              *ngFor="let item of [0,1,2,3,4,5,6,7,8,9]" (click)="changeYear(year10+item);showQuarter=true">
+              <span>{{year10+item}}</span>
+            </button>
+          </ng-container>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

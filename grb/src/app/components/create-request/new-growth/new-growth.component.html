@@ -1,0 +1,14 @@
+
+
+ <div class="newgrowth">
+ <label id="newgrowth-radio-group-label">NEW GROWTH</label>
+ <mat-icon (click)="close()">close</mat-icon>
+
+<mat-radio-group aria-labelledby="newgrowth-radio-group-label" class="newgrowth-radio-group" [(ngModel)]="selected">
+  <mat-radio-button class="newgrowth-radio-button" *ngFor="let newgrowth of newgrowthlist" [value]="newgrowth">
+    {{newgrowth | uppercase}}
+  </mat-radio-button>
+</mat-radio-group>
+<button class="submitButton" mat-raised-button [disabled]="disableSubmit()" (click)="onSubmit()">SUBMIT</button>
+
+</div>

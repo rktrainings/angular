@@ -1,0 +1,150 @@
+@import "~src/styles";
+
+.left-align {
+  text-align: left !important;
+}
+b{
+  font-family: $play;
+  font-size: 3vh;
+}
+.center-align {
+  text-align: center !important;
+}
+.backfillEmpHeader{
+  width: 10px;
+}
+::ng-deep .noData {
+  margin: 20vh !important;
+  // height: 5vh !important;
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: center !important;
+
+}
+::ng-deep .backfill-table-container .mat-cell {
+ 
+  font-size: 1.8vh !important;
+  font-weight: 400 !important;
+  font-family: Roboto,"Helvetica Neue",sans-serif;
+}
+
+.backfill-table-container{
+  padding: 1vh;
+  border:1px solid lightgrey;
+}
+.header {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.count {
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: end !important;
+  margin-right: 4vh;
+}
+
+::ng-deep th {
+  // font-size: 1.5vh !important;
+  font-weight: 550 !important;
+}
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background{
+  background-color: $bg-aqua;
+}
+
+.mat-header-cell {
+  // text-align: center;
+  font-weight: bolder !important;
+  color: $white !important;
+  // font-size: 1.8vh !important;
+    width: 95px;
+}
+
+.mat-cell {
+  // font-size: 1.8vh !important;
+  font-weight: 400 !important;
+}
+
+.backfill {
+  padding: 5vh;
+}
+
+.submittedBy {
+  text-align: center !important;
+  width: 19vh;
+}
+
+::ng-deep .ced-date .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+  border: 0px !important;
+  width: 15vh;
+}
+::ng-deep .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+  padding-bottom: 0.25em !important;
+}
+
+::ng-deep .ced-date .mat-form-field-wrapper .mat-form-field-flex {
+  border: 1px solid #ced4da !important;
+  border-radius: 8px;
+  height: calc(1.5em + 0.75rem + 2px) !important;
+  border-style: solid !important;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua !important;
+  align-items: center !important;
+}
+::ng-deep .ced-date .form.mat-form-field-appearance-legacy .mat-form-field-underline {
+  height: unset !important;
+  width: unset !important;
+}
+.ced-date {
+  padding-top: .5vh;
+}
+::ng-deep .dropdown-field .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+  border: 1px solid #ced4da !important;
+  border-radius: 8px;
+  height: calc(1.5em + 0.75rem + 2px) !important;
+  border-style: solid !important;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua !important;
+  align-items: center !important;
+}
+::ng-deep .mat-select-value-text {
+  padding-left: 1vh !important;
+}
+.extensionperiod{
+  width: 1px;
+}
+.form-control {
+  border-style: solid;
+  border-left-width: 6px !important;
+  border-radius: 8px !important;
+  border-left-color: $bg-aqua !important;
+ // width: 95px;
+  // border-right-width: 6px;
+  // border-right-color: $bg-aqua
+}
+
+.form-control:active,
+.form-control:focus {
+  border-right-color: unset !important;
+  border-top-color: unset !important;
+
+  border-bottom-color: unset !important;
+  box-shadow: unset !important;
+}
+
+.submittedByHeader{
+  left:4vh;
+  position: relative;
+}
+.newCED{
+  left:2vh;
+  position: relative;
+}
+
+.tenure{
+  width: 17vh;
+}

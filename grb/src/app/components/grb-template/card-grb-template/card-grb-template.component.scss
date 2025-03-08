@@ -1,0 +1,226 @@
+@import "~src/styles";
+
+.main-view {
+  // margin-top: 10vh !important;
+  position: relative;
+  padding: 18vh;
+}
+
+.row1 {
+  padding: 0vh 3vh 3vh 3vh;
+  max-height: 61vh;
+  border-radius: 3vh;
+}
+.row2 {
+  // padding-bottom: 3vh;
+  border-radius: 3vh;
+}
+.example-card:hover {
+  box-shadow: 0 0 33px rgba(16, 14, 23, 0.33) !important;
+}
+.example-card {
+  // width: 253px;
+  border: 2px solid white;
+  // #35393C
+  box-shadow: 0 0 13px rgba(16, 14, 23, 0.33) !important;
+  border-top-right-radius: 30px;
+  background-color: $bg-aqua;
+  height: 35vh;
+  cursor: pointer;
+}
+.headingkey {
+  text-align: center;
+  color: white;
+  padding-top: 20px;
+  font-family: $play;
+  font-size: 4vh;
+}
+.mat-card-template {
+  padding: 9px 20px;
+  margin: 2vh;
+}
+.imagediv {
+  text-align: center;
+  height: 80px;
+}
+.right {
+  border-radius: 30px;
+  // border: 2px solid green;
+  // background: green;
+  color: white;
+}
+.notfilled {
+  border-radius: 30px;
+  // border: 0px solid #00539cff;
+  // background: #00539cff;
+  color: white;
+}
+
+::ng-deep .mat-dialog-container {
+  display: block;
+  padding: 24px;
+  border-radius: 16px !important;
+  box-sizing: border-box;
+  overflow: auto;
+  outline: 0;
+  width: 100%;
+  height: 93% !important;
+  min-height: inherit;
+  max-height: 99vh;
+}
+
+.mat-raised-button {
+  background-color: lightgrey !important;
+}
+.buttonRow {
+  float: right;
+  bottom: -9.25vh;
+  right: 0;
+  position: absolute;
+  z-index: 1000;
+  // padding-top: 2vh;
+  // padding-bottom: 2vh;
+}
+.submitButton:not([disabled]) {
+  color: white !important;
+  background: $bg-aqua !important;
+  float: right;
+  font-family: $play;
+  border-radius: 30px !important;
+  padding:1vh 14vh !important;
+}
+.submitButton {
+  float: right;
+  border-radius: 30px ;
+  font-family: $play;
+  font-size: 2.5vh;
+  border-radius: 30px !important;
+  // padding: 0vh 8vh !important;
+}
+.mat-raised-button {
+  padding: 0vh 5vh !important;
+}
+.mat-raised-button {
+  float: right;
+  //background: $bg-aqua !important;
+  border-radius: 20px;
+  margin-right: 2vh;
+  color: white !important;
+  padding: 0vh 5vh !important;
+  // height: 5vh;
+}
+.standard-button {
+  padding: 1vh 14vh !important;
+}
+#card-template {
+  position: relative;
+  padding: 1vh;
+}
+.card-actions {
+  min-height: 30px;
+  line-height: 30px;
+  // background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0 40px 0 14px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: unset !important;
+}
+.actions {
+  line-height: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 50px;
+  width: 50px;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    transparent,
+    transparent 50%,
+    rgba(241, 194, 27, 0.4) 50.2%,
+    rgba(241, 194, 27, 0.4) 50.5%,
+    #f1c21b 50.7%,
+    #f1c21b
+  );
+}
+
+.action-icon {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  font-size: 3vh;
+}
+.stepper-main {
+  text-align: center;
+  margin-bottom: 4vh;
+}
+.svg-icon-template-1,
+.svg-icon-template-2,
+.svg-icon-template-3,
+.svg-icon-template-4,
+.svg-icon-template-5 {
+  width: 40vh;
+  position: relative;
+  padding-bottom: 2vh;
+}
+
+.svg-icon-template-1,
+.svg-icon-template-2 {
+  // left: 13vh;
+}
+
+.svg-icon-template-3,
+.svg-icon-template-4,
+.svg-icon-template-5 {
+  // left: 13vh;
+}
+.svg-div {
+  height: 10vh;
+  position: relative;
+  margin-bottom: 6vh;
+}
+.svg-icon-template-1,
+.svg-icon-template-2,
+.svg-icon-template-3,
+.svg-icon-template-4,
+.svg-icon-template-5,
+.svg-gom {
+  // left: 13vh !important;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 51px);
+}
+// stepper code merge
+
+// .svg-icons{
+//   text-align: center;
+//   padding-right: 20px;
+// }
+
+.mat-icons{
+  margin-left: calc(9% + -8vh) !important;
+  
+  // position: relative !important;
+}
+
+// .stepper-label {
+//   width: 20vh;
+//   font-family: "Play", sans-serif;
+//   font-size: 3vh;
+// }
+
+// .rTableRow {
+//   display: table-row;
+// }
+// .rTableCell {
+//   display: table-cell;
+// }
+// .icon-with-label{
+//   padding-left: 58px;
+// }

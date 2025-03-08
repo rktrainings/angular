@@ -1,0 +1,209 @@
+@import "~src/styles";
+
+#header {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#toolbar {
+  height: 8vh !important;
+  background-color: $bg-aqua !important;
+}
+
+.mat-container {
+  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+  flex: 1;
+}
+
+.menu-icon {
+  font-size: 5vh;
+}
+
+.header-text-1,
+.header-text-2 {
+  font-size: 5vh !important;
+  padding-left: 3vh;
+  font-family: $russo !important;
+}
+
+.header-text-1 {
+  cursor: pointer;
+  outline: none;
+}
+
+.nav {
+  display: unset !important;
+}
+
+::ng-deep .mat-container {
+  height: 100% !important;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  #mat-sidenav-drawer {
+    width: 36vh;
+    .menu-options {
+      .mat-drawer-content:hover {
+        color: black;
+        background-color: white;
+      }
+    }
+  }
+}
+
+.mat-drawer {
+  background-color: $bg-aqua !important;
+}
+
+.main-menu,
+.sub-menu {
+  font-size: 2vh;
+  padding: 1.5vh !important;
+  width: 30vh;
+  color: white;
+  list-style-type: none;
+  font-family: $play !important;
+}
+
+.sub-menu {
+  background-color: $bg-aqua;
+  color: white;
+}
+
+.sub-menu:active,
+.sub-menu:hover,
+.sub-active {
+  border-radius: 30px;
+  position: relative;
+}
+
+[id^="sub-menu-list"] {
+  margin-left: -21%;
+  background-color: $bg-aqua;
+  right: -15%;
+  bottom: -15px;
+  position: relative;
+  padding-top: 1vh;
+}
+
+.main-menu:hover,
+.main-menu:active,
+.sub-menu:hover,
+.sub-menu:active,
+.active,
+.sub-active {
+  cursor: pointer;
+  background-color: white !important;
+  color: black !important;
+}
+
+.main-menu-list {
+  border-bottom: unset !important;
+}
+
+.sub-menu-list {
+  display: inline;
+}
+
+.clickedMenu {
+  text-align: end;
+  font-family: $play !important;
+  font-size: 4vh;
+  padding-right: 3vh;
+  // padding-top: 1vh;
+  margin-bottom: 0 !important;
+  color: white;
+}
+
+::ng-deep .mat-container {
+  z-index: 30;
+  background: linear-gradient(to top, #35393c 60%, $bg-aqua 50%);
+}
+
+// main {
+//   overflow: hidden;
+// }
+
+.prf {
+  margin-left: auto;
+  .empName {
+    padding: 3vh;
+  }
+  .prf-pic {
+    width: 6vh;
+    border: 3px solid white;
+    cursor: pointer;
+  }
+  .logout-div {
+    display: inline;
+    cursor: pointer;
+    .logout {
+      width: 4vh;
+      margin-left: 3vh;
+    }
+    p {
+      font-size: 2vh;
+      display: inline;
+    }
+  }
+}
+
+.example-tree-invisible {
+  display: none;
+}
+
+.example-tree ul,
+.example-tree li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  font-family: $play;
+}
+
+::ng-deep .mat-tree-node {
+  cursor: pointer !important;
+  background-color: $bg-aqua !important;
+  color: white !important;
+  min-height: 7vh !important;
+  font-size: 2vh !important;
+}
+
+::ng-deep .mat-tree-node:hover,
+.mat-tree-node:active {
+  cursor: pointer !important;
+  background-color: white !important;
+  color: black !important;
+}
+
+.childNode:hover,
+.childNode:active,
+.active {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+.padding-menu {
+  padding: 0px 16px;
+  font-size: 2vh;
+}
+.mat-icon-rtl-mirror {
+  position: relative;
+  top: 1vh;
+}
+
+.ul-mat-tree {
+  background-color: $bg-aqua;
+  padding-top: 1vh;
+}
+
+.clickableButtons {
+  min-height: 5vh;
+  font-size: 2vh;
+}

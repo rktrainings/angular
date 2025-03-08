@@ -1,0 +1,95 @@
+<div class="rTableRow">
+  <div class="rTableCell" [ngStyle]="{'padding-left':getPadding('grb')}">
+    <div class="svg-icons">
+      <svg viewBox="3 10 55 40" [ngStyle]="{'fill': activeGRBDetails ? 'green' : '#50a3c3' }">
+        <use xlink:href="./assets/icons/grb/list.svg#list"></use>
+      </svg>
+    </div>
+    <div [ngStyle]="{'color': activeGRBDetails ? 'green' : '#50a3c3'}">
+      <div class="mat-icons">
+        <mat-icon *ngIf="activeGRBDetails">done_all</mat-icon>
+        <mat-icon *ngIf="!activeGRBDetails">cancel</mat-icon>
+      </div>
+      <div>
+        <div class="stepper-label">
+          <span>GRB DETAILS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="rTableCell" *ngIf="isEmployeeFilled" [ngStyle]="{'padding-left':getPadding('employee')}">
+    <div class="svg-icons">
+      <svg viewBox="0 0 55 50" [ngStyle]="{'fill': activeEmpDetails ? 'green' : '#50a3c3' }">
+        <use xlink:href="./assets/icons/grb/employees.svg#employee"></use>
+      </svg>
+    </div>
+    <div [ngStyle]="{'color': activeEmpDetails ? 'green' : '#50a3c3'}">
+      <div class="mat-icons">
+        <mat-icon *ngIf="activeEmpDetails">done_all</mat-icon>
+        <mat-icon *ngIf="!activeEmpDetails">cancel</mat-icon>
+      </div>
+      <div>
+        <div class="stepper-label" style="width: 29vh !important;">
+          <span>EMPLOYEE DETAILS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rTableCell review" *ngIf="isExternalGRB" [ngStyle]="{'padding-left':getPadding('gom')}">
+    <div class="svg-icons">
+      <svg viewBox="3 10 55 40" [ngStyle]="{'fill': activeGOMDetails ? 'green' : '#50a3c3' }">
+        <use xlink:href="./assets/icons/grb/list.svg#list"></use>
+      </svg>
+    </div>
+    <div [ngStyle]="{'color': activeGOMDetails ? 'green' : '#50a3c3'}">
+      <div class="mat-icons">
+        <mat-icon *ngIf="activeGOMDetails">done_all</mat-icon>
+        <mat-icon *ngIf="!activeGOMDetails">cancel</mat-icon>
+      </div>
+      <div>
+        <div class="stepper-label">
+          <span class="stepper-label">GOM DETAILS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rTableCell review" *ngIf="isExternalGRB" [ngStyle]="{'padding-left':getPadding('tram')}">
+    <div class="svg-icons">
+      <svg viewBox="3 10 55 40" [ngStyle]="{'fill': activeTRAMDetails ? 'green' : '#50a3c3' }">
+        <use xlink:href="./assets/icons/grb/list.svg#list"></use>
+      </svg>
+    </div>
+    <div [ngStyle]="{'color': activeTRAMDetails ? 'green' : '#50a3c3'}">
+      <div class="mat-icons">
+        <mat-icon *ngIf="activeTRAMDetails">done_all</mat-icon>
+        <mat-icon *ngIf="!activeTRAMDetails">cancel</mat-icon>
+      </div>
+      <div>
+        <div class="stepper-label">
+          <span class="stepper-label">TRAM DETAILS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rTableCell review" [ngStyle]="{'padding-left':getPadding('priview')}">
+    <div class="svg-icons">
+      <svg viewBox="0 0 120 45" [ngStyle]="{'fill': activePreview ? 'green' : '#50a3c3' }">
+        <use xlink:href="./assets/icons/grb/accessibility--color.svg#icon"></use>
+      </svg>
+    </div>
+    <div [ngStyle]="{'color': activePreview ? 'green' : '#50a3c3'}">
+      <div class="mat-icons">
+        <mat-icon *ngIf="activePreview">done_all</mat-icon>
+        <mat-icon *ngIf="!activePreview">cancel</mat-icon>
+      </div>
+      <div>
+        <div class="stepper-label review-stepper-text">
+          <span>PREVIEW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

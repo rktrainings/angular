@@ -1,0 +1,35 @@
+@import "~src/styles";
+
+b {
+  font-size: 3.5vh;
+  font-family: $play;
+}
+
+table {
+  width: 100%;
+}
+
+.audit-container-grb {
+  height: 55vh;
+  overflow: auto;
+  border: 1px solid lightgray;
+}
+
+.audit-container-grb table tr th {
+  text-align: left;
+}
+
+.audit-container-grb table tr td {
+  text-align: left;
+}
+
+.noData {
+  margin: 20vh !important;
+  // height: 5vh !important;
+  font-size: 2.5vh !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+.grb-audit-th,.grb-audit-td{
+  padding-right:2vh ;
+}

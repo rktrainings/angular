@@ -1,0 +1,83 @@
+<div id="grb" *ngIf="!showLoader">
+  <mat-card class="mat-card-dashboard">
+    <div id="search">
+      <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    </div>
+    <div class="my-grb-container table-border">
+      <table mat-table [dataSource]="dataSource" class="">
+        <ng-container matColumnDef="metroNo" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space"> METRO NO </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.metroNumber}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="grbNo" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space" style="width:35vh"> GRB NO </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.grbNumber | uppercase}}
+          </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="band" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space" style="width:15vh"> BAND </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.band}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="totalQty" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space"> TOTAL QTY </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.totalQuantity}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="deptCode" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space"> DEPT CODE </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.deptCode}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="deptName" class="center-align">
+          <th mat-header-cell *matHeaderCellDef class="space"> DEPT NAME </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.deptName | uppercase}}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef class="center-align"> ACTION </th>
+
+          <td mat-cell *matCellDef="let element" class="center-align clickableText">
+            <div class="row">
+              <button type="button" (click)="onClickSwap(element)" class="btn btn-link" [disabled]="!element.enableSwap">SWAP</button>
+              <button type="button" (click)="onClickGrbRevise(element)" class="btn btn-link" [disabled]="!element.enableGrbRevise">GRB REVISE</button>
+              <button type="button" (click)="onClickGrbBandchange(element)" class="btn btn-link" [disabled]="!element.enableBandChange">BAND CHANGE</button>
+              <!-- <p (click)="onClickSwap(element)">SWAP</p>
+              <p (click)="onClickGrbRevise(element)">GRB REVISE</p>
+              <p (click)="onClickGrbBandchange(element)">BAND CHANGE</p> -->
+            </div>
+          </td>
+        </ng-container>
+        <!-- <ng-container matColumnDef="auditLogs">
+            <th mat-header-cell *matHeaderCellDef class="auditTH"> AUDIT LOGS </th>
+            <td class="auditTD" mat-cell *matCellDef="let element" (click)="openAuditLogs(element)">
+              <mat-icon class="auditLogs" matTooltip="View Logs" matTooltipPosition="above"
+                >assignment_ind
+              </mat-icon>
+            </td>
+          </ng-container> -->
+        <tr mat-header-row *matHeaderRowDef="AllColumns;sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: AllColumns;"></tr>
+      </table>
+      <div *ngIf="enabledNoDataMsg" class="no-data">
+        NO DATA AVAILABLE
+      </div>
+
+    </div>
+  </mat-card>
+</div>
+<div *ngIf="showLoader">
+  <app-loader></app-loader>
+</div>

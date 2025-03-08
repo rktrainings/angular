@@ -1,0 +1,566 @@
+{
+  "menu": [
+    {
+      "key": "Dashboard",
+      "url": "/dashboard",
+      "imgURL": "./assets/icons/dashboard.svg",
+      "child": [
+        {
+          "key": "Current Cost Case",
+          "role": [
+            "ADMIN",
+            "BIZOPS",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/current-cost-case",
+          "path": "/dashboard?active=0",
+          "child": []
+        },
+        {
+          "key": "Pending Hiring Request",
+          "role": [
+            "ADMIN",
+            "BIZOPS",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/pending-hiring-request",
+          "path": "/dashboard?active=1",
+          "child": []
+        },
+        {
+          "key": "Approved Hiring Request",
+          "role": [
+            "ADMIN",
+            "BIZOPS",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/approved-hiring-request",
+          "path": "/dashboard?active=2",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "My Team",
+      "url": "/my-team",
+      "imgURL": "./assets/icons/teams.svg",
+      "child": [
+        {
+          "key": "My Span",
+          "role": [
+            "ADMIN",
+            "BIZOPS",
+            "SDL",
+            "DPE",
+            "SPOC"
+          ],
+          "url": "/my-span",
+          "path": "/my-team/my-span",
+          "child": []
+        },
+        {
+          "key": "My Reportees",
+          "role": [
+            "PEM"
+          ],
+          "url": "/my-reportees",
+          "path": "/my-team/my-reportees",
+          "child": []
+        },
+        {
+          "key": "Attrited Employees",
+          "role": [
+            "BIZOPS",
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/attrited-employees",
+          "path": "/my-team/attrited-employees",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "Create Request",
+      "url": "/create-request",
+      "imgURL": "./assets/icons/add--alt.svg",
+      "child": [
+        {
+          "key": "New Growth",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/new-growth",
+          "path": "/create-request/new-growth",
+          "child": []
+        },
+        {
+          "key": "Backfill",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/backfill",
+          "path": "/create-request/backfill",
+          "child": []
+        },
+        {
+          "key": "Conversion",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/conversion",
+          "path": "/create-request/conversion",
+          "child": []
+        },
+        {
+          "key": "SubK",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/subk",
+          "path": "/create-request/subk",
+          "child": []
+        },
+        {
+          "key": "CI Release",
+          "role": [
+            "ADMIN",
+            "CISPOC"
+          ],
+          "url": "/ci-release",
+          "child": []
+        },
+        {
+          "key": "DI",
+          "role": [
+            "ADMIN",
+            "SPOC",
+            "DPE",
+            "CISPOC"
+          ],
+          "url": "/di",
+          "child": []
+        },
+        {
+          "key": "Add CC",
+          "role": [
+            "ADMIN",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/add-cc",
+          "child": []
+        },
+        {
+          "key": "Pricing Case",
+          "role": [
+            "ADMIN",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/pricing-case",
+          "child": []
+        },
+        {
+          "key": "GRB",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/grb-request",
+          "path": "/create-request/grb-request",
+          "child": []
+        }
+      ]
+    },
+    {
+      "key": "My Request",
+      "url": "/my-request",
+      "imgURL": "./assets/icons/my-request.svg",
+      "child": [],
+      "path": "/my-request"
+    },
+    {
+      "key": "Approval Center",
+      "url": "/approval-center",
+      "imgURL": "./assets/icons/approved1.svg",
+      "child": [
+        {
+          "key": "Swap",
+          "role": [
+            "ADMIN",
+            "PEM"
+          ],
+          "url": "/swap",
+          "path": "/approval-center/swap",
+          "child": []
+        },
+        {
+          "key": "CI Release",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "DPE"
+          ],
+          "url": "/ci-release",
+          "path": "/approval-center/ci-release",
+          "child": []
+        },
+        {
+          "key": "Hire Request",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "BIZOPS",
+            "HIRING"
+          ],
+          "url": "/hire-request",
+          "child": [
+            {
+              "key": "CC",
+              "role": [
+                "ADMIN",
+                "CC_SPOC"
+              ],
+              "url": "/cc",
+              "path": "/approval-center/hire-request/cc"
+            },
+            {
+              "key": "UTE",
+              "role": [
+                "ADMIN",
+                "UTE_SPOC"
+              ],
+              "url": "/ute",
+              "path": "/approval-center/hire-request/ute"
+            },
+            {
+              "key": "ORP",
+              "role": [
+                "ADMIN",
+                "ORP_SPOC"
+              ],
+              "url": "/orp",
+              "path": "/approval-center/hire-request/orp"
+            },
+            {
+              "key": "BM",
+              "role": [
+                "ADMIN",
+                "BM_SPOC"
+              ],
+              "url": "/bm",
+              "path": "/approval-center/hire-request/bm"
+            }
+          ]
+        },
+        {
+          "key": "GRB",
+          "role": [
+            "ADMIN",
+            "BIZOPS"
+          ],
+          "url": "/approval-grb",
+          "path": "/approval-center/approval-grb",
+          "child": []
+        },
+        {
+          "key": "IOT",
+          "role": [
+            "ADMIN",
+            "IOT",
+            "BIZOPS"
+          ],
+          "url": "/iot",
+          "path":"/approval-center/iot",
+          "child": []
+        },
+        {
+          "key": "Board",
+          "role": [
+            "ADMIN",
+            "BOARD",
+            "BIZOPS"
+          ],
+          "url": "/board",
+          "child": [],
+          "path": "/approval-center/board"
+        },
+        {
+          "key": "BIZOPS",
+          "role": [
+            "ADMIN",
+            "BOARD",
+            "BIZOPS"
+          ],
+          "url": "/bizops",
+          "child": [],
+          "path": "/approval-center/bizops"
+        },
+        {
+          "key": "DI",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS"
+          ],
+          "url": "/di",
+          "child": [],
+          "path": "/approval-center/di"
+        },
+        {
+          "key": "CC",
+          "role": [
+            "ADMIN",
+            "BIZOPS"
+          ],
+          "url": "/cc",
+          "child": [],
+          "path": "/approval-center/cc"
+        }
+      ]
+    },
+    {
+      "key": "Grb Archive",
+      "url": "/grb-archive",
+      "imgURL": "./assets/icons/my-request.svg",
+      "role": [
+        "ADMIN",
+        "BIZOPS",
+        "SDL",
+        "DPE",
+        "SPOC",
+        "PEM",
+        "IOT",
+        "BOARD"
+      ],
+      "child": [],
+      "path": "/grb-archive"
+    },
+    {
+      "key": "Reports",
+      "url": "/reports",
+      "imgURL": "./assets/icons/reports.svg",
+      "child": [
+        {
+          "key": "CCN / PCR",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "BIZOPS",
+            "HIRING",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/ccn-pcr",
+          "path": "/reports/ccn-pcr",
+          "child": []
+        },
+        {
+          "key": "RECRUITMENT STATUS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "HIRING",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/recruitment-status",
+          "path": "/reports/recruitment-status",
+          "child": []
+        },
+        {
+          "key": "EXPORT GRB REQUESTS",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/export-grb-requests",
+          "path": "/reports/export-grb-requests",
+          "child": []
+        },
+        {
+          "key": "GRB DUMP",
+          "role": [
+            "ADMIN",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/grb-dump",
+          "path": "/reports/grb-dump",
+          "child": []
+        },
+        {
+          "key": "BACKFILL DETAILS",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/backfill-details",
+          "path": "/reports/backfill-details",
+          "child": []
+        },
+        {
+          "key": "HC & ATT",
+          "role": [
+            "ADMIN",
+            "PEM",
+            "SPOC",
+            "SDL",
+            "DPE",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/hc&att",
+          "path": "/reports/hc&att",
+          "child": []
+        },
+        {
+          "key": "DI",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/di",
+          "path": "/reports/di",
+          "child": []
+        },
+        {
+          "key": "BR HIRING STATUS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/br-hiring-status",
+          "path": "/reports/br-hiring-status",
+          "child": []
+        },
+        {
+          "key": "BR BACKFILL REPORT",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/br-backfill",
+          "path": "/reports/br-backfill",
+          "child": []
+        },
+        {
+          "key": "BR OPEN POSITIONS",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/br-open-positions",
+          "path": "/reports/br-open-positions",
+          "child": []
+        },
+        {
+          "key": "SUNDRY REPORT",
+          "role": [
+            "ADMIN",
+            "SDL",
+            "BIZOPS",
+            "IOT",
+            "BOARD"
+          ],
+          "url": "/br-open-positions",
+          "path": "/reports/br-open-positions",
+          "child": []
+        }
+
+      ]
+    },
+    {
+      "key": "Upload",
+      "url": "/upload",
+      "imgURL": "./assets/icons/upload.svg",
+      "child": [
+        {
+          "key": "HC History",
+          "role": [
+            "ADMIN",
+            "BIZOPS"
+          ],
+          "url": "/hc-history",
+          "path": "/upload/hc-history",
+          "child": []
+        },
+        {
+          "key": "HC Actual",
+          "role": [
+            "ADMIN",
+            "BIZOPS"
+          ],
+          "url": "/hc-actual",
+          "path": "/upload/hc-actual",
+          "child": []
+        }
+       
+      ]
+    }
+  ]
+}

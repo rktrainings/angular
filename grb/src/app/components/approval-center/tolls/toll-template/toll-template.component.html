@@ -1,0 +1,103 @@
+<div>
+  <div id="search">
+    <input class="searchBar" (keyup)="applyFilter($event.target.value)" placeholder="Search">
+    <p class="heading" *ngIf="tollName=='BM'">BAND MIX</p>
+    <p class="heading" *ngIf="tollName=='UTE'">UTE</p>
+    <p class="heading" *ngIf="tollName=='CC'">COST CASE</p>
+    <p class="heading" *ngIf="tollName=='ORP'">ORP</p>
+  </div>
+  <div class="countDiv-tolls">
+    <div class="count-tolls"> [{{count}}]</div>
+  </div>
+  <div id="table-wrapper">
+    <div class="dashboard-table-container">
+      <table mat-table [dataSource]="dataSource" class="">
+        <ng-container matColumnDef="metroNumber">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> METRO# </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.metroNumber}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="deptName">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 25vh;"> DEPT NAME </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.deptName | uppercase}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="hireType">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 20vh;"> HIRE TYPE </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.hireType | uppercase}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="hireRequest">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 20vh;"> HIRE REQUEST </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.hireRequest | uppercase}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="totalQuantity">
+          <th mat-header-cell *matHeaderCellDef class="center-align" style="width: 15vh;"> QUANTITY </th>
+          <td mat-cell *matCellDef="let element" class="clickable center-align">
+            {{element.totalQuantity}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="band">
+          <th mat-header-cell *matHeaderCellDef class="center-align" style="width: 15vh;"> BAND </th>
+          <td mat-cell *matCellDef="let element" class="clickable center-align">
+            {{element.band}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="submittedDate">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> SUBMITTED DATE </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.submittedDate}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="requesterName">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> REQUESTER NAME </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            {{element.requesterName | uppercase}}
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="tollStatus">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> STATUS </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            <div *ngIf="element.tollStatus == 'NOT_REVIEWED'; else reSubmit">
+              NOT REVIEWED
+            </div>
+            <ng-template #reSubmit>
+              RESUBMIT
+            </ng-template>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="commentsFromHiringManager">
+          <th mat-header-cell *matHeaderCellDef class="left-align" style="width: 22vh;"> REQUESTED INFORMATION </th>
+          <td mat-cell *matCellDef="let element" class="clickable left-align">
+            <div *ngIf="element.commentsFromHiringManager == null; else emptyResponse">
+              <textarea id="inforequired" class="text-area" disabled>NA
+              </textarea>
+            </div>
+            <ng-template #emptyResponse>
+              <textarea id="inforequired" class="text-area" disabled>{{element.commentsFromHiringManager | uppercase}}</textarea> 
+            </ng-template>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="review">
+          <th mat-header-cell *matHeaderCellDef class="center-align" style="width: 25vh;"> REVIEW </th>
+          <td mat-cell *matCellDef="let element" class="clickable center-align">
+            <button mat-raised-button id='buttonColor' class="action-button-tolls" (click)="onActionClick(element)">ACTION</button>
+          </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+      <div *ngIf="enabledNoDataMsg" class="no-data">
+        NO DATA AVAILABLE
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<ngx-spinner bdColor = "rgba(225,212,212,0.38)" size = "large" color = "#1c95c5" type = "ball-spin-clockwise" [fullScreen] = "true"><span class="loading-aqua"  style="color: #1c95c5;font-size:4vh;font-family:'play';padding-top:11vh;" >Loading</span></ngx-spinner>

@@ -1,0 +1,79 @@
+<div class="create-request-ciRelease">
+    <mat-card class="create-request-ciRelease">
+        <div class="ciRelease-form" *ngIf="fields.length>0">
+
+            <form [formGroup]="ciReleaseForm" class="needs-validation" novalidate>
+                <div class="row">
+                    <div *ngFor="let field of fields" class="col-3">
+                        <label class="lbl-gap">
+                            {{field.field_name}}
+                            <strong class="text-danger" *ngIf="field.required">*</strong>
+                        </label>
+                        <div [ngSwitch]="field.field_type">
+
+                            <!-- text field -->
+                            <div class="form-group" *ngSwitchCase="'text'">
+
+                                <input type="text" class="form-control" [name]="field.field_identifier"
+                                    [maxlength]="field.field_identifier=='empId'?6:200"
+                                    [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                        submitted && field.required &&
+                                        fieldCtrl[field.field_identifier].errors
+                                        }" [readOnly]="field.disabled" style="text-transform:uppercase"
+                                    (change)="onChange(field.field_identifier,$event.target.value)">
+
+                            </div>
+                            <!-- dropdown -->
+                            <div class="form-field" *ngSwitchCase="'dropdown'">
+                                <mat-form-field class="dropdown-field ">
+                                    <mat-select [(value)]="ciReleaseForm[field.field_identifier]"
+                                        [formControlName]="field.field_identifier"
+                                        (selectionChange)="dropdownChange(field.field_identifier,$event);onChange(field.field_identifier,$event.value)">
+                                        <mat-option *ngFor="let option of field.options" [matTooltip]="option"  [value]="option">{{option}}
+                                        </mat-option>
+                                    </mat-select>
+
+                                </mat-form-field>
+
+                            </div>
+
+                            <!-- number -->
+                            <div class="form-group" *ngSwitchCase="'number'">
+
+                                <input type="number" class="form-control" [name]="field.field_identifier"
+                                    [formControlName]="field.field_identifier" [ngClass]="{ 'is-invalid':
+                                        submitted && field.required &&
+                                        fieldCtrl[field.field_identifier].errors
+                                        }" [readOnly]="field.disabled" [min]="0" [max]="balanceFteCount"
+                                    (change)="onChange(field.field_identifier,$event.target.value)" required>
+                                <!-- <div *ngIf="submitted &&
+                    field.required &&
+                    fieldCtrl[field.field_identifier].errors" class="invalid-feedback">
+                      <div *ngIf="fieldCtrl[field.field_identifier].errors.required">
+                        {{field.field_name}} is required.
+                      </div>
+                    </div> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+        <div *ngIf="showSpinner">
+            <div class="loading-msg-ci-release">
+                <img class="spinner-size" src="./assets/icons/spinner-2.gif" />
+            </div>
+        </div>
+        <div class="row buttonRowCC">
+            <button type="submit" mat-raised-button class="form-submit submit-button-cc" [disabled]="isDisable()"
+                (click)="onSubmit()">Submit</button>
+        </div>
+    </mat-card>
+</div>
+
+<ngx-spinner bdColor="rgba(251,245,245,0.8)" size="large" color="#50a3c3" type="ball-spin-clockwise"
+    [fullScreen]="true"><span class="loading-aqua"
+        style="color: #50a3c3;font-size:4vh;font-family:'play';padding-top:11vh;">Please Wait</span>
+</ngx-spinner>

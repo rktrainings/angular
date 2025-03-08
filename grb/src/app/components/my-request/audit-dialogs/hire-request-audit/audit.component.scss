@@ -1,0 +1,44 @@
+
+@import "~src/styles";
+
+.container {
+  padding: 2vh;
+}
+
+b {
+  font-size: 2.5vh;
+}
+
+table {
+  width: 100%;
+}
+.no-data{
+  text-align: center;
+  padding-top: 47px;
+}
+.audit-container-hire {
+  height: 58vh !important;
+  overflow: auto;
+  margin-top: 2vh;
+}
+
+th.mat-header-cell {
+  text-align: left !important;
+  width: 5%;
+}
+
+td.mat-cell {
+  text-align: left !important
+}
+mat-icon {
+  cursor: pointer;
+  float: right;
+}
+
+
+.loading-msg {
+  font-weight: bold;
+  font-size: 5.0vh;
+  color:$bg-aqua !important;
+  text-align: center;
+}

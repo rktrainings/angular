@@ -1,0 +1,164 @@
+[{
+
+    "field_name": "Posting",
+    "field_type": "text",
+    "field_identifier": "posting",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 1
+
+  },
+  {
+
+    "field_name": "Request Type",
+    "field_type": "dropdown",
+    "field_identifier": "requestType",
+    "options": [],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, {
+
+    "field_name": "Employment Type",
+    "field_type": "dropdown",
+    "field_identifier": "employmentType",
+    "options": ["Full Time", "Part Time"],
+    "default": "Full Time",
+    "required": true,
+    "disabled": true,
+    "order": 2
+
+  }, 
+  {
+    "field_name": "Remote Work Possible",
+    "field_type": "dropdown",
+    "field_identifier": "remoteWorkPlacePossible",
+    "options": ["Yes", "No"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 4
+  },
+  {
+
+    "field_name": "Workplace Indicator",
+    "field_type": "dropdown",
+    "field_identifier": "workplaceIndicator",
+    "options": [
+      "Traditional office",
+      "Traditional Non Office(IBM Builidng - No Office Space)",
+      "Extended Office",
+      "Mobile / Telecommuter(No Assigned Worksapce)",
+      "work At home(80 % of Regular work at home)",
+      "Client Location / Alternative Location"
+    ],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 5
+  },
+  {
+
+    "field_name": "Candidate Already Identified For Offer",
+    "field_type": "dropdown",
+    "field_identifier": "canditateAlreadyIdentified",
+    "options": ["Yes", "No"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 7
+  },
+  {
+
+    "field_name": "Reason Candidate Has Been Identified",
+    "field_type": "dropdown",
+    "field_identifier": "reasonForCandidateBeenIdentified",
+    "options": ["Market Hire - Manager Created Role", "Internal Transfer within country", "Country to Country tranfer", "Vendor Conversion", "Fixed Term - Regular conversions - Conversion", "Student - Regular", "Valid Business Case-  Remaining "],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 8
+  },
+  {
+
+    "field_name": "Shift",
+    "field_type": "dropdown",
+    "field_identifier": "shift",
+    "options": ["General Shift",
+      "Evening",
+      "Night",
+      "On call",
+      "Rotation Basis"
+    ],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 9
+  },
+  {
+
+    "field_name": "Billable",
+    "field_type": "dropdown",
+    "field_identifier": "billable",
+    "options": ["Yes", "No"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 10
+  },
+
+  {
+
+    "field_name": "Travel Required",
+    "field_type": "dropdown",
+    "field_identifier": "travelRequired",
+    "options": [
+      "No Travel",
+      "Upto 10% or One day a Week",
+      "Upto 25% or Two Days a Week",
+      "Upto 50% or Three Days a Week",
+      "Upto 75% or Four Days a Week",
+      "Upto 100% or Five Days a Week"
+    ],
+    "default": "No Travel",
+    "required": true,
+    "disabled": true,
+    "order": 12
+  },
+  {
+
+    "field_name": "Does your account have restriction?",
+    "field_type": "dropdown",
+    "field_identifier": "isAccountHasRestrictions",
+    "options": ["Yes", "No"],
+    "default": "No",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  },
+  {
+
+    "field_name": "ID Type",
+    "field_type": "text",
+    "field_identifier": "idType",
+    "options": "",
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  }, {
+
+    "field_name": "Pool Type",
+    "field_type": "dropdown",
+    "field_identifier": "poolType",
+    "options": ["Voice", "Non-Voice"],
+    "default": "",
+    "required": true,
+    "disabled": true,
+    "order": 13
+  }
+]

@@ -1,0 +1,40 @@
+export class GrbTemplateEnh {
+    metro: string;
+    band: string;
+    totalQty: string;
+    hireType: string;
+    hiringAs: string;
+    deptCode: string;
+    deptName: string;
+    supId: string;
+    supName: string;
+    gpPercentage: string;
+    attritionYTDPercentage: string;
+    accountUTEPercentage: string;
+    practice: string;
+    accountType: string;
+    location: string;
+    geo: string;
+    iot: string;
+    country: string;
+    actualHeadCount: string;
+    revenueType: string;
+    workforceSolution: string;
+    skill: string;
+    subProcess: string;
+    jobTitle: string;
+    eob: string;
+    resourceContractType: string;
+    gicResourceType: string;
+    jrs: string;
+    tcv: string;
+    slaPenalityPerMonth: string;
+    revenueLossPerMonth: string;
+    hiringReason: string;
+    costSaving: string;
+    businessJustification: string;
+    comments: string;
+    deBandingRequest: string;
+    goLiveDate: string;
+
+}

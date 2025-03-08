@@ -1,0 +1,8 @@
+@import "~src/styles";
+
+.submitButton:not([disabled]) {
+    color: white !important;
+    background: $bg-aqua !important;
+    float:right;
+    border-radius: 30px;
+  }

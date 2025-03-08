@@ -1,0 +1,36 @@
+@import "~src/styles";
+
+.container {
+  padding: 2vh;
+}
+
+b {
+  font-size: 2.5vh;
+}
+.no-data {
+  text-align: center;
+  padding-top: 47px;
+}
+.audit-container-costcase {
+  height: 58vh;
+  overflow: auto;
+  margin-top: 2vh;
+}
+mat-icon {
+  cursor: pointer;
+  float: right;
+}
+td.mat-cell {
+  text-align: left;
+}
+th.mat-header-cell {
+  text-align: left;
+  width: 2%;
+}
+
+.loading-msg {
+  font-weight: bold;
+  font-size: 5vh;
+  color: $bg-aqua !important;
+  text-align: center;
+}

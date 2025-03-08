@@ -1,0 +1,91 @@
+@import "~src/styles";
+
+#search {
+  padding-top: 2vh;
+}
+
+#search > input {
+  border-radius: 15px;
+  margin-left: 3vh;
+  margin-bottom: 2vh;
+  padding: 1vh;
+}
+
+.searchBar {
+  width: 30vh;
+}
+.word-wrap{
+  word-wrap: break-word;
+}
+.approved-hiring-request-table-container {
+  height: 52vh !important;
+  overflow: auto;
+}
+
+.board-color {
+  color: red;
+}
+
+.mat-header-row {
+  background-color: $bg-aqua !important;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+th.mat-header-cell {
+  color: white;
+}
+
+
+.no-data {
+  text-align: center;
+  font-size: 2.5vh !important;
+  font-weight: bold;
+  margin: 15vh;
+}
+
+.word-wrap{
+  word-wrap: break-word;
+}
+
+.clickable {
+  cursor: pointer;
+  color: $bg-aqua;
+}
+
+.mat-select-value {
+  color: white !important;
+}
+
+.mat-form-field-search {
+  padding-top: 20px;
+}
+
+
+#table-wrapper table {
+  width: 100%;
+}
+
+#table-wrapper table * {
+  color: black;
+}
+
+#table-wrapper table thead th .text {
+  position: absolute;
+  top: -20px;
+  z-index: 2;
+  height: 20px;
+  width: 35%;
+}
+
+.mat-header-cell {
+  font-weight: bolder !important;
+  color: white !important;
+  font-size: 1.9vh !important;
+}
+.mat-cell {
+  font-size: 1.7vh !important;
+  font-weight: 500 ;
+}

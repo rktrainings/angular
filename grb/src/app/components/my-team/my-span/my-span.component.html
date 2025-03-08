@@ -1,0 +1,9 @@
+<div id="my-span" *ngIf="show">
+  <app-tabular-view [PARENT]="'MY_SPAN'" [ELEMENT_DATA]="ELEMENT_DATA" [displayedHeaders]="displayedHeaders"
+    [displayedColumns]="displayedColumns" [AllColumns]="AllColumns" [showActions]="showActions" [fetchData]="fetchData"
+    [showCheckBox]="showCheckBox" [showSearchFilter]="showSearchFilter" [managersList]="managersList"
+    (getDataOnSearch)="getDataOnSearch($event)"></app-tabular-view>
+</div>
+<div *ngIf="!show">
+  <app-loader></app-loader>
+</div>

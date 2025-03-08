@@ -1,0 +1,52 @@
+@import "~src/styles";
+
+
+.prf-heading p{
+    float: left;
+    font-size: 3.5vh;
+}
+.close-prf{
+    margin-left: 3vh;
+    cursor: pointer;
+}
+.prf-body {
+    border: 1px solid lightgray;
+    max-width: 80vw;
+    width: 94vh;
+    height: 32vh;
+}
+
+.prf-pic-view {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 150px;
+    border-radius: 30%;
+    max-width: 150px;
+    max-height: 20vh;
+}
+
+.prf-border {
+    text-align: center;
+}
+
+.row {
+    width: 100%;
+    left: 2vh;
+    position: relative;
+}
+
+.detailsRow{
+    border-top: 1px solid lightgray;
+    max-height: 7vh;
+}
+
+.col-4,.col-8,.col-6{
+    padding:1vh;
+}
+p{
+    font-family: $play;
+    overflow-wrap: break-word !important;
+    word-wrap: break-word !important;
+    max-width: 50vh !important;
+    margin: 0 auto;
+}
